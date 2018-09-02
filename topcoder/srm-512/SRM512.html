@@ -1,0 +1,733 @@
+<link type="text/css" rel="stylesheet" href="/css/style.css" />
+<link type="text/css" rel="stylesheet" href="/css/coders.css" />
+<link type="text/css" rel="stylesheet" href="/css/stats.css" />
+<link type="text/css" rel="stylesheet" href="/css/tcStyles20080219.css" />
+
+<div class="linkBox">
+    <a href="/tc?module=Static&amp;d1=match_editorials&amp;d2=archive">Archive</a><br />
+    <a href="/stat?c=round_overview&er=5&rd=14537">Match Overview</a><br />
+    <a href="http://forums.topcoder.com/?module=ThreadList&forumID=545692">Discuss this match</a>
+</div>
+<span class="bodySubtitle">Single Round Match 512</span><br />
+Wednesday, July 13th, 2011
+<br /><br />
+
+<h2>Match summary</h2> 
+
+<p>Happy SRM (1&lt;&lt;9)! This SRM set the new record of the registrants limit: 2400 coders, and it was full! However, only 2255 coders did participate in this SRM, with 1398 coders in Division 2 and 857 coders in Division 1.</p>
+
+<p>The distribution of points for the problems in this SRM is quite unusual, 256-512-1024. The admins decided that this distribution will be interesting, and as a reminder that they have had 512 SRMs up to now. Congratulations, admins!</p>
+
+<p>In Division 1, coders faced an easy greedy problem with usual difficulty, a tricky medium problem, and a hard problem requiring good math and dynamic programming skills. The first place went to <a href="http://www.topcoder.com/tc?module=MemberProfile&tab=alg&cr=13351270" class="coderTextRed">Vasyl[alphacom]</a> who submitted all problems correctly, and returned to target! The second place went to <a href="http://www.topcoder.com/tc?module=MemberProfile&tab=alg&cr=22221928" class="coderTextRed">UdH-WiNGeR</a>, also had all problems correctly. <a href="http://www.topcoder.com/tc?module=MemberProfile&tab=alg&cr=251074" class="coderTextRed">bmerry</a>, despite getting the lowest score on 256, earned the third spot thanks to his +75 challenge points.</p>
+ 
+<p>Division 2 was also interesting, with 47 coders solving all problems. <a href="http://www.topcoder.com/tc?module=MemberProfile&tab=alg&cr=22880911" class="coderTextBlue">aRSeniy</a> won the match with very good perfomances on all problems and +50 challenge points. <a href="http://www.topcoder.com/tc?module=MemberProfile&tab=alg&cr=15069914" class="coderTextBlue">cyph1e</a> took the second place, also with +50 challenge points. Newcomer <a href="http://www.topcoder.com/tc?module=MemberProfile&tab=alg&cr=22914564" class="coderTextYellow">akgma</a> took to the third place and was promoted to yellow. Congratulations to all winners!</p>
+<H1> 
+The Problems 
+</H1>
+</p> 
+
+<font size="+2"> 
+<b><a href="/stat?c=problem_statement&amp;pm=11287&amp;rd=14537" name="11287">MarbleDecoration</a></b> 
+</font> 
+<A href="/tc?module=ProblemRatingQuestions&pid=11287"><img src="/i/rate_it.gif" hspace="10" border="0" alt="rate it" /></A> 
+<A HREF="http://forums.topcoder.com/?module=ThreadList&forumID=545692" CLASS="statText"><img src="/i/interface/btn_discuss_it.gif" alt="discuss it" border="0" /></A>
+<br> 
+Used as: Division Two - Level One: <blockquote><table cellspacing="2"> 
+  <tr> 
+    <td class="bodyText" style="background: #eee;"> 
+      <b>Value</b> 
+    </td> 
+    <td class="bodyText" style="background: #eee;"> 
+      256 
+    </td> 
+  </tr> 
+  <tr> 
+    <td class="bodyText" style="background: #eee;"> 
+      <b>Submission Rate</b> 
+    </td> 
+    <td class="bodyText" style="background: #eee;"> 
+      1279 / 1398 (91.49%) 
+    </td> 
+  </tr> 
+  <tr> 
+    <td class="bodyText" style="background: #eee;"> 
+      <b>Success Rate</b> 
+    </td> 
+    <td class="bodyText" style="background: #eee;"> 
+      1146 / 1279 (89.60%) 
+    </td> 
+  </tr> 
+  <tr> 
+    <td class="bodyText" style="background: #eee;"> 
+      <b>High Score</b> 
+    </td> 
+    <td class="bodyText" style="background: #eee;"> 
+      <b>wenming17</b> for 255.92 points (0 mins 31 secs) 
+    </td> 
+  </tr> 
+  <tr> 
+    <td class="bodyText" style="background: #eee;"> 
+      <b>Average Score</b> 
+    </td> 
+    <td class="bodyText" style="background: #eee;"> 
+      210.19 (for 1146 correct submissions) 
+    </td> 
+  </tr> 
+</table></blockquote> 
+<p>Let's simplify the problem. Assume that there are only two different colors of marbles.</p>
+
+<p><b><u>Two Colors of Marbles</u></b></p>
+
+<p>So, in this simpler subproblem, we are given several marbles of at most two different colors. Assume that we have A marbles of the first color and B marbles of the second color. There are three cases to consider:</p>
+
+<p><b>Case 1</b>. If A &gt; B, then we can create an optimal sequence like this: ABABABA ... BA</p>
+
+<p>The maximum length of the sequence is 2*B + 1.</p>
+	  
+<p><b>Case 2</b>. If A &lt; B, then we can create an optimal sequence like this: BABABAB ... AB</p>
+
+<p>The maximum length of the sequence is 2*A + 1.</p>
+
+<p><b>Case 3</b>. Otherwise, A = B. Then, we can create an optimal sequence like this: ABABAB ... AB</p>
+
+<p>The maximum length of the sequence is A + B.</p>
+
+<p><b><u>Three Colors of Marbles</u></b></p>
+
+<p>The original problem requires three colors to consider. However, as Elsh wants the sequence to have at most two different colors, we can just brute-force choosing two colors, and take the maximum result over all choices.</p>
+
+<p><b><u>Implementation</u></b></p>
+
+<p>This is a sample direct implementation of the above idea.</p>
+
+<pre>
+{code}
+private int maxLength(int A, int B)
+{
+    if (A > B)
+        return 2*B + 1;
+    else if (A < B)
+        return 2*A + 1;
+    return A + B;
+}
+public int maxLength(int R, int G, int B)
+{
+    int res = 0;
+    res = Math.max(res, maxLength(R, G));
+    res = Math.max(res, maxLength(G, B));
+    res = Math.max(res, maxLength(R, B));
+    return res;
+}
+</pre>
+
+<p><b><u>Greedy Solution</u></b></p>
+
+<p>It is always optimal to choose two colors that have the most marbles. So, we can sort the the input, choose two maximums, and apply the above idea for two colors. Here is a concise implementation of this idea.</p>
+
+<pre>
+{code}
+public int maxLength(int R, int G, int B)
+{
+    int[] colors = {R, G, B};
+    Arrays.sort(colors);
+    if (colors[1] < colors[2])
+    	return 2*colors[1] + 1;
+    return colors[1] + colors[2];
+}
+</pre>
+
+<p>The complexity of this solution is O(1), because 3, the number of different colors, is constant.</p>
+
+<p><b><u>Exercises</u></b></p>
+
+<p>Solve the problem if the sequence can contain at most three different colors of marbles.</p>
+
+<font size="+2"> 
+<b><a href="/stat?c=problem_statement&amp;pm=11295&amp;rd=14537" name="11295">MysteriousRestaurant</a></b> 
+</font> 
+<A href="/tc?module=ProblemRatingQuestions&pid=11295"><img src="/i/rate_it.gif" hspace="10" border="0" alt="rate it" /></A> 
+<A HREF="http://forums.topcoder.com/?module=ThreadList&forumID=545692" CLASS="statText"><img src="/i/interface/btn_discuss_it.gif" alt="discuss it" border="0" /></A>
+<br> 
+Used as: Division Two - Level Two: <blockquote><table cellspacing="2"> 
+  <tr> 
+    <td class="bodyText" style="background: #eee;"> 
+      <b>Value</b> 
+    </td> 
+    <td class="bodyText" style="background: #eee;"> 
+      512 
+    </td> 
+  </tr> 
+  <tr> 
+    <td class="bodyText" style="background: #eee;"> 
+      <b>Submission Rate</b> 
+    </td> 
+    <td class="bodyText" style="background: #eee;"> 
+      480 / 1398 (34.33%) 
+    </td> 
+  </tr> 
+  <tr> 
+    <td class="bodyText" style="background: #eee;"> 
+      <b>Success Rate</b> 
+    </td> 
+    <td class="bodyText" style="background: #eee;"> 
+      228 / 480 (47.50%) 
+    </td> 
+  </tr> 
+  <tr> 
+    <td class="bodyText" style="background: #eee;"> 
+      <b>High Score</b> 
+    </td> 
+    <td class="bodyText" style="background: #eee;"> 
+      <b>owen_cont</b> for 506.08 points (3 mins 4 secs) 
+    </td> 
+  </tr> 
+  <tr> 
+    <td class="bodyText" style="background: #eee;"> 
+      <b>Average Score</b> 
+    </td> 
+    <td class="bodyText" style="background: #eee;"> 
+      264.14 (for 228 correct submissions) 
+    </td> 
+  </tr> 
+</table></blockquote> 
+
+Used as: Division One - Level One: <blockquote><table cellspacing="2"> 
+  <tr> 
+    <td class="bodyText" style="background: #eee;"> 
+      <b>Value</b> 
+    </td> 
+    <td class="bodyText" style="background: #eee;"> 
+      256 
+    </td> 
+  </tr> 
+  <tr> 
+    <td class="bodyText" style="background: #eee;"> 
+      <b>Submission Rate</b> 
+    </td> 
+    <td class="bodyText" style="background: #eee;"> 
+      779 / 857 (90.90%) 
+    </td> 
+  </tr> 
+  <tr> 
+    <td class="bodyText" style="background: #eee;"> 
+      <b>Success Rate</b> 
+    </td> 
+    <td class="bodyText" style="background: #eee;"> 
+      667 / 779 (85.62%) 
+    </td> 
+  </tr> 
+  <tr> 
+    <td class="bodyText" style="background: #eee;"> 
+      <b>High Score</b> 
+    </td> 
+    <td class="bodyText" style="background: #eee;"> 
+      <b>Petr</b> for 248.46 points (4 mins 58 secs) 
+    </td> 
+  </tr> 
+  <tr> 
+    <td class="bodyText" style="background: #eee;"> 
+      <b>Average Score</b> 
+    </td> 
+    <td class="bodyText" style="background: #eee;"> 
+      176.13 (for 667 correct submissions) 
+    </td> 
+  </tr> 
+</table></blockquote> 
+<p>This is an optimization problem. We are asked to find the largest number of days Ash and Elsh could have lunch at the restaurant. Remember that if they don't buy any dishes on a day, they cannot buy anything again at the restaurant on the subsequent days. So the days on which the could have lunch must be consecutive, starting from the first day.</p>
+
+<p>This doesn't seem to be so easy, does it? So let's first convert the problem into a decision problem.</p>
+
+<p><b><u>The Decision Problem</u></b></p>
+<p>Now, the problem becomes like this:</p>
+
+<p>"Given D, can Ash and Elsh have lunch at the restaurant for D days?"</p>
+
+<p>For convenience, let's assume that the first day on which the restaurant opens is Sunday. Note that once we fix the number of days D, we know exactly how many Sundays, Mondays, etc. on which they will have lunch. For example, let D = 30. Then,</p>
+<ul>
+<li>Sundays: day 1, 8, 15, 22, 29.</li>
+<li>Mondays: day 2, 9, 16, 23, 30.</li>
+<li>Tuesdays: day 3, 10, 17, 24.</li>
+<li>Wednesdays: day 4, 11, 18, 25.</li>
+<li>Thursdays: day 5, 12, 19, 26.</li>
+<li>Fridays: day 6, 13, 20, 27.</li>
+<li>Saturdays: day 7, 14, 21, 28.</li>
+</ul>
+
+<p>According to the mysterious rule, they must buy the same type of dish on the same day of the week. The choice of the dish to buy for each day of the week is independent to each other. So, for each day of the week, greedily choose the dish whose sum of prices on the above days is the lowest. For example, if we want to determine the total prices of dishes for Tuesdays, find the minimum of (<b>prices[2][j]</b> + <b>prices[9][j]</b> + <b>prices[16][j]</b> + <b>prices[23][j]</b>) for all 0 &le; j &lt; M. Remember that <b>prices</b> is 0-based.</p>
+
+<p>After that, add up the total prices of the dishes they buy for each day of the week. If the total cost is not greater than <b>budget</b>, then the answer to the decision problem is "yes", otherwise "no".</p>
+
+<p>Here is a sample code that implements the idea. It includes a function that decode the prices according to the problem statement. The answer to the decision problem is then ok(D, <b>budget</b>).</p>
+
+<pre>
+{code}
+int decode(char c)
+{
+    if ('0' <= c && c <= '9')
+        return c-'0';
+    if ('A' <= c && c <= 'Z')
+        return c-'A'+10;
+    return c-'a'+36;
+}
+
+bool ok(int D, String[] prices, int budget)
+{
+    int M = prices[0].length();
+    int cost = 0;
+    for (int i = 0; i < 7; i++) // for each day of the week
+    {
+        int best = 0;
+        for (int j = 0; j < M; j++) // for each type of dishes
+        {
+            int cur = 0;
+            for (int d = i; d < D; d += 7) // for each day
+            	cur += decode(prices[d][j]);
+            best = Math.min(best, cur); // choose the lowest sum of prices
+        }
+        cost += best;
+    }
+    return cost <= budget;
+}
+</pre>
+
+<p><b><u>The Original Problem</b></u></p>
+
+<p>How many different answers does the original problem may have? It turns out to be N+1: 0 days, 1 day, 2 days, ..., and N days. Does the problem seem to be easier now? Yes! We now just return the maximum D such that ok(D, <b>budget</b>) returns true, for 0 &le; D &le; N. That's the solution to the original problem.</p>
+
+<p>Since N+1 is a small number, we can iterate for D from N down to 0 and return the first D for which ok(D, <b>budget</b>) returns true. This is a sample iterative solution, used by most contestants.
+
+<pre>
+{code}
+int maxDays(String[] prices, int budget)
+{
+    int N = prices.length;
+    for (int D = N; D >= 1; D--)
+        if (ok(D, prices, budget))
+            return D;
+    return 0;
+}
+</pre>
+
+<p>The complexity of this solution is O(M N^2). Other coders chose to binary search on D to achieve O(M N lg N) complexity, for example, take a look at <a href="http://www.topcoder.com/tc?module=MemberProfile7tab=alg&cr=10574855" class="coderTextRed">Petr</a>'s <a href="http://www.topcoder.com/stat?c=problem_solution&rm=309179&rd=14537&pm=11295&cr=10574855">solution</a>.</p> 
+
+<p>Why can we use binary search here? Because the function ok(D, <b>budget</b>) is monotonic, i.e., if ok(D, <b>budget</b>) is true, the ok(D-1, <b>budget</b>) will be also true. Also, if ok(D, <b>budget</b>) is false, then ok(D+1, <b>budget</b>) must be false. You may read the binary search tutorial <a href="http://www.topcoder.com/tc?module=Static&d1=tutorials&d2=binarySearch">here</a> as a reference.
+
+<p><b><u>Exercises</u></b></p>
+
+<p>You have learned that sometimes a problem becomes much easier when converted into a decision one. Several other problems that use this idea are <a href="http://www.topcoder.com/stat?c=problem_solution&rm=308221&rd=14524&pm=11414&cr=22767798">MinimumLiars</a> and <a href="http://www.topcoder.com/stat?c=problem_statement&pm=10797">Badgers</a>. Try solving them!</p>
+
+<font size="+2"> 
+<b><a href="/stat?c=problem_statement&amp;pm=11289&amp;rd=14537" name="11289">DoubleRoshambo</a></b> 
+</font> 
+<A href="/tc?module=ProblemRatingQuestions&pid=11289"><img src="/i/rate_it.gif" hspace="10" border="0" alt="rate it" /></A> 
+<A HREF="http://forums.topcoder.com/?module=ThreadList&forumID=545692" CLASS="statText"><img src="/i/interface/btn_discuss_it.gif" alt="discuss it" border="0" /></A>
+<br> 
+Used as: Division Two - Level Three: <blockquote><table cellspacing="2"> 
+  <tr> 
+    <td class="bodyText" style="background: #eee;"> 
+      <b>Value</b> 
+    </td> 
+    <td class="bodyText" style="background: #eee;"> 
+      1024 
+    </td> 
+  </tr> 
+  <tr> 
+    <td class="bodyText" style="background: #eee;"> 
+      <b>Submission Rate</b> 
+    </td> 
+    <td class="bodyText" style="background: #eee;"> 
+      185 / 1398 (13.23%) 
+    </td> 
+  </tr> 
+  <tr> 
+    <td class="bodyText" style="background: #eee;"> 
+      <b>Success Rate</b> 
+    </td> 
+    <td class="bodyText" style="background: #eee;"> 
+      89 / 185 (48.11%) 
+    </td> 
+  </tr> 
+  <tr> 
+    <td class="bodyText" style="background: #eee;"> 
+      <b>High Score</b> 
+    </td> 
+    <td class="bodyText" style="background: #eee;"> 
+      <b>akm14889</b> for 958.02 points (7 mins 33 secs) 
+    </td> 
+  </tr> 
+  <tr> 
+    <td class="bodyText" style="background: #eee;"> 
+      <b>Average Score</b> 
+    </td> 
+    <td class="bodyText" style="background: #eee;"> 
+      653.67 (for 89 correct submissions) 
+    </td> 
+  </tr> 
+</table></blockquote> 
+
+<p>This is the last problem in Division 2, which has quite large number of successful submissions, 89.</p>
+
+<p>The problem literally asks for the value of a maximum cost of a perfect matching of a bipartite graph. Construct a graph with 2N nodes, N nodes in the left side (for Ash) and N nodes in the right side (for Elsh). For each pair of nodes (A, E) (A in the left and E in the right), construct an edge with cost equal to the point(s) Ash would score if Ash plays A and Elsh plays E.</p>
+
+<p><b><u>Solution 1. Hungarian Algorithm</u></b></p>
+
+<p><a href="http://www.topcoder.com/tc?module=Static&d1=tutorials&d2=hungarianAlgorithm">Hungarian Algorithm</a> can directly solve minimum cost perfect matching problem. However, because this problem asks the maximum cost, we can fix this by transforming each edge with cost x into an edge with cost (2 - x) (2 is the maximum cost of all edges). Then, apply Hungarian Algorithm to the transformed bipartite graph, and return (2N - result).</p>
+
+<p>Using a pre-written code, this solution is quite fast to implement. <a href="http://www.topcoder.com/tc?module=MemberProfile&tab=alg&cr=20036759" class="coderTextBlue">khayyam</a> did implement Hungarian Algorithm in-contest in his <a href="http://www.topcoder.com/stat?c=problem_solution&rm=309290&rd=14537&pm=11289&cr=20036759">solution</a>!</p>
+
+<p>--</p>
+
+<p>... but wait! It is too cruel to have a Hungarian Algorithm problem in Division 2, isn't it? Yes, it is! The intended solution is actually... </p>
+
+<p><b><u>Solution 2. Greedy</u></b></p>
+
+<p>First, let consider only edges with 1 point. A typical graph of the problem will look like this.</p>
+
+<pre>
+A0    E0
+A1 \/ E1
+A2 /\ E2
+A3    E3
+A4 -- E4
+</pre>
+
+<p>The above ASCII art means that Ash's gestures are {A0, A1, A2, A3, A4} and Elsh's gestures are {E0, E1, E2, E3, E4}. Ash will score 1 point if he plays A0 against Elsh's E3, A3 against her E0, or A4 against her E4.</p>
+
+<p>A very important property of this graph is that each node has at most one edge adjacent to it. Why? Because each gesture has exactly one corresponding gesture against which a player will score 1 point. For example, if Ash plays "PR", the only gesture Elsh has to play that makes Ash score 1 point is "RS". Conversely, if Elsh plays "RS", the only gesture Alsh has to play that makes him score 1 point is "PR".</p>
+
+<p>Because of that property, considering only 1-point edge, Ash's score is exactly the number of edges present in the graph.</p>
+
+<p>Now, let's add the edges with 2 points. Similar to the 1-point edge, each node has at most one 2-point edge adjacent to it. Consider one such edge. Assume that it connects node Ax with node Ey. There are four cases to consider.</p>
+
+<p><b>Case 1</b>. Ax and Ey both don't have any adjacent edges.</p>
+
+<p>It is obvious that it is optimal to match Ax with Ey. Ash scores 2 additional points with this edge.</p>
+
+<p><b>Case 2</b>. Ax has an adjacent edge and Ey doesn't, or Ey has an adjacent edge and Ax doesn't.</p>
+
+<p>It is also optimal to cancel the 1-point edge and take the new 2-point edge. Ash scores 2 - 1 = 1 additional point with this edge.</p>
+
+<p><b>Case 3</b>. Ax and Ey is connected with a 1-point edge.</p>
+
+<p>It is also optimal to replace the old edge with this 2-point edge. Ash scores 2 - 1 = 1 additional points with this edge.</p>
+
+<p><b>Case 4</b>. Ax and Ey both have adjacent edges, and they are not connected with a 1-point edge.</p>
+
+<p>It is harmless to cancel both Ax and Ey's 1-point edges, and rematch Ax with Ey. Ash scores 2 - 2 = 0 additional points, which has no effect to the solution, so we can always do this.</p>
+
+<p><b>Conclusion</b>. Because in any case we can always take 2-point edges without making the solution worse, then a greedy solution exists: take as many as 2-point edges, then after that take as many as 1-point edges. Return 2 * (number of 2-point edges) + (number of 1-point edges). That's it. Take a look at <a href="http://www.topcoder.com/tc?module=MemberProfile&tab=alg&cr=15069914" class="coderTextBlue">cyph1e</a>'s <a href="http://www.topcoder.com/stat?c=problem_solution&rm=309260&rd=14537&pm=11289&cr=15069914">solution</a> that implements this idea concisely.</p>
+
+<p><b><u>Why 1024 points, not 900?</u></b></p>
+
+<p>Since the greedy solution is rather quick to code, I proposed 900 points for this problem. But, <a href="http://www.topcoder.com/tc?module=MemberProfile&cr=22688523" class="coderTextOrange">mystic_tc</a> decided to give 1024 points, because he didn't want to spoil that this problem will be easier than usual. And, it did work: many coders submitted complicated solutions with Hungarian Algorithm or min-cost max-flow, making this round quite interesting to watch. 89 correct solutions for a Division 2 Hard problem is also a reasonable number, he said :)</p> 
+
+<font size="+2"> 
+<b><a href="/stat?c=problem_statement&amp;pm=11288&amp;rd=14537" name="11288">SubFibonacci</a></b> 
+</font> 
+<A href="/tc?module=ProblemRatingQuestions&pid=11288"><img src="/i/rate_it.gif" hspace="10" border="0" alt="rate it" /></A> 
+<A HREF="http://forums.topcoder.com/?module=ThreadList&forumID=545692" CLASS="statText"><img src="/i/interface/btn_discuss_it.gif" alt="discuss it" border="0" /></A>
+<br> 
+Used as: Division One - Level Two: <blockquote><table cellspacing="2"> 
+  <tr> 
+    <td class="bodyText" style="background: #eee;"> 
+      <b>Value</b> 
+    </td> 
+    <td class="bodyText" style="background: #eee;"> 
+      512 
+    </td> 
+  </tr> 
+  <tr> 
+    <td class="bodyText" style="background: #eee;"> 
+      <b>Submission Rate</b> 
+    </td> 
+    <td class="bodyText" style="background: #eee;"> 
+      183 / 857 (21.35%) 
+    </td> 
+  </tr> 
+  <tr> 
+    <td class="bodyText" style="background: #eee;"> 
+      <b>Success Rate</b> 
+    </td> 
+    <td class="bodyText" style="background: #eee;"> 
+      67 / 183 (36.61%) 
+    </td> 
+  </tr> 
+  <tr> 
+    <td class="bodyText" style="background: #eee;"> 
+      <b>High Score</b> 
+    </td> 
+    <td class="bodyText" style="background: #eee;"> 
+      <b>wcao</b> for 398.79 points (16 mins 7 secs) 
+    </td> 
+  </tr> 
+  <tr> 
+    <td class="bodyText" style="background: #eee;"> 
+      <b>Average Score</b> 
+    </td> 
+    <td class="bodyText" style="background: #eee;"> 
+      248.38 (for 67 correct submissions) 
+    </td> 
+  </tr> 
+</table></blockquote> 
+<p>This problem turned out to be harder than we expected. To solve this problem, one requires very good accuracy in implementing the solution, because the example cases are quite weak.</p>
+
+<p>In a nutshell, this problem asks for a longest sequence consisting of two Fibonacci subsequences (for Ash and for Elsh), such that when they are concatenated, the resulting sequence is sorted in ascending order.</p>
+
+<p><b><u>The Easy Cases</b></u></p>
+
+<p>The easy cases are when N, the number of elements of S, is less than or equal to 4. The answer for those cases is N, because any sequence containing 0, 1, 2, 3, or 4 elements is a concatenation of two Fibonacci subsequences.</p>
+
+<p><b><u>The General Cases</b></u></p>
+
+<p>The crucial observation is that the last element of Ash's sequence is less than the first element of Elsh's sequence. The order of elements of S is also not important, so let's sort it in ascending order. Assuming that S is 0-based, then there is an index i (0 &le; i &lt; N) such that all elements of Ash's sequence are not greater than S[i], and all elements of Elsh's sequence are not less than S[i+1]. In other words, we can simplify the problem: find the longest Fibonacci subsequence in S[0 .. i] for Ash, then find the longest Fibonacci subsequence in S[i+1 .. N-1] for Elsh, then concatenate them. The length of the resulting sequence is the answer to the problem.</p>
+
+<p>This is our current sketch solution.</p>
+
+<pre>
+{code}
+public int maxElements(int[] S)
+{
+    int N = S.length;
+    int res = 0;
+    Arrays.sort(S);
+    for (int i = 0; i < N; i++)
+        res = Math.max(res, solve(S, 0, i) + solve(S, i+1, N-1));
+    return res;
+}
+</pre>
+
+<p><b><u>The Simplified Problem</b></u></p>
+
+<p>The problem has been simplified from finding two sequences into finding one sequence. We still need to implement solve(S, low, high), that is, the length of the longest Fibonacci sequence in S[low .. high]. If S[low .. high] consists of n elements, where 0 &le; n &le; 1, then the answer is n (easy case). So, from now on assume that S[low .. high] consists of at least 2 elements.</p>
+
+<p>The Fibonacci subsequence we are looking for (let's call it X) will consist of at least two elements. So, there are at least two elements from S that are present in X. Let's call them A and B, with A being the first element of X and A &lt; B. Given A and B, can we determine all other elements of X? No, unless we know how many elements are there between A and B in the Fibonacci sequence. Let's call it D.</p>
+
+<p>Now, given A, B, and D, we can find the second element of the Fibonacci sequence (right after A). Let's call it Z. How? For example, if D = 2, then the elements of the Fibonacci sequence will be:</p>
+
+<pre>
+A, Z, A + Z, B = A + 2Z
+</pre>
+
+<p>Another example, let D = 5. Then, the elements of the Fibonacci sequence will be:</p>
+
+<pre>
+A, Z, A + Z, A + 2Z, 2A + 3Z, 3A + 5Z, B = 5A + 8Z
+</pre>
+
+<p>In general, if we fix D, then: </p>
+
+<pre>
+B = fib[D]*A + fib[D+1]*Z
+Z = (B - fib[D]*A) / fib[D+1]
+</pre>
+
+<p>where</p>
+
+<pre>
+fib[0] = 1
+fib[1] = 1
+fib[i] = fib[i-1] + fib[i-2], for i >= 2
+</pre>
+
+<p>So, we can obtain Z, the second element of the Fibonacci sequence, by A, B, and D with the above formula. One important thing to notice is that Z must be both integer and positive. Many solutions failed because they allowed Z &le; 0, whereas in the problem statement, Fibonacci sequence is defined only for positive integers.</p>
+
+<p>Having known the first two elements, of course we can obtain the next elements of the Fibonacci sequence. The maximum number of elements of X is the number of elements of the Fibonacci sequence that exist in S. We can iterate one by one over the elements of the Fibonacci sequence (of course, that are less than 100,000,000) and use binary search to check their existence in S.</p>
+
+<p>Using brute-force to choose A, B, and D, now we can obtain the longest sequence of Fibonacci subsequence that exist in S[low .. high]. The maximum D to consider is roughly 39, since it is the number of elements in Fibonacci sequence 1, 2, 3, ... that are less than 100,000,000.</p>
+
+<p>The complexity of this solution is O(N^5 lg N), but in practice it will be much lower than that, because for a pair of A, B, the number of valid D's to make a Fibonacci sequence is few.</p>
+
+<p>This is a sample solution using the idea. It assumes that you have the fib[] table already computed.</p>
+
+<pre>
+{code}
+int solve(int[] S, int low, int high)
+{
+    if (high-low+1 <= 1)
+    	return high-low+1;
+    	
+    int res = 0;
+    for (int A = low; A <= high; A++)
+    for (int B = A+1, B <= high; B++)
+    for (int D = 0; D <= 39; D++)
+    {
+        long test = (long)S[B] - fib[D]*S[A];
+        if (test <= 0 || test % fib[D+1] != 0)
+            continue;
+        
+        int Z = (int)(test / fib[D+1]);
+        int cur = 1;
+        
+        while (Z <= 100000000)
+        {
+            if (Arrays.binarySearch(S, Z) >= 0)
+                cur++;
+            int temp = Z;
+            Z = A + Z;
+            A = temp;
+        }
+        res = Math.max(res, best);
+    }
+    return res;
+}
+</pre>
+
+<p><b><u>Exercises</u></b></p>
+
+<p>Solve the problem in O(N^5), by eliminating the binary search.</p>
+<p>Solve the problem in O(N^4). Hint: precompute the longest Fibonacci sequence starting from i and ending at i, for all 0 &le; i &lt; N.</p>
+<p>Prove that with the current constraint, the maximum D to consider is 18.</p>
+</pre>
+
+<font size="+2"> 
+<b><a href="/stat?c=problem_statement&amp;pm=11290&amp;rd=14537" name="11290">PickAndDelete</a></b> 
+</font> 
+<A href="/tc?module=ProblemRatingQuestions&pid=11290"><img src="/i/rate_it.gif" hspace="10" border="0" alt="rate it" /></A> 
+<A HREF="http://forums.topcoder.com/?module=ThreadList&forumID=545692" CLASS="statText"><img src="/i/interface/btn_discuss_it.gif" alt="discuss it" border="0" /></A>
+<br> 
+Used as: Division One - Level Three: <blockquote><table cellspacing="2"> 
+  <tr> 
+    <td class="bodyText" style="background: #eee;"> 
+      <b>Value</b> 
+    </td> 
+    <td class="bodyText" style="background: #eee;"> 
+      1024 
+    </td> 
+  </tr> 
+  <tr> 
+    <td class="bodyText" style="background: #eee;"> 
+      <b>Submission Rate</b> 
+    </td> 
+    <td class="bodyText" style="background: #eee;"> 
+      28 / 857 (3.27%) 
+    </td> 
+  </tr> 
+  <tr> 
+    <td class="bodyText" style="background: #eee;"> 
+      <b>Success Rate</b> 
+    </td> 
+    <td class="bodyText" style="background: #eee;"> 
+      17 / 28 (60.71%) 
+    </td> 
+  </tr> 
+  <tr> 
+    <td class="bodyText" style="background: #eee;"> 
+      <b>High Score</b> 
+    </td> 
+    <td class="bodyText" style="background: #eee;"> 
+      <b>ACRush</b> for 858.72 points (12 mins 59 secs) 
+    </td> 
+  </tr> 
+  <tr> 
+    <td class="bodyText" style="background: #eee;"> 
+      <b>Average Score</b> 
+    </td> 
+    <td class="bodyText" style="background: #eee;"> 
+      682.98 (for 17 correct submissions) 
+    </td> 
+  </tr> 
+</table></blockquote> 
+<p>Finally, we arrive to the hardest problem in the set! Before I explain the solution, as usual, let's first simplify the problem.</p>
+
+<p>Assume that the String[] S has been parsed into int[] S. For simplicity, I assume that S is indexed 1-based.</p>
+
+<p>Firstly, the order of elements in S is not important, because in each round Ash can pick any elements in his sequence. So, we can assume that S is sorted in ascending order. In round i, it is optimal for Ash to pick the i-th smallest element in his sequence (why?). So, the problem is greatly reduced into:</p>
+
+<p><b><u>The Simplified Problem</u></b></p>
+
+<p>"Count the number of sequences X of N elements, such that when X is sorted in non-decreasing order, 1 &le; X[i] &le; S[i] for all 1 &le; i &le; N."</p>
+
+<p>There are at least two solutions, testers' solution and my solution.</p>
+
+<p><b><u>Testers' Solution. O(N^2 lg N)</u></b></p>
+
+<p>I will first explain the solution used by our testers, <a href="http://www.topcoder.com/tc?module=MemberProfile&tab=alg&cr=10481120" class="coderTextRed">ivan_metelsky</a> and <a href="http://www.topcoder.com/tc?module=MemberProfile&tab=alg&cr=21659750" class="coderTextRed">Chmel_Tolstiy</a>. The below explanation is heavily based on <a href="http://www.topcoder.com/tc?module=MemberProfile&tab=alg&cr=10481120" class="coderTextRed">ivan_metelsky</a>'s explanation.</p>
+
+<p>Let good(n) be the number of sequences X containing n elements, such that when X is sorted in non-decreasing order, X[i] &le; S[i] for all 1 &le; i &le; n.</p>
+
+<p>There are S[n] ^ n sequences X such that when X is sorted, 1 &le; X[n] &le; S[n]. However, some of them are (let's call them) "bad", i.e., when X is sorted, X[i0] &gt; S[i0] for some i0, 1 &le; i0 &lt; n. Consider a bad sequence. If there are several possible values for i0, choose the smallest. It means that we already have (i0 - 1) good elements, and the other (n - i0 + 1) elements are greater than S[i0].</p>
+
+<p>There are good(i0 - 1) sequences having (i0 - 1) good elements, and there are (S[n] - S[i0]) ^ (n - i0 + 1) ways to choose the remaining bad elements. There are C(n, i0 - 1) ways to choose the positions of the bad elements. Therefore, the number of bad sequences, bad(n, i0) is:</p>
+
+<pre>
+bad(n, i0) = good(i0 - 1) * C(n, i0 - 1) * (S[n] - S[i0]) ^ (n - i0 + 1) 
+</pre>
+
+<p>So, finally, the formula for good(n) is:</p>
+
+<pre>
+good(n) = S[n] ^ n - sum {bad(n, i0)} for all 1 &le; i0 &lt; n
+</pre>
+
+<p>These two mutually recursive functions can be computed in O(N^3) if we calculate the powers directly, or in O(N^2 lg N) if we use exponentiation by squaring.</p>
+
+<p>The answer to the problem is then good(N).</p>
+
+<p><b><u>Writer's Solution. O(N^3)</u></b></p>
+<p>As usual, assume that S is sorted. For example, let S contains 4 elements. If we lay out the elements of S, they will look like this.</p>
+
+<pre>
+      D
+      D
+    C C
+    C C
+  B B B
+  B B B
+A A A A
+A A A A
+</pre>
+
+<p>where</p>
+<ul>
+	<li>A = S[1]</li>
+	<li>B = S[2]-S[1]</li>
+	<li>C = S[3]-S[2]</li>
+	<li>D = S[4]-S[3]</li>
+</ul>
+
+<p>The above ASCII art means that the first element is A, the second element is A+B, the third element is A+B+C, and the last element is A+B+C+D.</p>
+
+<p>In a winning sequence, it is clear that:</p>
+
+<ul>
+	<li>It contains nA elements that are between 1 and A, inclusive, where 0 &le; nA &le; 4. Call them of type eA.</li>
+	<li>It contains nB elements that are between A+1 and A+B, inclusive, where 0 &le; nB &le; 3. Call them of type eB.</li>
+	<li>It contains nC elements that are between A+B+1 and A+B+C, inclusive, where 0 &le; nC &le; 2. Call them of type eC.</li>
+	<li>It contains nD elements that are between A+B+C+1 and A+B+C+D, inclusive, where 0 &le; nD &le; 1. Call them of type eD.</li>
+	<li>nA + nB + nC + nD = 4.</li>
+</ul>
+
+<p>Why? Because, for example, if nB = 4, then Ash cannot find a number not greater than S[1], thus loses the game.</p>
+
+<p>In general, in a winning sequence, there are n1 elements of type e1, n2 elements of type e2, ... nN elements of type eN, where 0 &le; ni &le; N-i+1, and n1 + n2 + ... + nN = N. In addition, the types are mutually exclusive, i.e. each element belongs to exactly one type.</p>
+
+<p>Having known the characteristics of a winning sequence, let's count how many of them exist. We will use dynamic programming approach. Let dp[i][j] be the number of winning sequences consisting of j elements and the last type of elements to consider is type ei.</p>
+
+<p>Now, we must set up the recurrence relation. Assume that we are now at the state dp[i][j]. There are j elements remaining and we want put elements of type ei. Let's say we put k elements of type ei. From the list above, it is clear that 0 &le; k &le; N-i+1; furthermore, k &le; j.</p>
+
+<p>Each number of the k elements of type ei can be between S[i-1]+1 and S[i], inclusive (assume that S[0] = 0). So, there are (S[i]-S[i-1])^k ways to put k elements of type ei. There are C(j, k) ways to choose the positions of k elements of type ei in the j elements. After that, we are left with (j-k) elements remaining and the last elements to consider is of type e(i-1). That's exactly dp[i-1][j-k].</p>
+
+<p>So, the recurrence relation for the dynamic programming approach is:</p>
+
+<pre>
+dp[i][j] = sum {(S[i]-S[i-1])^k * C(j, k) * dp[i-1][j-k]} for all 0 <= k <= min(N-i+1, j)
+</pre>
+
+<p>The base cases are, of course:</p>
+
+<pre>
+dp[0][0] = 1
+dp[i][0] = dp[0][i] = 0 for all 0 &lt; i &le; N
+</pre>
+
+<p>If we first precompute the values of (S[i]-S[i-1])^k for all possible values of i and k, and C(j, k) for all possible values of j and k, we can compute the DP table in O(N^3).</p> 
+
+<p>The answer to the problem is simply dp[N][N]. You can view a nice implementation of similar idea in <a href="http://www.topcoder.com/tc?module=MemberProfile&tab=alg&cr=14970299" class="coderTextRed">Egor</a>'s <a href="http://www.topcoder.com/stat?c=problem_solution&rm=309192&rd=14537&pm=11290&cr=14970299">solution</a>.</p> 
+
+<p><b><u>Exercises</u></b></p>
+
+<p>The original problem I proposed to <a href="http://www.topcoder.com/tc?module=MemberProfile&cr=22688523" class="coderTextOrange">mystic_tc</a> is a little bit harder. In the original problem, there are two sequences, S1 and S2 (both have the same number of elements), and we are to return the number of sequences that win against one of S1 or S2 (or both). Try solving this version!</p>
+
+<h2>Afterwords</h2>
+
+<p>So, this is the first paid SRM I wrote. Previously I wrote the Division 2 problems of Member SRM 489. I really hope you enjoyed the match, as well as I enjoyed it in the admin's room :) See you in my next SRMs, if any!</p>

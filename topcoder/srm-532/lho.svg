@@ -1,0 +1,1424 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="744.09448819"
+   height="1052.3622047"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.48.1 r9760"
+   sodipodi:docname="lho.svg"
+   inkscape:export-filename="/home/fushar/Desktop/lho.png"
+   inkscape:export-xdpi="152.92035"
+   inkscape:export-ydpi="152.92035">
+  <defs
+     id="defs4">
+    <marker
+       inkscape:stockid="Arrow1Lstart"
+       orient="auto"
+       refY="0.0"
+       refX="0.0"
+       id="Arrow1Lstart"
+       style="overflow:visible">
+      <path
+         id="path4116"
+         d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z "
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1.0pt;marker-start:none"
+         transform="scale(0.8) translate(12.5,0)" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow1Mend"
+       orient="auto"
+       refY="0.0"
+       refX="0.0"
+       id="Arrow1Mend"
+       style="overflow:visible;">
+      <path
+         id="path4125"
+         d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z "
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1.0pt;marker-start:none;"
+         transform="scale(0.4) rotate(180) translate(10,0)" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow1Sstart"
+       orient="auto"
+       refY="0.0"
+       refX="0.0"
+       id="Arrow1Sstart"
+       style="overflow:visible">
+      <path
+         id="path4128"
+         d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z "
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1.0pt;marker-start:none"
+         transform="scale(0.2) translate(6,0)" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow2Mend"
+       orient="auto"
+       refY="0.0"
+       refX="0.0"
+       id="Arrow2Mend"
+       style="overflow:visible;">
+      <path
+         id="path4143"
+         style="font-size:12.0;fill-rule:evenodd;stroke-width:0.62500000;stroke-linejoin:round;"
+         d="M 8.7185878,4.0337352 L -2.2072895,0.016013256 L 8.7185884,-4.0017078 C 6.9730900,-1.6296469 6.9831476,1.6157441 8.7185878,4.0337352 z "
+         transform="scale(0.6) rotate(180) translate(0,0)" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow2Lend"
+       orient="auto"
+       refY="0.0"
+       refX="0.0"
+       id="Arrow2Lend"
+       style="overflow:visible;">
+      <path
+         id="path4137"
+         style="font-size:12.0;fill-rule:evenodd;stroke-width:0.62500000;stroke-linejoin:round;"
+         d="M 8.7185878,4.0337352 L -2.2072895,0.016013256 L 8.7185884,-4.0017078 C 6.9730900,-1.6296469 6.9831476,1.6157441 8.7185878,4.0337352 z "
+         transform="scale(1.1) rotate(180) translate(1,0)" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow1Send"
+       orient="auto"
+       refY="0.0"
+       refX="0.0"
+       id="Arrow1Send"
+       style="overflow:visible;">
+      <path
+         id="path4131"
+         d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z "
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1.0pt;marker-start:none;"
+         transform="scale(0.2) rotate(180) translate(6,0)" />
+    </marker>
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="1.979899"
+     inkscape:cx="187.10446"
+     inkscape:cy="696.80542"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="true"
+     inkscape:window-width="1366"
+     inkscape:window-height="691"
+     inkscape:window-x="0"
+     inkscape:window-y="24"
+     inkscape:window-maximized="1">
+    <inkscape:grid
+       type="xygrid"
+       id="grid3757" />
+  </sodipodi:namedview>
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <rect
+       style="fill:#ff0000;fill-rule:evenodd;stroke:#ffffff;stroke-width:3.0999999;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       id="rect2985-2-87-1-1-9-11-6-5-0-3"
+       width="40"
+       height="40"
+       x="-155"
+       y="227.36218"
+       inkscape:export-filename="/home/fushar/Programming/Contest/Problem Writing/SRM/532/DengklekPaintingSquares_fig7.png"
+       inkscape:export-xdpi="95.360001"
+       inkscape:export-ydpi="95.360001"
+       transform="scale(-1,1)" />
+    <rect
+       style="fill:#aa8800;fill-rule:evenodd;stroke:#554400;stroke-width:3.09999989999999981;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       id="rect2985"
+       width="40"
+       height="40"
+       x="160"
+       y="292.36218"
+       inkscape:export-filename="/home/fushar/Desktop/DengklekPaintingSquares_fig1.png"
+       inkscape:export-xdpi="95.360001"
+       inkscape:export-ydpi="95.360001" />
+    <rect
+       style="fill:#aa8800;fill-rule:evenodd;stroke:#554400;stroke-width:3.09999989999999981;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       id="rect2985-5"
+       width="40"
+       height="40"
+       x="200"
+       y="292.36218"
+       inkscape:export-filename="/home/fushar/Desktop/DengklekPaintingSquares_fig1.png"
+       inkscape:export-xdpi="95.360001"
+       inkscape:export-ydpi="95.360001" />
+    <rect
+       style="fill:#000000;fill-rule:evenodd;stroke:#554400;stroke-width:3.09999989999999981;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       id="rect2985-2"
+       width="40"
+       height="40"
+       x="240"
+       y="292.36218"
+       inkscape:export-filename="/home/fushar/Desktop/DengklekPaintingSquares_fig1.png"
+       inkscape:export-xdpi="95.360001"
+       inkscape:export-ydpi="95.360001" />
+    <rect
+       style="fill:#000000;fill-rule:evenodd;stroke:#554400;stroke-width:3.09999989999999981;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       id="rect2985-9"
+       width="40"
+       height="40"
+       x="280"
+       y="292.36218"
+       inkscape:export-filename="/home/fushar/Desktop/DengklekPaintingSquares_fig1.png"
+       inkscape:export-xdpi="95.360001"
+       inkscape:export-ydpi="95.360001" />
+    <rect
+       style="fill:#aa8800;fill-rule:evenodd;stroke:#554400;stroke-width:3.09999989999999981;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       id="rect2985-5-3"
+       width="40"
+       height="40"
+       x="320"
+       y="292.36218"
+       inkscape:export-filename="/home/fushar/Desktop/DengklekPaintingSquares_fig1.png"
+       inkscape:export-xdpi="95.360001"
+       inkscape:export-ydpi="95.360001" />
+    <rect
+       style="fill:#aa8800;fill-rule:evenodd;stroke:#554400;stroke-width:3.09999989999999981;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       id="rect2985-2-8"
+       width="40"
+       height="40"
+       x="360"
+       y="292.36218"
+       inkscape:export-filename="/home/fushar/Desktop/DengklekPaintingSquares_fig1.png"
+       inkscape:export-xdpi="95.360001"
+       inkscape:export-ydpi="95.360001" />
+    <rect
+       style="fill:#000000;fill-rule:evenodd;stroke:#554400;stroke-width:3.09999989999999981;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       id="rect2985-93"
+       width="40"
+       height="40"
+       x="160"
+       y="332.36218"
+       inkscape:export-filename="/home/fushar/Desktop/DengklekPaintingSquares_fig1.png"
+       inkscape:export-xdpi="95.360001"
+       inkscape:export-ydpi="95.360001" />
+    <rect
+       style="fill:#aa8800;fill-rule:evenodd;stroke:#554400;stroke-width:3.09999989999999981;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       id="rect2985-5-0"
+       width="40"
+       height="40"
+       x="200"
+       y="332.36218"
+       inkscape:export-filename="/home/fushar/Desktop/DengklekPaintingSquares_fig1.png"
+       inkscape:export-xdpi="95.360001"
+       inkscape:export-ydpi="95.360001" />
+    <rect
+       style="fill:#000000;fill-rule:evenodd;stroke:#554400;stroke-width:3.09999989999999981;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       id="rect2985-2-87"
+       width="40"
+       height="40"
+       x="240"
+       y="332.36218"
+       inkscape:export-filename="/home/fushar/Desktop/DengklekPaintingSquares_fig1.png"
+       inkscape:export-xdpi="95.360001"
+       inkscape:export-ydpi="95.360001" />
+    <rect
+       style="fill:#aa8800;fill-rule:evenodd;stroke:#554400;stroke-width:3.09999989999999981;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       id="rect2985-9-6"
+       width="40"
+       height="40"
+       x="280"
+       y="332.36218"
+       inkscape:export-filename="/home/fushar/Desktop/DengklekPaintingSquares_fig1.png"
+       inkscape:export-xdpi="95.360001"
+       inkscape:export-ydpi="95.360001" />
+    <rect
+       style="fill:#aa8800;fill-rule:evenodd;stroke:#554400;stroke-width:3.09999989999999981;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       id="rect2985-5-3-5"
+       width="40"
+       height="40"
+       x="320"
+       y="332.36218"
+       inkscape:export-filename="/home/fushar/Desktop/DengklekPaintingSquares_fig1.png"
+       inkscape:export-xdpi="95.360001"
+       inkscape:export-ydpi="95.360001" />
+    <rect
+       style="fill:#aa8800;fill-rule:evenodd;stroke:#554400;stroke-width:3.09999989999999981;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       id="rect2985-2-8-2"
+       width="40"
+       height="40"
+       x="360"
+       y="332.36218"
+       inkscape:export-filename="/home/fushar/Desktop/DengklekPaintingSquares_fig1.png"
+       inkscape:export-xdpi="95.360001"
+       inkscape:export-ydpi="95.360001" />
+    <rect
+       style="fill:#aa8800;fill-rule:evenodd;stroke:#554400;stroke-width:3.09999989999999981;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       id="rect2985-97"
+       width="40"
+       height="40"
+       x="160"
+       y="372.36218"
+       inkscape:export-filename="/home/fushar/Desktop/DengklekPaintingSquares_fig1.png"
+       inkscape:export-xdpi="95.360001"
+       inkscape:export-ydpi="95.360001" />
+    <rect
+       style="fill:#aa8800;fill-rule:evenodd;stroke:#554400;stroke-width:3.09999989999999981;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       id="rect2985-5-5"
+       width="40"
+       height="40"
+       x="200"
+       y="372.36218"
+       inkscape:export-filename="/home/fushar/Desktop/DengklekPaintingSquares_fig1.png"
+       inkscape:export-xdpi="95.360001"
+       inkscape:export-ydpi="95.360001" />
+    <rect
+       style="fill:#000000;fill-rule:evenodd;stroke:#554400;stroke-width:3.09999989999999981;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       id="rect2985-2-4"
+       width="40"
+       height="40"
+       x="240"
+       y="372.36218"
+       inkscape:export-filename="/home/fushar/Desktop/DengklekPaintingSquares_fig1.png"
+       inkscape:export-xdpi="95.360001"
+       inkscape:export-ydpi="95.360001" />
+    <rect
+       style="fill:#aa8800;fill-rule:evenodd;stroke:#554400;stroke-width:3.09999989999999981;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       id="rect2985-9-4"
+       width="40"
+       height="40"
+       x="280"
+       y="372.36218"
+       inkscape:export-filename="/home/fushar/Desktop/DengklekPaintingSquares_fig1.png"
+       inkscape:export-xdpi="95.360001"
+       inkscape:export-ydpi="95.360001" />
+    <rect
+       style="fill:#aa8800;fill-rule:evenodd;stroke:#554400;stroke-width:3.09999989999999981;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       id="rect2985-5-3-9"
+       width="40"
+       height="40"
+       x="320"
+       y="372.36218"
+       inkscape:export-filename="/home/fushar/Desktop/DengklekPaintingSquares_fig1.png"
+       inkscape:export-xdpi="95.360001"
+       inkscape:export-ydpi="95.360001" />
+    <rect
+       style="fill:#000000;fill-rule:evenodd;stroke:#554400;stroke-width:3.09999989999999981;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       id="rect2985-2-8-6"
+       width="40"
+       height="40"
+       x="360"
+       y="372.36218"
+       inkscape:export-filename="/home/fushar/Desktop/DengklekPaintingSquares_fig1.png"
+       inkscape:export-xdpi="95.360001"
+       inkscape:export-ydpi="95.360001" />
+    <rect
+       style="fill:#000000;fill-rule:evenodd;stroke:#554400;stroke-width:3.09999989999999981;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       id="rect2985-93-7"
+       width="40"
+       height="40"
+       x="160"
+       y="412.36218"
+       inkscape:export-filename="/home/fushar/Desktop/DengklekPaintingSquares_fig1.png"
+       inkscape:export-xdpi="95.360001"
+       inkscape:export-ydpi="95.360001" />
+    <rect
+       style="fill:#000000;fill-rule:evenodd;stroke:#554400;stroke-width:3.09999989999999981;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       id="rect2985-5-0-2"
+       width="40"
+       height="40"
+       x="200"
+       y="412.36218"
+       inkscape:export-filename="/home/fushar/Desktop/DengklekPaintingSquares_fig1.png"
+       inkscape:export-xdpi="95.360001"
+       inkscape:export-ydpi="95.360001" />
+    <rect
+       style="fill:#aa8800;fill-rule:evenodd;stroke:#554400;stroke-width:3.09999989999999981;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       id="rect2985-2-87-1"
+       width="40"
+       height="40"
+       x="240"
+       y="412.36218"
+       inkscape:export-filename="/home/fushar/Desktop/DengklekPaintingSquares_fig1.png"
+       inkscape:export-xdpi="95.360001"
+       inkscape:export-ydpi="95.360001" />
+    <rect
+       style="fill:#000000;fill-rule:evenodd;stroke:#554400;stroke-width:3.09999989999999981;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       id="rect2985-9-6-0"
+       width="40"
+       height="40"
+       x="280"
+       y="412.36218"
+       inkscape:export-filename="/home/fushar/Desktop/DengklekPaintingSquares_fig1.png"
+       inkscape:export-xdpi="95.360001"
+       inkscape:export-ydpi="95.360001" />
+    <rect
+       style="fill:#000000;fill-rule:evenodd;stroke:#554400;stroke-width:3.09999989999999981;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       id="rect2985-5-3-5-1"
+       width="40"
+       height="40"
+       x="320"
+       y="412.36218"
+       inkscape:export-filename="/home/fushar/Desktop/DengklekPaintingSquares_fig1.png"
+       inkscape:export-xdpi="95.360001"
+       inkscape:export-ydpi="95.360001" />
+    <rect
+       style="fill:#000000;fill-rule:evenodd;stroke:#554400;stroke-width:3.09999989999999981;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       id="rect2985-2-8-2-3"
+       width="40"
+       height="40"
+       x="360"
+       y="412.36218"
+       inkscape:export-filename="/home/fushar/Desktop/DengklekPaintingSquares_fig1.png"
+       inkscape:export-xdpi="95.360001"
+       inkscape:export-ydpi="95.360001" />
+    <rect
+       style="fill:#0000ff;stroke:#ff0000;stroke-width:0;stroke-miterlimit:4;stroke-dasharray:none"
+       id="rect8040"
+       width="20"
+       height="0"
+       x="250"
+       y="432.36218" />
+    <rect
+       style="fill:#000000;fill-rule:evenodd;stroke:#554400;stroke-width:3.09999989999999981;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       id="rect2985-2-87-1-1"
+       width="40"
+       height="40"
+       x="250"
+       y="502.36218"
+       inkscape:export-filename="/home/fushar/Desktop/DengklekPaintingSquares_fig2.png"
+       inkscape:export-xdpi="96.849556"
+       inkscape:export-ydpi="96.849556" />
+    <rect
+       style="fill:#aa8800;fill-rule:evenodd;stroke:#554400;stroke-width:3.09999989999999981;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       id="rect2985-2-87-1-5"
+       width="40"
+       height="40"
+       x="290"
+       y="502.36218"
+       inkscape:export-xdpi="96.849556"
+       inkscape:export-ydpi="96.849556"
+       inkscape:export-filename="/home/fushar/Desktop/DengklekPaintingSquares_fig2.png" />
+    <rect
+       style="fill:#000000;fill-rule:evenodd;stroke:#554400;stroke-width:3.09999989999999981;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       id="rect2985-2-87-1-1-9"
+       width="40"
+       height="40"
+       x="250"
+       y="542.36218"
+       inkscape:export-filename="/home/fushar/Desktop/DengklekPaintingSquares_fig2.png"
+       inkscape:export-xdpi="96.849556"
+       inkscape:export-ydpi="96.849556" />
+    <rect
+       style="fill:#000000;fill-rule:evenodd;stroke:#554400;stroke-width:3.09999989999999981;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       id="rect2985-2-87-1-5-7"
+       width="40"
+       height="40"
+       x="290"
+       y="542.36218"
+       inkscape:export-xdpi="96.849556"
+       inkscape:export-ydpi="96.849556"
+       inkscape:export-filename="/home/fushar/Desktop/DengklekPaintingSquares_fig2.png" />
+    <rect
+       style="fill:#000000;fill-rule:evenodd;stroke:#554400;stroke-width:3.09999989999999981;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       id="rect2985-2-87-1-1-6"
+       width="40"
+       height="40"
+       x="340"
+       y="502.36218"
+       inkscape:export-filename="/home/fushar/Desktop/DengklekPaintingSquares_fig2.png"
+       inkscape:export-xdpi="96.849556"
+       inkscape:export-ydpi="96.849556" />
+    <rect
+       style="fill:#000000;fill-rule:evenodd;stroke:#554400;stroke-width:3.09999989999999981;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       id="rect2985-2-87-1-5-1"
+       width="40"
+       height="40"
+       x="380"
+       y="502.36218"
+       inkscape:export-filename="/home/fushar/Desktop/DengklekPaintingSquares_fig2.png"
+       inkscape:export-xdpi="96.849556"
+       inkscape:export-ydpi="96.849556" />
+    <rect
+       style="fill:#000000;fill-rule:evenodd;stroke:#554400;stroke-width:3.09999989999999981;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       id="rect2985-2-87-1-1-9-0"
+       width="40"
+       height="40"
+       x="340"
+       y="542.36218"
+       inkscape:export-filename="/home/fushar/Desktop/DengklekPaintingSquares_fig2.png"
+       inkscape:export-xdpi="96.849556"
+       inkscape:export-ydpi="96.849556" />
+    <rect
+       style="fill:#aa8800;fill-rule:evenodd;stroke:#554400;stroke-width:3.09999989999999981;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       id="rect2985-2-87-1-5-7-7"
+       width="40"
+       height="40"
+       x="380"
+       y="542.36218"
+       inkscape:export-filename="/home/fushar/Desktop/DengklekPaintingSquares_fig2.png"
+       inkscape:export-xdpi="96.849556"
+       inkscape:export-ydpi="96.849556" />
+    <rect
+       style="fill:#aa8800;fill-rule:evenodd;stroke:#554400;stroke-width:3.09999989999999981;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       id="rect2985-2-87-1-1-7"
+       width="40"
+       height="40"
+       x="160"
+       y="502.36218"
+       inkscape:export-filename="/home/fushar/Desktop/DengklekPaintingSquares_fig2.png"
+       inkscape:export-xdpi="96.849556"
+       inkscape:export-ydpi="96.849556" />
+    <rect
+       style="fill:#000000;fill-rule:evenodd;stroke:#554400;stroke-width:3.09999989999999981;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       id="rect2985-2-87-1-5-3"
+       width="40"
+       height="40"
+       x="200"
+       y="502.36218"
+       inkscape:export-filename="/home/fushar/Desktop/DengklekPaintingSquares_fig2.png"
+       inkscape:export-xdpi="96.849556"
+       inkscape:export-ydpi="96.849556" />
+    <rect
+       style="fill:#000000;fill-rule:evenodd;stroke:#554400;stroke-width:3.09999989999999981;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       id="rect2985-2-87-1-1-9-1"
+       width="40"
+       height="40"
+       x="160"
+       y="542.36218"
+       inkscape:export-filename="/home/fushar/Desktop/DengklekPaintingSquares_fig2.png"
+       inkscape:export-xdpi="96.849556"
+       inkscape:export-ydpi="96.849556" />
+    <rect
+       style="fill:#000000;fill-rule:evenodd;stroke:#554400;stroke-width:3.09999989999999981;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       id="rect2985-2-87-1-5-7-3"
+       width="40"
+       height="40"
+       x="200"
+       y="542.36218"
+       inkscape:export-filename="/home/fushar/Desktop/DengklekPaintingSquares_fig2.png"
+       inkscape:export-xdpi="96.849556"
+       inkscape:export-ydpi="96.849556" />
+    <rect
+       style="fill:#000000;fill-rule:evenodd;stroke:#554400;stroke-width:3.09999989999999981;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       id="rect2985-2-87-1-1-5"
+       width="40"
+       height="40"
+       x="70"
+       y="592.36218"
+       inkscape:export-filename="/home/fushar/Desktop/DengklekPaintingSquares_fig2.png"
+       inkscape:export-xdpi="96.849556"
+       inkscape:export-ydpi="96.849556" />
+    <rect
+       style="fill:#000000;fill-rule:evenodd;stroke:#554400;stroke-width:3.09999989999999981;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       id="rect2985-2-87-1-5-77"
+       width="40"
+       height="40"
+       x="110"
+       y="592.36218"
+       inkscape:export-filename="/home/fushar/Desktop/DengklekPaintingSquares_fig2.png"
+       inkscape:export-xdpi="96.849556"
+       inkscape:export-ydpi="96.849556" />
+    <rect
+       style="fill:#aa8800;fill-rule:evenodd;stroke:#554400;stroke-width:3.09999989999999981;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       id="rect2985-2-87-1-1-9-11"
+       width="40"
+       height="40"
+       x="70"
+       y="632.36218"
+       inkscape:export-filename="/home/fushar/Desktop/DengklekPaintingSquares_fig2.png"
+       inkscape:export-xdpi="96.849556"
+       inkscape:export-ydpi="96.849556" />
+    <rect
+       style="fill:#000000;fill-rule:evenodd;stroke:#554400;stroke-width:3.09999989999999981;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       id="rect2985-2-87-1-5-7-0"
+       width="40"
+       height="40"
+       x="110"
+       y="632.36218"
+       inkscape:export-xdpi="96.849556"
+       inkscape:export-ydpi="96.849556"
+       inkscape:export-filename="/home/fushar/Desktop/DengklekPaintingSquares_fig2.png" />
+    <rect
+       style="fill:#aa8800;fill-rule:evenodd;stroke:#554400;stroke-width:3.09999989999999981;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       id="rect2985-2-87-1-1-8"
+       width="40"
+       height="40"
+       x="160"
+       y="592.36218"
+       inkscape:export-filename="/home/fushar/Desktop/DengklekPaintingSquares_fig2.png"
+       inkscape:export-xdpi="96.849556"
+       inkscape:export-ydpi="96.849556" />
+    <rect
+       style="fill:#000000;fill-rule:evenodd;stroke:#554400;stroke-width:3.09999989999999981;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       id="rect2985-2-87-1-5-74"
+       width="40"
+       height="40"
+       x="200"
+       y="592.36218"
+       inkscape:export-filename="/home/fushar/Desktop/DengklekPaintingSquares_fig2.png"
+       inkscape:export-xdpi="96.849556"
+       inkscape:export-ydpi="96.849556" />
+    <rect
+       style="fill:#000000;fill-rule:evenodd;stroke:#554400;stroke-width:3.09999989999999981;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       id="rect2985-2-87-1-1-9-4"
+       width="40"
+       height="40"
+       x="160"
+       y="632.36218"
+       inkscape:export-filename="/home/fushar/Desktop/DengklekPaintingSquares_fig2.png"
+       inkscape:export-xdpi="96.849556"
+       inkscape:export-ydpi="96.849556" />
+    <rect
+       style="fill:#aa8800;fill-rule:evenodd;stroke:#554400;stroke-width:3.09999989999999981;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       id="rect2985-2-87-1-5-7-03"
+       width="40"
+       height="40"
+       x="200"
+       y="632.36218"
+       inkscape:export-filename="/home/fushar/Desktop/DengklekPaintingSquares_fig2.png"
+       inkscape:export-xdpi="96.849556"
+       inkscape:export-ydpi="96.849556" />
+    <rect
+       style="fill:#000000;fill-rule:evenodd;stroke:#554400;stroke-width:3.09999989999999981;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       id="rect2985-2-87-1-1-96"
+       width="40"
+       height="40"
+       x="250"
+       y="592.36218"
+       inkscape:export-filename="/home/fushar/Desktop/DengklekPaintingSquares_fig2.png"
+       inkscape:export-xdpi="96.849556"
+       inkscape:export-ydpi="96.849556" />
+    <rect
+       style="fill:#aa8800;fill-rule:evenodd;stroke:#554400;stroke-width:3.09999989999999981;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       id="rect2985-2-87-1-5-6"
+       width="40"
+       height="40"
+       x="290"
+       y="592.36218"
+       inkscape:export-filename="/home/fushar/Desktop/DengklekPaintingSquares_fig2.png"
+       inkscape:export-xdpi="96.849556"
+       inkscape:export-ydpi="96.849556" />
+    <rect
+       style="fill:#aa8800;fill-rule:evenodd;stroke:#554400;stroke-width:3.09999989999999981;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       id="rect2985-2-87-1-1-9-2"
+       width="40"
+       height="40"
+       x="250"
+       y="632.36218"
+       inkscape:export-filename="/home/fushar/Desktop/DengklekPaintingSquares_fig2.png"
+       inkscape:export-xdpi="96.849556"
+       inkscape:export-ydpi="96.849556" />
+    <rect
+       style="fill:#000000;fill-rule:evenodd;stroke:#554400;stroke-width:3.09999989999999981;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       id="rect2985-2-87-1-5-7-9"
+       width="40"
+       height="40"
+       x="290"
+       y="632.36218"
+       inkscape:export-filename="/home/fushar/Desktop/DengklekPaintingSquares_fig2.png"
+       inkscape:export-xdpi="96.849556"
+       inkscape:export-ydpi="96.849556" />
+    <rect
+       style="fill:#aa8800;fill-rule:evenodd;stroke:#554400;stroke-width:3.09999989999999981;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       id="rect2985-2-87-1-1-2"
+       width="40"
+       height="40"
+       x="340"
+       y="592.36218"
+       inkscape:export-filename="/home/fushar/Desktop/DengklekPaintingSquares_fig2.png"
+       inkscape:export-xdpi="96.849556"
+       inkscape:export-ydpi="96.849556" />
+    <rect
+       style="fill:#aa8800;fill-rule:evenodd;stroke:#554400;stroke-width:3.09999989999999981;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       id="rect2985-2-87-1-5-66"
+       width="40"
+       height="40"
+       x="380"
+       y="592.36218"
+       inkscape:export-filename="/home/fushar/Desktop/DengklekPaintingSquares_fig2.png"
+       inkscape:export-xdpi="96.849556"
+       inkscape:export-ydpi="96.849556" />
+    <rect
+       style="fill:#aa8800;fill-rule:evenodd;stroke:#554400;stroke-width:3.09999989999999981;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       id="rect2985-2-87-1-1-9-6"
+       width="40"
+       height="40"
+       x="340"
+       y="632.36218"
+       inkscape:export-filename="/home/fushar/Desktop/DengklekPaintingSquares_fig2.png"
+       inkscape:export-xdpi="96.849556"
+       inkscape:export-ydpi="96.849556" />
+    <rect
+       style="fill:#aa8800;fill-rule:evenodd;stroke:#554400;stroke-width:3.09999989999999981;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       id="rect2985-2-87-1-5-7-8"
+       width="40"
+       height="40"
+       x="380"
+       y="632.36218"
+       inkscape:export-filename="/home/fushar/Desktop/DengklekPaintingSquares_fig2.png"
+       inkscape:export-xdpi="96.849556"
+       inkscape:export-ydpi="96.849556" />
+    <rect
+       style="fill:#000000;fill-rule:evenodd;stroke:#554400;stroke-width:3.09999989999999981;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       id="rect2985-2-87-1-1-5-9"
+       width="40"
+       height="40"
+       x="70"
+       y="502.36218"
+       inkscape:export-filename="/home/fushar/Desktop/DengklekPaintingSquares_fig2.png"
+       inkscape:export-xdpi="96.849556"
+       inkscape:export-ydpi="96.849556" />
+    <rect
+       style="fill:#000000;fill-rule:evenodd;stroke:#554400;stroke-width:3.09999989999999981;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       id="rect2985-2-87-1-5-77-6"
+       width="40"
+       height="40"
+       x="110"
+       y="502.36218"
+       inkscape:export-filename="/home/fushar/Desktop/DengklekPaintingSquares_fig2.png"
+       inkscape:export-xdpi="96.849556"
+       inkscape:export-ydpi="96.849556" />
+    <rect
+       style="fill:#000000;fill-rule:evenodd;stroke:#554400;stroke-width:3.09999989999999981;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       id="rect2985-2-87-1-1-9-11-6"
+       width="40"
+       height="40"
+       x="70"
+       y="542.36218"
+       inkscape:export-filename="/home/fushar/Desktop/DengklekPaintingSquares_fig2.png"
+       inkscape:export-xdpi="96.849556"
+       inkscape:export-ydpi="96.849556" />
+    <rect
+       style="fill:#000000;fill-rule:evenodd;stroke:#554400;stroke-width:3.09999989999999981;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       id="rect2985-2-87-1-5-7-0-7"
+       width="40"
+       height="40"
+       x="110"
+       y="542.36218"
+       inkscape:export-xdpi="96.849556"
+       inkscape:export-ydpi="96.849556"
+       inkscape:export-filename="/home/fushar/Desktop/DengklekPaintingSquares_fig2.png" />
+    <rect
+       style="fill:#aa8800;fill-rule:evenodd;stroke:#554400;stroke-width:3.09999989999999981;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       id="rect2985-2-87-1-1-5-9-4"
+       width="40"
+       height="40"
+       x="120"
+       y="292.36218"
+       inkscape:export-filename="/home/fushar/Desktop/DengklekPaintingSquares_fig1.png"
+       inkscape:export-xdpi="95.360001"
+       inkscape:export-ydpi="95.360001" />
+    <rect
+       style="fill:#aa8800;fill-rule:evenodd;stroke:#554400;stroke-width:3.09999989999999981;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       id="rect2985-2-87-1-1-9-11-6-3"
+       width="40"
+       height="40"
+       x="120"
+       y="332.36218"
+       inkscape:export-filename="/home/fushar/Desktop/DengklekPaintingSquares_fig1.png"
+       inkscape:export-xdpi="95.360001"
+       inkscape:export-ydpi="95.360001" />
+    <rect
+       style="fill:#aa8800;fill-rule:evenodd;stroke:#554400;stroke-width:3.09999989999999981;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       id="rect2985-2-87-1-1-5-9-9"
+       width="40"
+       height="40"
+       x="120"
+       y="372.36218"
+       inkscape:export-filename="/home/fushar/Desktop/DengklekPaintingSquares_fig1.png"
+       inkscape:export-xdpi="95.360001"
+       inkscape:export-ydpi="95.360001" />
+    <rect
+       style="fill:#000000;fill-rule:evenodd;stroke:#554400;stroke-width:3.09999989999999981;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       id="rect2985-2-87-1-1-9-11-6-5"
+       width="40"
+       height="40"
+       x="120"
+       y="412.36218"
+       inkscape:export-filename="/home/fushar/Desktop/DengklekPaintingSquares_fig1.png"
+       inkscape:export-xdpi="95.360001"
+       inkscape:export-ydpi="95.360001" />
+    <rect
+       style="fill:#ffffff;fill-rule:evenodd;stroke:#554400;stroke-width:3.09999989999999981;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       id="rect2985-91"
+       width="40"
+       height="40"
+       x="155"
+       y="67.362183"
+       inkscape:export-filename="/home/fushar/Programming/Contest/Problem Writing/SRM/532/DengklekPaintingSquares_fig7.png"
+       inkscape:export-xdpi="95.360001"
+       inkscape:export-ydpi="95.360001" />
+    <rect
+       style="fill:#ffffff;fill-rule:evenodd;stroke:#554400;stroke-width:3.09999989999999981;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       id="rect2985-5-7"
+       width="40"
+       height="40"
+       x="195"
+       y="67.362183"
+       inkscape:export-filename="/home/fushar/Programming/Contest/Problem Writing/SRM/532/DengklekPaintingSquares_fig7.png"
+       inkscape:export-xdpi="95.360001"
+       inkscape:export-ydpi="95.360001" />
+    <rect
+       style="fill:#ffffff;fill-rule:evenodd;stroke:#554400;stroke-width:3.09999989999999981;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       id="rect2985-2-7"
+       width="40"
+       height="40"
+       x="235"
+       y="67.362183"
+       inkscape:export-filename="/home/fushar/Programming/Contest/Problem Writing/SRM/532/DengklekPaintingSquares_fig7.png"
+       inkscape:export-xdpi="95.360001"
+       inkscape:export-ydpi="95.360001" />
+    <rect
+       style="fill:#ffffff;fill-rule:evenodd;stroke:#554400;stroke-width:3.09999989999999981;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       id="rect2985-9-1"
+       width="40"
+       height="40"
+       x="275"
+       y="67.362183"
+       inkscape:export-filename="/home/fushar/Programming/Contest/Problem Writing/SRM/532/DengklekPaintingSquares_fig7.png"
+       inkscape:export-xdpi="95.360001"
+       inkscape:export-ydpi="95.360001" />
+    <rect
+       style="fill:#ffffff;fill-rule:evenodd;stroke:#554400;stroke-width:3.09999989999999981;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       id="rect2985-5-3-1"
+       width="40"
+       height="40"
+       x="315"
+       y="67.362183"
+       inkscape:export-filename="/home/fushar/Programming/Contest/Problem Writing/SRM/532/DengklekPaintingSquares_fig7.png"
+       inkscape:export-xdpi="95.360001"
+       inkscape:export-ydpi="95.360001" />
+    <rect
+       style="fill:#ffffff;fill-rule:evenodd;stroke:#554400;stroke-width:3.09999989999999981;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       id="rect2985-2-8-5"
+       width="40"
+       height="40"
+       x="355"
+       y="67.362183"
+       inkscape:export-filename="/home/fushar/Programming/Contest/Problem Writing/SRM/532/DengklekPaintingSquares_fig7.png"
+       inkscape:export-xdpi="95.360001"
+       inkscape:export-ydpi="95.360001" />
+    <rect
+       style="fill:#ffffff;fill-rule:evenodd;stroke:#554400;stroke-width:3.09999989999999981;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       id="rect2985-93-9"
+       width="40"
+       height="40"
+       x="155"
+       y="107.36218"
+       inkscape:export-filename="/home/fushar/Programming/Contest/Problem Writing/SRM/532/DengklekPaintingSquares_fig7.png"
+       inkscape:export-xdpi="95.360001"
+       inkscape:export-ydpi="95.360001" />
+    <rect
+       style="fill:#ffffff;fill-rule:evenodd;stroke:#554400;stroke-width:3.09999989999999981;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       id="rect2985-5-0-7"
+       width="40"
+       height="40"
+       x="195"
+       y="107.36218"
+       inkscape:export-filename="/home/fushar/Programming/Contest/Problem Writing/SRM/532/DengklekPaintingSquares_fig7.png"
+       inkscape:export-xdpi="95.360001"
+       inkscape:export-ydpi="95.360001" />
+    <rect
+       style="fill:#ffffff;fill-rule:evenodd;stroke:#554400;stroke-width:3.09999989999999981;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       id="rect2985-2-87-7"
+       width="40"
+       height="40"
+       x="235"
+       y="107.36218"
+       inkscape:export-filename="/home/fushar/Programming/Contest/Problem Writing/SRM/532/DengklekPaintingSquares_fig7.png"
+       inkscape:export-xdpi="95.360001"
+       inkscape:export-ydpi="95.360001" />
+    <rect
+       style="fill:#ffffff;fill-rule:evenodd;stroke:#554400;stroke-width:3.09999989999999981;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       id="rect2985-9-6-6"
+       width="40"
+       height="40"
+       x="275"
+       y="107.36218"
+       inkscape:export-filename="/home/fushar/Programming/Contest/Problem Writing/SRM/532/DengklekPaintingSquares_fig7.png"
+       inkscape:export-xdpi="95.360001"
+       inkscape:export-ydpi="95.360001" />
+    <rect
+       style="fill:#ffffff;fill-rule:evenodd;stroke:#554400;stroke-width:3.09999989999999981;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       id="rect2985-5-3-5-7"
+       width="40"
+       height="40"
+       x="315"
+       y="107.36218"
+       inkscape:export-filename="/home/fushar/Programming/Contest/Problem Writing/SRM/532/DengklekPaintingSquares_fig7.png"
+       inkscape:export-xdpi="95.360001"
+       inkscape:export-ydpi="95.360001" />
+    <rect
+       style="fill:#ffffff;fill-rule:evenodd;stroke:#554400;stroke-width:3.09999989999999981;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       id="rect2985-2-8-2-36"
+       width="40"
+       height="40"
+       x="355"
+       y="107.36218"
+       inkscape:export-filename="/home/fushar/Programming/Contest/Problem Writing/SRM/532/DengklekPaintingSquares_fig7.png"
+       inkscape:export-xdpi="95.360001"
+       inkscape:export-ydpi="95.360001" />
+    <rect
+       style="fill:#ffffff;fill-rule:evenodd;stroke:#554400;stroke-width:3.09999989999999981;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       id="rect2985-97-5"
+       width="40"
+       height="40"
+       x="155"
+       y="147.36218"
+       inkscape:export-filename="/home/fushar/Programming/Contest/Problem Writing/SRM/532/DengklekPaintingSquares_fig7.png"
+       inkscape:export-xdpi="95.360001"
+       inkscape:export-ydpi="95.360001" />
+    <rect
+       style="fill:#ffffff;fill-rule:evenodd;stroke:#554400;stroke-width:3.09999989999999981;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       id="rect2985-5-5-6"
+       width="40"
+       height="40"
+       x="195"
+       y="147.36218"
+       inkscape:export-filename="/home/fushar/Programming/Contest/Problem Writing/SRM/532/DengklekPaintingSquares_fig7.png"
+       inkscape:export-xdpi="95.360001"
+       inkscape:export-ydpi="95.360001" />
+    <rect
+       style="fill:#ffffff;fill-rule:evenodd;stroke:#554400;stroke-width:3.09999989999999981;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       id="rect2985-2-4-3"
+       width="40"
+       height="40"
+       x="235"
+       y="147.36218"
+       inkscape:export-filename="/home/fushar/Programming/Contest/Problem Writing/SRM/532/DengklekPaintingSquares_fig7.png"
+       inkscape:export-xdpi="95.360001"
+       inkscape:export-ydpi="95.360001" />
+    <rect
+       style="fill:#ffffff;fill-rule:evenodd;stroke:#554400;stroke-width:3.09999989999999981;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       id="rect2985-9-4-9"
+       width="40"
+       height="40"
+       x="275"
+       y="147.36218"
+       inkscape:export-filename="/home/fushar/Programming/Contest/Problem Writing/SRM/532/DengklekPaintingSquares_fig7.png"
+       inkscape:export-xdpi="95.360001"
+       inkscape:export-ydpi="95.360001" />
+    <rect
+       style="fill:#ffffff;fill-rule:evenodd;stroke:#554400;stroke-width:3.09999989999999981;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       id="rect2985-5-3-9-4"
+       width="40"
+       height="40"
+       x="315"
+       y="147.36218"
+       inkscape:export-filename="/home/fushar/Programming/Contest/Problem Writing/SRM/532/DengklekPaintingSquares_fig7.png"
+       inkscape:export-xdpi="95.360001"
+       inkscape:export-ydpi="95.360001" />
+    <rect
+       style="fill:#ffffff;fill-rule:evenodd;stroke:#554400;stroke-width:3.09999989999999981;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       id="rect2985-2-8-6-8"
+       width="40"
+       height="40"
+       x="355"
+       y="147.36218"
+       inkscape:export-filename="/home/fushar/Programming/Contest/Problem Writing/SRM/532/DengklekPaintingSquares_fig7.png"
+       inkscape:export-xdpi="95.360001"
+       inkscape:export-ydpi="95.360001" />
+    <rect
+       style="fill:#808080;fill-rule:evenodd;stroke:#554400;stroke-width:3.09999989999999981;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       id="rect2985-93-7-1"
+       width="40"
+       height="40"
+       x="155"
+       y="187.36218"
+       inkscape:export-filename="/home/fushar/Programming/Contest/Problem Writing/SRM/532/DengklekPaintingSquares_fig7.png"
+       inkscape:export-xdpi="95.360001"
+       inkscape:export-ydpi="95.360001" />
+    <rect
+       style="fill:#808080;fill-rule:evenodd;stroke:#554400;stroke-width:3.09999989999999981;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       id="rect2985-5-0-2-2"
+       width="40"
+       height="40"
+       x="195"
+       y="187.36218"
+       inkscape:export-filename="/home/fushar/Programming/Contest/Problem Writing/SRM/532/DengklekPaintingSquares_fig7.png"
+       inkscape:export-xdpi="95.360001"
+       inkscape:export-ydpi="95.360001" />
+    <rect
+       style="fill:#808080;fill-rule:evenodd;stroke:#554400;stroke-width:3.09999989999999981;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       id="rect2985-2-87-1-9"
+       width="40"
+       height="40"
+       x="235"
+       y="187.36218"
+       inkscape:export-filename="/home/fushar/Programming/Contest/Problem Writing/SRM/532/DengklekPaintingSquares_fig7.png"
+       inkscape:export-xdpi="95.360001"
+       inkscape:export-ydpi="95.360001" />
+    <rect
+       style="fill:#808080;fill-rule:evenodd;stroke:#554400;stroke-width:3.09999989999999981;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       id="rect2985-9-6-0-3"
+       width="40"
+       height="40"
+       x="275"
+       y="187.36218"
+       inkscape:export-filename="/home/fushar/Programming/Contest/Problem Writing/SRM/532/DengklekPaintingSquares_fig7.png"
+       inkscape:export-xdpi="95.360001"
+       inkscape:export-ydpi="95.360001" />
+    <rect
+       style="fill:#808080;fill-rule:evenodd;stroke:#554400;stroke-width:3.09999989999999981;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       id="rect2985-5-3-5-1-9"
+       width="40"
+       height="40"
+       x="315"
+       y="187.36218"
+       inkscape:export-filename="/home/fushar/Programming/Contest/Problem Writing/SRM/532/DengklekPaintingSquares_fig7.png"
+       inkscape:export-xdpi="95.360001"
+       inkscape:export-ydpi="95.360001" />
+    <rect
+       style="fill:#808080;fill-rule:evenodd;stroke:#554400;stroke-width:3.09999989999999981;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       id="rect2985-2-8-2-3-0"
+       width="40"
+       height="40"
+       x="355"
+       y="187.36218"
+       inkscape:export-filename="/home/fushar/Programming/Contest/Problem Writing/SRM/532/DengklekPaintingSquares_fig7.png"
+       inkscape:export-xdpi="95.360001"
+       inkscape:export-ydpi="95.360001" />
+    <rect
+       style="fill:#ffffff;fill-rule:evenodd;stroke:#554400;stroke-width:3.09999989999999981;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       id="rect2985-2-87-1-1-5-9-4-8"
+       width="40"
+       height="40"
+       x="115"
+       y="67.362183"
+       inkscape:export-filename="/home/fushar/Programming/Contest/Problem Writing/SRM/532/DengklekPaintingSquares_fig7.png"
+       inkscape:export-xdpi="95.360001"
+       inkscape:export-ydpi="95.360001" />
+    <rect
+       style="fill:#ffffff;fill-rule:evenodd;stroke:#554400;stroke-width:3.09999989999999981;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       id="rect2985-2-87-1-1-9-11-6-3-8"
+       width="40"
+       height="40"
+       x="115"
+       y="107.36218"
+       inkscape:export-filename="/home/fushar/Programming/Contest/Problem Writing/SRM/532/DengklekPaintingSquares_fig7.png"
+       inkscape:export-xdpi="95.360001"
+       inkscape:export-ydpi="95.360001" />
+    <rect
+       style="fill:#ffffff;fill-rule:evenodd;stroke:#554400;stroke-width:3.09999989999999981;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       id="rect2985-2-87-1-1-5-9-9-5"
+       width="40"
+       height="40"
+       x="115"
+       y="147.36218"
+       inkscape:export-filename="/home/fushar/Programming/Contest/Problem Writing/SRM/532/DengklekPaintingSquares_fig7.png"
+       inkscape:export-xdpi="95.360001"
+       inkscape:export-ydpi="95.360001" />
+    <rect
+       style="fill:#808080;fill-rule:evenodd;stroke:#554400;stroke-width:3.09999989999999981;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       id="rect2985-2-87-1-1-9-11-6-5-0"
+       width="40"
+       height="40"
+       x="115"
+       y="187.36218"
+       inkscape:export-filename="/home/fushar/Programming/Contest/Problem Writing/SRM/532/DengklekPaintingSquares_fig7.png"
+       inkscape:export-xdpi="95.360001"
+       inkscape:export-ydpi="95.360001" />
+    <rect
+       style="fill:#ffffff;fill-rule:evenodd;stroke:#554400;stroke-width:3.0999999;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       id="rect2985-91-9"
+       width="40"
+       height="40"
+       x="145"
+       y="717.36218"
+       inkscape:export-filename="/home/fushar/Programming/Contest/Problem Writing/SRM/532/DengklekPaintingSquares_fig3.png"
+       inkscape:export-xdpi="95.360001"
+       inkscape:export-ydpi="95.360001" />
+    <rect
+       style="fill:#ffffff;fill-rule:evenodd;stroke:#554400;stroke-width:3.0999999;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       id="rect2985-5-7-9"
+       width="40"
+       height="40"
+       x="185"
+       y="717.36218"
+       inkscape:export-filename="/home/fushar/Programming/Contest/Problem Writing/SRM/532/DengklekPaintingSquares_fig3.png"
+       inkscape:export-xdpi="95.360001"
+       inkscape:export-ydpi="95.360001" />
+    <rect
+       style="fill:#ffffff;fill-rule:evenodd;stroke:#554400;stroke-width:3.0999999;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       id="rect2985-2-7-3"
+       width="40"
+       height="40"
+       x="225"
+       y="717.36218"
+       inkscape:export-filename="/home/fushar/Programming/Contest/Problem Writing/SRM/532/DengklekPaintingSquares_fig3.png"
+       inkscape:export-xdpi="95.360001"
+       inkscape:export-ydpi="95.360001" />
+    <rect
+       style="fill:#ffffff;fill-rule:evenodd;stroke:#554400;stroke-width:3.0999999;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       id="rect2985-9-1-2"
+       width="40"
+       height="40"
+       x="265"
+       y="717.36218"
+       inkscape:export-filename="/home/fushar/Programming/Contest/Problem Writing/SRM/532/DengklekPaintingSquares_fig3.png"
+       inkscape:export-xdpi="95.360001"
+       inkscape:export-ydpi="95.360001" />
+    <rect
+       style="fill:#ffffff;fill-rule:evenodd;stroke:#554400;stroke-width:3.0999999;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       id="rect2985-5-3-1-4"
+       width="40"
+       height="40"
+       x="305"
+       y="717.36218"
+       inkscape:export-filename="/home/fushar/Programming/Contest/Problem Writing/SRM/532/DengklekPaintingSquares_fig3.png"
+       inkscape:export-xdpi="95.360001"
+       inkscape:export-ydpi="95.360001" />
+    <rect
+       style="fill:#ffffff;fill-rule:evenodd;stroke:#554400;stroke-width:3.0999999;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       id="rect2985-2-8-5-3"
+       width="40"
+       height="40"
+       x="345"
+       y="717.36218"
+       inkscape:export-filename="/home/fushar/Programming/Contest/Problem Writing/SRM/532/DengklekPaintingSquares_fig3.png"
+       inkscape:export-xdpi="95.360001"
+       inkscape:export-ydpi="95.360001" />
+    <rect
+       style="fill:#ffffff;fill-rule:evenodd;stroke:#554400;stroke-width:3.0999999;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       id="rect2985-93-9-7"
+       width="40"
+       height="40"
+       x="145"
+       y="757.36218"
+       inkscape:export-filename="/home/fushar/Programming/Contest/Problem Writing/SRM/532/DengklekPaintingSquares_fig3.png"
+       inkscape:export-xdpi="95.360001"
+       inkscape:export-ydpi="95.360001" />
+    <rect
+       style="fill:#ffffff;fill-rule:evenodd;stroke:#554400;stroke-width:3.0999999;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       id="rect2985-5-0-7-1"
+       width="40"
+       height="40"
+       x="185"
+       y="757.36218"
+       inkscape:export-filename="/home/fushar/Programming/Contest/Problem Writing/SRM/532/DengklekPaintingSquares_fig3.png"
+       inkscape:export-xdpi="95.360001"
+       inkscape:export-ydpi="95.360001" />
+    <rect
+       style="fill:#ffffff;fill-rule:evenodd;stroke:#554400;stroke-width:3.09999989999999981;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       id="rect2985-2-87-7-2"
+       width="40"
+       height="40"
+       x="225"
+       y="757.36218"
+       inkscape:export-filename="/home/fushar/Programming/Contest/Problem Writing/SRM/532/DengklekPaintingSquares_fig3.png"
+       inkscape:export-xdpi="95.360001"
+       inkscape:export-ydpi="95.360001" />
+    <rect
+       style="fill:#808080;fill-rule:evenodd;stroke:#554400;stroke-width:3.0999999;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       id="rect2985-9-6-6-2"
+       width="40"
+       height="40"
+       x="265"
+       y="757.36218"
+       inkscape:export-filename="/home/fushar/Programming/Contest/Problem Writing/SRM/532/DengklekPaintingSquares_fig3.png"
+       inkscape:export-xdpi="95.360001"
+       inkscape:export-ydpi="95.360001" />
+    <rect
+       style="fill:#808080;fill-rule:evenodd;stroke:#554400;stroke-width:3.0999999;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       id="rect2985-5-3-5-7-0"
+       width="40"
+       height="40"
+       x="305"
+       y="757.36218"
+       inkscape:export-filename="/home/fushar/Programming/Contest/Problem Writing/SRM/532/DengklekPaintingSquares_fig3.png"
+       inkscape:export-xdpi="95.360001"
+       inkscape:export-ydpi="95.360001" />
+    <rect
+       style="fill:#808080;fill-rule:evenodd;stroke:#554400;stroke-width:3.0999999;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       id="rect2985-2-8-2-36-2"
+       width="40"
+       height="40"
+       x="345"
+       y="757.36218"
+       inkscape:export-filename="/home/fushar/Programming/Contest/Problem Writing/SRM/532/DengklekPaintingSquares_fig3.png"
+       inkscape:export-xdpi="95.360001"
+       inkscape:export-ydpi="95.360001" />
+    <rect
+       style="fill:#808080;fill-rule:evenodd;stroke:#554400;stroke-width:3.0999999;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       id="rect2985-97-5-1"
+       width="40"
+       height="40"
+       x="145"
+       y="797.36218"
+       inkscape:export-filename="/home/fushar/Programming/Contest/Problem Writing/SRM/532/DengklekPaintingSquares_fig3.png"
+       inkscape:export-xdpi="95.360001"
+       inkscape:export-ydpi="95.360001" />
+    <rect
+       style="fill:#808080;fill-rule:evenodd;stroke:#554400;stroke-width:3.0999999;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       id="rect2985-5-5-6-7"
+       width="40"
+       height="40"
+       x="185"
+       y="797.36218"
+       inkscape:export-filename="/home/fushar/Programming/Contest/Problem Writing/SRM/532/DengklekPaintingSquares_fig3.png"
+       inkscape:export-xdpi="95.360001"
+       inkscape:export-ydpi="95.360001" />
+    <rect
+       style="fill:#808080;fill-rule:evenodd;stroke:#554400;stroke-width:3.09999989999999981;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       id="rect2985-2-4-3-5"
+       width="40"
+       height="40"
+       x="225"
+       y="797.36218"
+       inkscape:export-filename="/home/fushar/Programming/Contest/Problem Writing/SRM/532/DengklekPaintingSquares_fig3.png"
+       inkscape:export-xdpi="95.360001"
+       inkscape:export-ydpi="95.360001" />
+    <rect
+       style="fill:#ff0000;fill-rule:evenodd;stroke:#554400;stroke-width:3.09999989999999981;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       id="rect2985-9-4-9-1"
+       width="40"
+       height="40"
+       x="265"
+       y="797.36218"
+       inkscape:export-filename="/home/fushar/Programming/Contest/Problem Writing/SRM/532/DengklekPaintingSquares_fig3.png"
+       inkscape:export-xdpi="95.360001"
+       inkscape:export-ydpi="95.360001" />
+    <rect
+       style="fill:#000000;fill-rule:evenodd;stroke:#554400;stroke-width:3.0999999;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       id="rect2985-5-3-9-4-7"
+       width="40"
+       height="40"
+       x="305"
+       y="797.36218"
+       inkscape:export-filename="/home/fushar/Programming/Contest/Problem Writing/SRM/532/DengklekPaintingSquares_fig3.png"
+       inkscape:export-xdpi="95.360001"
+       inkscape:export-ydpi="95.360001" />
+    <rect
+       style="fill:#000000;fill-rule:evenodd;stroke:#554400;stroke-width:3.0999999;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       id="rect2985-2-8-6-8-4"
+       width="40"
+       height="40"
+       x="345"
+       y="797.36218"
+       inkscape:export-filename="/home/fushar/Programming/Contest/Problem Writing/SRM/532/DengklekPaintingSquares_fig3.png"
+       inkscape:export-xdpi="95.360001"
+       inkscape:export-ydpi="95.360001" />
+    <rect
+       style="fill:#000000;fill-rule:evenodd;stroke:#554400;stroke-width:3.0999999;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       id="rect2985-93-7-1-1"
+       width="40"
+       height="40"
+       x="145"
+       y="837.36218"
+       inkscape:export-filename="/home/fushar/Programming/Contest/Problem Writing/SRM/532/DengklekPaintingSquares_fig3.png"
+       inkscape:export-xdpi="95.360001"
+       inkscape:export-ydpi="95.360001" />
+    <rect
+       style="fill:#000000;fill-rule:evenodd;stroke:#554400;stroke-width:3.0999999;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       id="rect2985-5-0-2-2-7"
+       width="40"
+       height="40"
+       x="185"
+       y="837.36218"
+       inkscape:export-filename="/home/fushar/Programming/Contest/Problem Writing/SRM/532/DengklekPaintingSquares_fig3.png"
+       inkscape:export-xdpi="95.360001"
+       inkscape:export-ydpi="95.360001" />
+    <rect
+       style="fill:#000000;fill-rule:evenodd;stroke:#554400;stroke-width:3.0999999;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       id="rect2985-2-87-1-9-1"
+       width="40"
+       height="40"
+       x="225"
+       y="837.36218"
+       inkscape:export-filename="/home/fushar/Programming/Contest/Problem Writing/SRM/532/DengklekPaintingSquares_fig3.png"
+       inkscape:export-xdpi="95.360001"
+       inkscape:export-ydpi="95.360001" />
+    <rect
+       style="fill:#000000;fill-rule:evenodd;stroke:#554400;stroke-width:3.0999999;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       id="rect2985-9-6-0-3-1"
+       width="40"
+       height="40"
+       x="265"
+       y="837.36218"
+       inkscape:export-filename="/home/fushar/Programming/Contest/Problem Writing/SRM/532/DengklekPaintingSquares_fig3.png"
+       inkscape:export-xdpi="95.360001"
+       inkscape:export-ydpi="95.360001" />
+    <rect
+       style="fill:#000000;fill-rule:evenodd;stroke:#554400;stroke-width:3.0999999;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       id="rect2985-5-3-5-1-9-1"
+       width="40"
+       height="40"
+       x="305"
+       y="837.36218"
+       inkscape:export-filename="/home/fushar/Programming/Contest/Problem Writing/SRM/532/DengklekPaintingSquares_fig3.png"
+       inkscape:export-xdpi="95.360001"
+       inkscape:export-ydpi="95.360001" />
+    <rect
+       style="fill:#000000;fill-rule:evenodd;stroke:#554400;stroke-width:3.0999999;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       id="rect2985-2-8-2-3-0-7"
+       width="40"
+       height="40"
+       x="345"
+       y="837.36218"
+       inkscape:export-filename="/home/fushar/Programming/Contest/Problem Writing/SRM/532/DengklekPaintingSquares_fig3.png"
+       inkscape:export-xdpi="95.360001"
+       inkscape:export-ydpi="95.360001" />
+    <rect
+       style="fill:#ffffff;fill-rule:evenodd;stroke:#554400;stroke-width:3.0999999;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       id="rect2985-2-87-1-1-5-9-4-8-0"
+       width="40"
+       height="40"
+       x="105"
+       y="717.36218"
+       inkscape:export-filename="/home/fushar/Programming/Contest/Problem Writing/SRM/532/DengklekPaintingSquares_fig3.png"
+       inkscape:export-xdpi="95.360001"
+       inkscape:export-ydpi="95.360001" />
+    <rect
+       style="fill:#ffffff;fill-rule:evenodd;stroke:#554400;stroke-width:3.0999999;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       id="rect2985-2-87-1-1-9-11-6-3-8-4"
+       width="40"
+       height="40"
+       x="105"
+       y="757.36218"
+       inkscape:export-filename="/home/fushar/Programming/Contest/Problem Writing/SRM/532/DengklekPaintingSquares_fig3.png"
+       inkscape:export-xdpi="95.360001"
+       inkscape:export-ydpi="95.360001" />
+    <rect
+       style="fill:#808080;fill-rule:evenodd;stroke:#554400;stroke-width:3.0999999;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       id="rect2985-2-87-1-1-5-9-9-5-0"
+       width="40"
+       height="40"
+       x="105"
+       y="797.36218"
+       inkscape:export-filename="/home/fushar/Programming/Contest/Problem Writing/SRM/532/DengklekPaintingSquares_fig3.png"
+       inkscape:export-xdpi="95.360001"
+       inkscape:export-ydpi="95.360001" />
+    <rect
+       style="fill:#000000;fill-rule:evenodd;stroke:#554400;stroke-width:3.0999999;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       id="rect2985-2-87-1-1-9-11-6-5-0-8"
+       width="40"
+       height="40"
+       x="105"
+       y="837.36218"
+       inkscape:export-filename="/home/fushar/Programming/Contest/Problem Writing/SRM/532/DengklekPaintingSquares_fig3.png"
+       inkscape:export-xdpi="95.360001"
+       inkscape:export-ydpi="95.360001" />
+    <text
+       xml:space="preserve"
+       style="font-size:30.89462852px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="97.314308"
+       y="977.72516"
+       id="text3254"
+       sodipodi:linespacing="125%"
+       transform="scale(1.1817378,0.84621141)"
+       inkscape:export-filename="/home/fushar/Programming/Contest/Problem Writing/SRM/532/DengklekPaintingSquares_fig3.png"
+       inkscape:export-xdpi="95.360001"
+       inkscape:export-ydpi="95.360001"><tspan
+         sodipodi:role="line"
+         id="tspan3256"
+         x="97.314308"
+         y="977.72516">0</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:30.89462852px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="131.16277"
+       y="977.72516"
+       id="text3254-0"
+       sodipodi:linespacing="125%"
+       transform="scale(1.1817378,0.84621141)"
+       inkscape:export-filename="/home/fushar/Programming/Contest/Problem Writing/SRM/532/DengklekPaintingSquares_fig3.png"
+       inkscape:export-xdpi="95.360001"
+       inkscape:export-ydpi="95.360001"><tspan
+         sodipodi:role="line"
+         id="tspan3256-8"
+         x="131.16277"
+         y="977.72516">1</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:30.89462852px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="232.70813"
+       y="930.45563"
+       id="text3254-1"
+       sodipodi:linespacing="125%"
+       transform="scale(1.1817378,0.84621141)"
+       inkscape:export-filename="/home/fushar/Programming/Contest/Problem Writing/SRM/532/DengklekPaintingSquares_fig3.png"
+       inkscape:export-xdpi="95.360001"
+       inkscape:export-ydpi="95.360001"><tspan
+         sodipodi:role="line"
+         id="tspan3256-5"
+         x="232.70813"
+         y="930.45563">1</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:30.89462852px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="266.55658"
+       y="930.45563"
+       id="text3254-24"
+       sodipodi:linespacing="125%"
+       transform="scale(1.1817378,0.84621141)"
+       inkscape:export-filename="/home/fushar/Programming/Contest/Problem Writing/SRM/532/DengklekPaintingSquares_fig3.png"
+       inkscape:export-xdpi="95.360001"
+       inkscape:export-ydpi="95.360001"><tspan
+         sodipodi:role="line"
+         id="tspan3256-16"
+         x="266.55658"
+         y="930.45563">2</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:30.89462852px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="300.40503"
+       y="930.45563"
+       id="text3254-3"
+       sodipodi:linespacing="125%"
+       transform="scale(1.1817378,0.84621141)"
+       inkscape:export-filename="/home/fushar/Programming/Contest/Problem Writing/SRM/532/DengklekPaintingSquares_fig3.png"
+       inkscape:export-xdpi="95.360001"
+       inkscape:export-ydpi="95.360001"><tspan
+         sodipodi:role="line"
+         id="tspan3256-6"
+         x="300.40503"
+         y="930.45563">0</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:30.89462852px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="198.85968"
+       y="977.72516"
+       id="text3254-0-8"
+       sodipodi:linespacing="125%"
+       transform="scale(1.1817378,0.84621141)"
+       inkscape:export-filename="/home/fushar/Programming/Contest/Problem Writing/SRM/532/DengklekPaintingSquares_fig3.png"
+       inkscape:export-xdpi="95.360001"
+       inkscape:export-ydpi="95.360001"><tspan
+         sodipodi:role="line"
+         id="tspan3256-8-7"
+         x="198.85968"
+         y="977.72516">1</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:30.89462852px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="165.01122"
+       y="977.72516"
+       id="text3254-0-0"
+       sodipodi:linespacing="125%"
+       transform="scale(1.1817378,0.84621141)"
+       inkscape:export-filename="/home/fushar/Programming/Contest/Problem Writing/SRM/532/DengklekPaintingSquares_fig3.png"
+       inkscape:export-xdpi="95.360001"
+       inkscape:export-ydpi="95.360001"><tspan
+         sodipodi:role="line"
+         id="tspan3256-8-6"
+         x="165.01122"
+         y="977.72516">1</tspan></text>
+  </g>
+</svg>

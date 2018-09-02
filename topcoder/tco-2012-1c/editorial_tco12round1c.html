@@ -1,0 +1,570 @@
+<link type="text/css" rel="stylesheet" href="/css/style.css" />
+<link type="text/css" rel="stylesheet" href="/css/coders.css" />
+<link type="text/css" rel="stylesheet" href="/css/stats.css" />
+<link type="text/css" rel="stylesheet" href="/css/tcStyles20080219.css" />
+
+<div class="linkBox">
+    <a href="http://apps.topcoder.com/wiki/display/tc/Algorithm+Problem+Set+Analysis">Archive</a><br />
+    <a href="http://community.topcoder.com/stat?c=round_overview&er=5&rd=15902">Match Overview</a><br />
+    <a href="http://apps.topcoder.com/forums/?module=ThreadList&forumID=555321">Discuss this match</a>
+</div>
+<span class="bodySubtitle">TopCoder Open 2012 Round 1C</span><br />
+Saturday, April 14th, 2012
+<br /><br />
+
+<h2>Match summary</h2> 
+
+<p>This match was the last chance for people to grab the top 600 slots  in order to advance to 2012 TCO Algorithm Track Round 2. The coders that didn't advance from Round 1A and Round 1B competed in this match, as well as the ones that hadn't got time to participate in the 1A and 1B. It is interesting to notice that during the qualification rounds, several coders who had been inactive for months or even years appeared again in the Arena, most noticably are the red ones.</p>
+
+<p>The problems in this round are somewhat easier than the previous qualification rounds. The Easy problem is a brute-force problem that requires some insights to get the brute-force solution. The Medium problem is easy to code, but it is quite tricky to prove. Apparently, many low-rated coders had higher scores than the higher-rated coders, because many of them submitted without even proving it. Finally, the Hard problem is actually a graph theory problem, but it can be solved using a correct greedy approach.</p>
+
+<p>The winner of this match goes to <a href="http://community.topcoder.com/tc?module=MemberProfile&tab=alg&cr=22707084">BrainDeveloper</a>. He was a green coder when he won the match; a very impressive job! The second place went to <a href="http://community.topcoder.com/tc?module=MemberProfile&tab=alg&cr=22686851">zhuojie</a>. <a href="http://community.topcoder.com/tc?module=MemberProfile&tab=alg&cr=22628118">marcina007</a> followed in the third place with less than 10-point margin. Congratulations to all winners and all coders who finally managed to advance to Round 2!</p>
+ 
+<H1> 
+The Problems 
+</H1>
+</p> 
+
+<font size="+2"> 
+<b><a href="/stat?c=problem_statement&amp;pm=11867&amp;rd=15092" name="11867">PasswordXGuessing</a></b> 
+</font> 
+<A href="http://community.topcoder.com/tc?module=ProblemRatingQuestions&pid=11867"><img src="/i/rate_it.gif" hspace="10" border="0" alt="rate it" /></A> 
+<A HREF="http://forums.topcoder.com/?module=ThreadList&forumID=555321" CLASS="statText"><img src="/i/interface/btn_discuss_it.gif" alt="discuss it" border="0" /></A>
+<br> 
+Used as: Division One - Level One: <blockquote><table cellspacing="2"> 
+  <tr> 
+    <td class="bodyText" style="background: #eee;"> 
+      <b>Value</b> 
+    </td> 
+    <td class="bodyText" style="background: #eee;"> 
+      250 
+    </td> 
+  </tr> 
+  <tr> 
+    <td class="bodyText" style="background: #eee;"> 
+      <b>Submission Rate</b> 
+    </td> 
+    <td class="bodyText" style="background: #eee;"> 
+      1053 / 1751 (60.14%) 
+    </td> 
+  </tr> 
+  <tr> 
+    <td class="bodyText" style="background: #eee;"> 
+      <b>Success Rate</b> 
+    </td> 
+    <td class="bodyText" style="background: #eee;"> 
+      823 / 1053 (78.16%) 
+    </td> 
+  </tr> 
+  <tr> 
+    <td class="bodyText" style="background: #eee;"> 
+      <b>High Score</b> 
+    </td> 
+    <td class="bodyText" style="background: #eee;"> 
+      <b>coderwilliam</b> for 248.13 points (2 mins 28 secs) 
+    </td> 
+  </tr> 
+  <tr> 
+    <td class="bodyText" style="background: #eee;"> 
+      <b>Average Score</b> 
+    </td> 
+    <td class="bodyText" style="background: #eee;"> 
+      173.86 (for 823 correct submissions) 
+    </td> 
+  </tr> 
+</table></blockquote> 
+
+<p>As this is a 250-point problem in a TCO qualification round, one 
+usually can expect a brute force solution. However, in this problem, the
+ brute force solution may be not so obvious for some contestants. The 
+"result is guaranteed to fit in a 64-bit signed integer data type" in 
+Notes section may be also intimidating, but we will see that the maximum
+ possible result is not that large.</p>
+
+<p>First, let's simplify the statement. Suppose that Ms. Ciel's initial 
+password is P. We would like to compute the number of possible P such 
+that:</p>
+
+<p>"Each element of <b>guesses</b> differs from P in exactly one digit."</p>
+
+<p><b><u>Let's simplify the condition!</u></b></p>
+
+<p>Now, consider the first person. The above condition implies that:</p>
+
+<p>"<b>guesses</b>[0] differs from P in exactly one digit."</p>
+
+<p>Finally, the following condition must automatically hold:</p>
+<p>"P differs from <b>guesses</b>[0] in exactly one digit."</p>
+
+<p><b><u>Brute-force solution</u></b></p>
+
+<p>The last condition gives us a direct solution: generate all passwords that differ from <b>guesses</b>[0] in exactly one digit. For each such password, check whether it also differs from the other guesses in exactly one digit.</p>
+
+<p>How many possible passwords are there? To generate the passwords, we can consider each of the X digits in <b>guesses</b>[0]
+ and try replacing it into each of the other 9 possible characters (from
+ '0' to '9'). Therefore, the maximum number of valid passwords is 
+actually 9 * X, which fits in a 64-bit signed integer data type :)</p>
+
+<p>Note that we can also do the brute force on <b>guesses</b>[1], or <b>guesses</b>[2], or the others. They should give the same answer.</p>
+
+<p><b><u>Code</u></b></p>
+
+<p>Here is a sample Java solution.</p>
+
+<pre>public class PasswordXGuessing
+{
+    public int howMany(String[] guesses)
+    {
+        int N = guesses.length;
+        int X = guesses[0].length();
+        
+        char[][] gc = new char[N][X];
+        for (int i = 0; i &lt; N; i++)
+            gc[i] = guesses[i].toCharArray();
+        
+        int res = 0;
+        for (int p = 0; p &lt; X; p++) // consider each digit
+        {
+            char oldc = gc[0][p];
+            for (char newc = '0'; newc &lt;= '9'; newc++)
+            {
+                if (newc == oldc) // change the digit into a different digit
+                    continue;
+                gc[0][p] = newc;
+                
+                boolean valid = true; // whether it differs in exactly one digit
+                for (int i = 1; i &lt; N; i++)
+                {
+                    int diff = 0;
+                    for (int j = 0; j &lt; X; j++)
+                        if (gc[0][j] != gc[i][j])
+                            diff++;
+                    if (diff != 1)
+                        valid = false;
+                }
+                if (valid)
+                    res++;
+            }
+            gc[0][p] = oldc;
+        }
+        return res;
+    }
+}
+</pre>
+
+<p><b><u>Exercise</u></b></p>
+
+<p>There are only six possible answers for this problems: 0, 1, 2, 8, 
+10-something, and 9*X. For each answer, try to find which kind of test 
+cases that result in that answer!</p>
+
+<font size="+2"> 
+<b><a href="/stat?c=problem_statement&amp;pm=11873&amp;rd=15092" name="11873">PasswordXGrid</a></b> 
+</font> 
+<A href="http://community.topcoder.com/tc?module=ProblemRatingQuestions&pid=11873"><img src="/i/rate_it.gif" hspace="10" border="0" alt="rate it" /></A> 
+<A HREF="http://forums.topcoder.com/?module=ThreadList&forumID=555321" CLASS="statText"><img src="/i/interface/btn_discuss_it.gif" alt="discuss it" border="0" /></A>
+<br> 
+Used as: Division One - Level Two: <blockquote><table cellspacing="2"> 
+  <tr> 
+    <td class="bodyText" style="background: #eee;"> 
+      <b>Value</b> 
+    </td> 
+    <td class="bodyText" style="background: #eee;"> 
+      500 
+    </td> 
+  </tr> 
+  <tr> 
+    <td class="bodyText" style="background: #eee;"> 
+      <b>Submission Rate</b> 
+    </td> 
+    <td class="bodyText" style="background: #eee;"> 
+      714 / 1751 (40.78%) 
+    </td> 
+  </tr> 
+  <tr> 
+    <td class="bodyText" style="background: #eee;"> 
+      <b>Success Rate</b> 
+    </td> 
+    <td class="bodyText" style="background: #eee;"> 
+      609 / 714 (85.29%) 
+    </td> 
+  </tr> 
+  <tr> 
+    <td class="bodyText" style="background: #eee;"> 
+      <b>High Score</b> 
+    </td> 
+    <td class="bodyText" style="background: #eee;"> 
+      <b>dragon11</b> for 481.89 points (5 mins 32 secs) 
+    </td> 
+  </tr> 
+  <tr> 
+    <td class="bodyText" style="background: #eee;"> 
+      <b>Average Score</b> 
+    </td> 
+    <td class="bodyText" style="background: #eee;"> 
+      309.32 (for 609 correct submissions) 
+    </td> 
+  </tr> 
+</table></blockquote> 
+
+<p><b><u>Deciphering the input</u></b></p>
+
+<p>The first challenge in this problem is to decipher the unusual input 
+format. It may be quite tricky to draw the grid given the input (in 
+example cases, for example). However, the problem statement clearly 
+states that if you are in point (i, j),</p>
+
+<p>* the label in your right side is <b>horizontal</b>[i][j], and<br>
+* the label in your bottom side is <b>vertical</b>[i][j].</p>
+
+<p>After mastering the input format, let's find the actual solution. 
+Surprisingly, it is quite simple and may be unexpected (at least for a 
+500-point problem):</p>
+
+<p><b><u>The solution</u></b></p>
+
+<p>Let S be the maximum cost over all paths that go from point (0, 0) to
+ point (N, M), going right or bottom only. Then, the answer is exactly 
+S.</p>
+
+<p><b><u>Proof</u></b></p>
+
+<p>First, note the answer must be at least S, since we are not allowed 
+to decrease any of the labels. Next, we will prove that we are always 
+able to modify the board such that all paths have exactly the cost S. 
+Hence, S is the minimal answer.</p>
+
+<p>How to modify the board such that all paths have exactly the cost S?</p>
+
+<p><u>Lemma 1</u>: In a valid modified board, for each (i, j), all paths that go from point (i, j) to point (N, M) have the same cost.</p>
+
+<p>If there are at least two paths with different costs from (i, j) to 
+(N, M) (let's say A and B), then there are at least two paths with 
+different costs from (0, 0) to (N, M): X + A and X + B, where X is the 
+cost (of all paths) from (0, 0) to (i, j).</p>
+
+<p><u>Lemma 2</u>: We can modify the board such that for each (i, j), 
+all paths from (i, j) to (N, M) have the same cost longest[i][j], where 
+longest[i][j] is maximum cost over all paths that go from (i, j) to (N, 
+M).</p>
+
+<p>Here is how to do it. Consider each point (i, j). Increase the label 
+of edge (i, j) &lt;-&gt; (i+1, j) into longest[i][j] - longest[i+1][j]. 
+Note that this is always possible because (label of edge (i, j) 
+&lt;-&gt; (i+1, j)) + longest[i+1][j] &lt;= longest[i][j]. In the 
+similar way, increase the label of edge (i, j) &lt;-&gt; (i, j+1) into 
+longest[i][j] - longest[i][j+1].</p>
+
+<p>Therefore, with Lemma 2, we automatically have proved that we can 
+modify the board such that all paths from (0, 0) to (N, M) have the same
+ cost longest[0][0] = S.</p>
+
+<p>The longest[][] matrix can be computed using a simple dynamic programming.</p>
+
+<p><b><u>Code</u></b></p>
+
+<p>This code used 'dp' instead of 'longest', since 'dp' is usually more popular :)</p>
+
+<pre>public class PasswordXGrid
+{    
+    public int minSum(String[] horizontal, String[] vertical)
+    {
+        int N = horizontal.length;
+        int M = vertical[0].length();
+        
+        int[][] dp = new int[N][M];
+        
+        for (int i = N-1; i &gt;= 0; i--)
+            for (int j = M-1; j &gt;= 0; j--)
+            {
+                if (i &lt; N-1)
+                    dp[i][j] = Math.max(dp[i][j], vertical[i].charAt(j)-'0' + dp[i+1][j]);
+                if (j &lt; M-1)
+                    dp[i][j] = Math.max(dp[i][j], horizontal[i].charAt(j)-'0' + dp[i][j+1]);
+            }
+        return dp[0][0];
+    }
+}
+</pre>
+
+<p><b><u>How did I came up with this problem & solutions? (by <a href="http://community.topcoder.com/tc?module=MemberProfile&tab=alg&cr=22769059">cgy4ever</a>) </u></b></p>
+<i>(To understand this part, you may have to know some basic knowledge in calculus)</i>
+<br>
+Well, this problem looks not too complex(at least the solution), but I spent several monthes on creating and solving it.
+<br>
+So let's begin with the key idea behind this problem.
+<br>
+I came up with this problem when I was learning <a href = "http://en.wikipedia.org/wiki/Conservative_vector_field">conservative vector field</a>(in a <a href = "Simply_connected_space">simply connected space</a>).
+And there are 2 important results about that:
+<br>
+<br>
+[Theorem 1] F is conservative <==> curl(F) == 0 <==> the line integral over any cycle is 0 <==> the line integral is path independent.
+<br>
+[Theorem 2] F is conservative <==> there exist a scalar field P, which called its potential function, such that: F = gradient(P).
+<br>
+<br>
+This part, "curl(F) == 0 <==> the line integral over any cycle is 0", is followed by
+<a href = "http://en.wikipedia.org/wiki/Stokes%27_theorem">Stokes' theorem</a>, it shows the connection between local properties and the overall properties. So I want to use this awesome theorem to build a problem.
+<br>
+<br>
+<b>The original version</b>
+<br>
+<br>
+The original version says: you can only decrease the length of each edge(but the length must remain non-negative), such that the length from (0, 0) to (N, M) is path-independent. So the 
+task is to find the maximal of length from (0, 0) to (N, M) after modification.
+<br>
+<br>
+<b>Solution by theorem 1</b>
+<br>
+<br>
+My first try of solving this problem is by using theorem 1: "path independent <==> curl(F) == 0".
+<br>
+Wait! What means "curl" in such discrete case? Well, curl is the limit of (line integral over an infinite small circle) / (the area of this circle). And in the discrete case, we only need: for each cell, the line integral is 0, or say: two path from (A, B) to (A+1, B+1) have the same length.
+<br>
+Note that, this not only leads "Each road from (0, 0) to (N, M)" has the same length, but for any pair (A, B) to (A+n, B+m) where n, m >= 0. This result comes from the discrete version of Stokes' theorem: The line integral over some simple region, is the sum of integrals for cells that contains in it.
+<br>
+<br>
+So for such instance:
+<br>
+<pre>
+A--B--C
+|  |  |
+D--E--F
+</pre>
+We needs: len(A,B) + len(B,E) = len(A,D) + len(D,E) and len(B,C) + len(C,F) = len(B,E) + len(E,F).
+<br>
+So for each cell, we have one equation, how can we deal with these equations?
+<br>
+Ok, let's add one node in each cell, and add 4 edges to this node: towards up, down, left and right.
+<br>
+<pre>             
+A----B        A--|--B
+|    |        |  v  |
+|    |   ==> --->x--->
+C----D        |  |  |
+              C--v--D             
+</pre>
+If we treate these 4 edges as flows, then this equation is just the <a href = "http://en.wikipedia.org/wiki/Node_law#Kirchhoff.27s_current_law_.28KCL.29">Kirchhoff's current law</a>, which always holds in the flow instance.
+<br>
+If we create a source, collect all edges through left side and top side, and create a sink to collect all edges through right side and right side, then we finish the construction of network flow.
+And you can check, the flow between S and T equals to: the distance between (0, 0) to (N, M) in the original problem.
+<br>
+So we have a solutoin by using max-flow.
+<br>
+<br>
+<b>To get a more effective solution</b>
+<br>
+<br>
+So now we have a to solve a max-flow problem in such a grid-like graph.
+If you know the <a href = "http://en.wikipedia.org/wiki/Max-flow_min-cut_theorem">max-flow min-cut theorem</a> and the duality theory(Minimal cut on plane graph G = shortest path between S* to T* on G*), you can solve this more effectively.
+<br>
+By some reasoning (It's somehow a bit complex, but the result are simple), we have the following theorem:
+<br>
+<br>
+The answer to original problem is: shortest path between (0, 0) and (N, M) if we add these edges:
+<br>
+(A, B) --> (A, B+1) with length h[A][B], (A, B+1) --> (A, B) with length 0
+<br>
+(A, B) --> (A+1, B) with length v[A][B], (A+1, B) --> (A, B) with length 0
+<br>
+<br>
+Note that we need these 2 edges with length 0, the following instance shows that the solution without such edges goes wrong:
+<br>
+<pre>
+A--9--B--1--C
+|     |     |
+1     1     1
+|     |     |
+D--1--E--9--F
+</pre>
+<br>
+The answer should be 4(due to A->D->E->B->C->F), but not 11(A->B->C->F):
+<br>
+<pre>
+A--<b>2</b>--B--1--C
+|     |     |
+1     <b>0</b>     1
+|     |     |
+D--1--E--<b>2</b>--F
+</pre>
+<br>
+<b>Solution by theorem 2</b>
+<br>
+<br>
+
+The above solution looks too complex, so can we explain our solution in an easier way?
+<br>
+Ok, let's analyze this problem using theorem 2.
+<br>
+<br>
+It says: we have such potential function F[i][j], such that:
+<br>
+<br>
+h[i][j] becomes: F[i][j+1] - F[i][j].
+<br>
+v[i][j] becomes: F[i+1][j] - F[i][j].
+<br>
+<br>
+We want to maximize: F[N][M] - F[0][0]. (We can simply set F[0][0] = 0 for convience.)
+The above conditions can write as:
+<br>
+<br>
+0 <= F[i][j+1] - F[i][j] <= h[i][j]
+<br>
+0 <= F[i+1][j] - F[i][j] <= v[i][j]
+<br>
+<br>
+And this is a system of difference constraints, so we obtain same result: the answer equals to the length of shortest path in the graph we build in our previous solution.
+<br>
+<br>
+<b>The current version</b>
+<br>
+<br>
+The above version could be more challenge, but be more evil -- I'd say, many people will be challenged.
+<br>
+So in the last match in Round 1, we don't want the problemset to be such hard / evil.
+<br>
+Why we needs the edges with length 0? Because after modification, the length can't be negative.
+But in the current version, we don't have such conditions.
+So now the solution is very simple: just find the longest path between (0, 0) and (N, M).
+</p>
+
+<font size="+2"> 
+<b><a href="/stat?c=problem_statement&amp;pm=11868&amp;rd=15092" name="11868">PasswordXPalindrome</a></b> 
+</font> 
+<A href="http://community.topcoder.com/tc?module=ProblemRatingQuestions&pid=11868"><img src="/i/rate_it.gif" hspace="10" border="0" alt="rate it" /></A> 
+<A HREF="http://forums.topcoder.com/?module=ThreadList&forumID=555321" CLASS="statText"><img src="/i/interface/btn_discuss_it.gif" alt="discuss it" border="0" /></A>
+<br> 
+Used as: Division One - Level Three: <blockquote><table cellspacing="2"> 
+  <tr> 
+    <td class="bodyText" style="background: #eee;"> 
+      <b>Value</b> 
+    </td> 
+    <td class="bodyText" style="background: #eee;"> 
+      1000 
+    </td> 
+  </tr> 
+  <tr> 
+    <td class="bodyText" style="background: #eee;"> 
+      <b>Submission Rate</b> 
+    </td> 
+    <td class="bodyText" style="background: #eee;"> 
+      301 / 1751 (17.19%) 
+    </td> 
+  </tr> 
+  <tr> 
+    <td class="bodyText" style="background: #eee;"> 
+      <b>Success Rate</b> 
+    </td> 
+    <td class="bodyText" style="background: #eee;"> 
+      153 / 301 (50.83%) 
+    </td> 
+  </tr> 
+  <tr> 
+    <td class="bodyText" style="background: #eee;"> 
+      <b>High Score</b> 
+    </td> 
+    <td class="bodyText" style="background: #eee;"> 
+      <b>WitGer</b> for 958.23 points (5 mins 58 secs) 
+    </td> 
+  </tr> 
+  <tr> 
+    <td class="bodyText" style="background: #eee;"> 
+      <b>Average Score</b> 
+    </td> 
+    <td class="bodyText" style="background: #eee;"> 
+      658.35 (for 153 correct submissions) 
+    </td> 
+  </tr> 
+</table></blockquote> 
+
+<p>The number of passing submissions of this problem is quite large: 153 submissions, much larger than the previous two rounds, even after we only included weak example cases for this problem. There at least two solutions: a graph one and a greedy one.</p>
+
+<p><b><u>Solution 1: Graph Theory</u></b></p>
+
+<p>Consider a graph whose vertices are 'a', 'b', 'c', ..., 'z'. For each 0 &lt;= i &lt; X/2, add an edge between vertices <b>password</b>[i] and <b>password</b>[X-i-1].</p>
+
+<p><b><u>Solution 2: Another Graph Theory Solution (By <a href="http://community.topcoder.com/tc?module=MemberProfile&tab=alg&cr=22769059">cgy4ever</a>)</u></b></p>
+<br>
+Let's assum that there exist a solution. Then we consider the following model:
+<br>
+Let n = password.length(), and N = (n+1)/2;
+<br>
+We create N bubbles(as vertexes), each contains 2 letter: i-th and (n-1-i)-th. And add edge between bubbles that contains the same letter.
+<br>
+<br>
+For example, if password = "aabffeeddgccb", then we get the following graph:
+<br>
+.. - [ab] - [ca] - [bc] - .. (a cycle)
+<br>
+[fg] - [df] - [de] - [e] (a chain ends with a bubble that contains only 1 letter in case n is odd.)
+<br>
+Note that since each bubble contains only 2 letter, and each letter occured at most twice, each component will be a cycle or a chain.
+<br>
+<br>
+Let's denote the number of components in this graph by A. Then we argue that: the answer is N-A, in the following way:
+<br>
+1. The string become a palindrome <=> A becomes N.
+<br>
+2. For each swap, A can only increased at most 1.
+<br>
+3. When we swap the letters in adjacent bubble (then make a bubble contain same letter), A will increased by 1.
+<br>
+<br>
+Since A is very easy to calculate, we have the following algorithm:
+<pre>
+public class PasswordXGrid
+public class PasswordXPalindrome
+{
+	public int minSwaps(String password)
+	{
+		boolean[][] G;
+		int n = password.length();
+		int N = (n+1)/2;
+		// First we check if there exist a solution.
+		int countSingle = 0;
+		for(int i = 0; i < n; i++)
+		{
+			boolean isSingle = true;
+			for(int j = 0; j < n; j++)
+				if(i != j && password.charAt(i) == password.charAt(j))
+					isSingle = false;
+			if(isSingle)
+				countSingle ++;
+		}
+		if(countSingle > 1)
+			return -1;
+		// Then we build the graph and calculate the number A.
+		G = new boolean [N][N];
+		for(int i = 0; i < n; i++)
+			for(int j = 0; j < n; j++)
+				if(password.charAt(i) == password.charAt(j))
+					G[Math.min(i,n-1-i)][Math.min(j,n-1-j)] = true;
+		for(int k = 0; k < N; k++)
+			for(int i = 0; i < N; i++)
+				for(int j = 0; j < N; j++)
+					G[i][j] |= G[i][k] && G[k][j];
+		int ans = 0;
+		for(int i = 0; i < N; i++)
+		{
+			boolean first = true;
+			for(int j = 0; j < i; j++)
+				if(G[i][j])
+					first = false;
+			if(first)
+				ans ++;
+		}
+		return N - ans;
+	}	
+};
+</pre>
+<br>
+<p><b><u>Solution 3: Greedy algorithm (By <a href="http://community.topcoder.com/tc?module=MemberProfile&tab=alg&cr=22769059">cgy4ever</a>)</u></b></p>
+<br>
+Note that this lemma: "3. When we swap the letters in adjacent bubble (then make a bubble contain same letter), A will increased by 1." only required that we obtain a new pair(The same letter in symtric position) born after one operation. So we obtain the following algorithm:
+<pre>
+While there exist position i s.t. s[i] != s[n-1-i]:
+	swap(s[n-1-i], s[t]), where s[t] = s[i] and t != i.
+	counter += 1
+</pre>
+Some of the coders submit a solution like this, and obtained a high score. Maybe they don't know why it works, but it really help him/her to get a high rank.

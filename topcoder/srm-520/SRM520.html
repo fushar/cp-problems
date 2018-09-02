@@ -1,0 +1,523 @@
+<link type="text/css" rel="stylesheet" href="/css/style.css" />
+<link type="text/css" rel="stylesheet" href="/css/coders.css" />
+<link type="text/css" rel="stylesheet" href="/css/stats.css" />
+<link type="text/css" rel="stylesheet" href="/css/tcStyles20080219.css" />
+
+<div class="linkBox">
+    <a href="/tc?module=Static&amp;d1=match_editorials&amp;d2=archive">Archive</a><br />
+    <a href="/stat?c=round_overview&er=5&rd=14537">Match Overview</a><br />
+    <a href="http://forums.topcoder.com/?module=ThreadList&forumID=545692">Discuss this match</a>
+</div>
+<span class="bodySubtitle">Single Round Match 512</span><br />
+Wednesday, July 13th, 2011
+<br /><br />
+
+<h2>Match summary</h2> 
+
+<p> 
+First of all, congratulations [[rng_58]] for winning TCO 2011 and joining TopCoder as an algorithm admin!
+</p> 
+ 
+<H1> 
+The Problems 
+</H1>
+</p> 
+
+<font size="+2"> 
+<b><a href="/stat?c=problem_statement&amp;pm=11287&amp;rd=14537" name="11287">SRMRoomAssignmentPhase</a></b> 
+</font> 
+<A href="/tc?module=ProblemRatingQuestions&pid=11287"><img src="/i/rate_it.gif" hspace="10" border="0" alt="rate it" /></A> 
+<A HREF="http://forums.topcoder.com/?module=ThreadList&forumID=545692" CLASS="statText"><img src="/i/interface/btn_discuss_it.gif" alt="discuss it" border="0" /></A>
+<br> 
+Used as: Division Two - Level One: <blockquote><table cellspacing="2"> 
+  <tr> 
+    <td class="bodyText" style="background: #eee;"> 
+      <b>Value</b> 
+    </td> 
+    <td class="bodyText" style="background: #eee;"> 
+      256 
+    </td> 
+  </tr> 
+  <tr> 
+    <td class="bodyText" style="background: #eee;"> 
+      <b>Submission Rate</b> 
+    </td> 
+    <td class="bodyText" style="background: #eee;"> 
+      1279 / 1398 (91.49%) 
+    </td> 
+  </tr> 
+  <tr> 
+    <td class="bodyText" style="background: #eee;"> 
+      <b>Success Rate</b> 
+    </td> 
+    <td class="bodyText" style="background: #eee;"> 
+      1146 / 1279 (89.60%) 
+    </td> 
+  </tr> 
+  <tr> 
+    <td class="bodyText" style="background: #eee;"> 
+      <b>High Score</b> 
+    </td> 
+    <td class="bodyText" style="background: #eee;"> 
+      <b>wenming17</b> for 255.92 points (0 mins 31 secs) 
+    </td> 
+  </tr> 
+  <tr> 
+    <td class="bodyText" style="background: #eee;"> 
+      <b>Average Score</b> 
+    </td> 
+    <td class="bodyText" style="background: #eee;"> 
+      210.19 (for 1146 correct submissions) 
+    </td> 
+  </tr> 
+</table></blockquote> 
+<p>
+The first step into competing in an SRM is being assigned to one of the rooms!</p>
+
+<p>This problem is pretty straightforward. This is an example of a simulation problem. Just sort the ratings and then simulate the room assignment exactly as described in problem statement, in descending order of the ratings, and you are done. Here is a sample code:</p>
+
+<pre>
+public int countCompetitors(int[] ratings, int K)
+{
+    int N = ratings.length;
+    int myRating = ratings[0];
+    Arrays.sort(ratings);
+    
+    int[] room = new int[N];
+    
+    int k = 0;
+    int myRoom;
+    for (int i = N-1; i >= 0; i--)
+    {
+    	if (ratings[i] == me)
+    	    myRoom = k;
+    	room[i] = k;
+        k++;
+        if (k == K)
+            k = 0;
+    }
+    
+    int res = 0;
+    for (int i = 0; i &lt; N; i++)
+        if (room[i] == myRoom && ratings[i] > myRating)
+    	    res++;
+    return res;
+}
+</pre>
+
+<p>This is sufficient to solve the problem. Of course, there is an elegant solution.</p>
+
+<p><b><u>The Elegant Solution</u></b></p>
+
+<p>Let X be the number of coders who have greater ratings than yours. Then, the answer is simply X/K, rounded down.</p>
+
+<p>Why? Essentially, this problem asks for your rank (0-indexed) in your room. Let's have the ratings sorted in descending order. If we simulate the room assignment as described, then coders in indices 0 through K-1 will be the highest (rank 0) rated coders in their rooms, coders in indices K through 2K-1 will be the second highest (rank 1) rated coders in their rooms, and so on.</p>
+
+<p>In other words, we can split the input into blocks of K coders each, except possibly the last block which may contain less than K coders. All coders in the same block have the same rank in their rooms. Notice that the expression X/K is equal to the block number (0-indexed), which is identical to your rank.</p>
+
+<pre>
+public int countCompetitors(int[] ratings, int K)
+{
+    int X = 0;
+    for (int i = 1; i &lt; ratings.length; i++)
+        if (ratings[i] &gt; ratings[0])
+            X++;
+    return X/K;
+}
+</pre>
+
+<p><b><u>Exercise</u></b></p>
+
+<p>Your rank is X/K. What is your room number?</p>
+
+<font size="+2"> 
+<b><a href="/stat?c=problem_statement&amp;pm=11295&amp;rd=14537" name="11295">SRMCodingPhase</a></b> 
+</font> 
+<A href="/tc?module=ProblemRatingQuestions&pid=11295"><img src="/i/rate_it.gif" hspace="10" border="0" alt="rate it" /></A> 
+<A HREF="http://forums.topcoder.com/?module=ThreadList&forumID=545692" CLASS="statText"><img src="/i/interface/btn_discuss_it.gif" alt="discuss it" border="0" /></A>
+<br> 
+Used as: Division Two - Level Two: <blockquote><table cellspacing="2"> 
+  <tr> 
+    <td class="bodyText" style="background: #eee;"> 
+      <b>Value</b> 
+    </td> 
+    <td class="bodyText" style="background: #eee;"> 
+      512 
+    </td> 
+  </tr> 
+  <tr> 
+    <td class="bodyText" style="background: #eee;"> 
+      <b>Submission Rate</b> 
+    </td> 
+    <td class="bodyText" style="background: #eee;"> 
+      480 / 1398 (34.33%) 
+    </td> 
+  </tr> 
+  <tr> 
+    <td class="bodyText" style="background: #eee;"> 
+      <b>Success Rate</b> 
+    </td> 
+    <td class="bodyText" style="background: #eee;"> 
+      228 / 480 (47.50%) 
+    </td> 
+  </tr> 
+  <tr> 
+    <td class="bodyText" style="background: #eee;"> 
+      <b>High Score</b> 
+    </td> 
+    <td class="bodyText" style="background: #eee;"> 
+      <b>owen_cont</b> for 506.08 points (3 mins 4 secs) 
+    </td> 
+  </tr> 
+  <tr> 
+    <td class="bodyText" style="background: #eee;"> 
+      <b>Average Score</b> 
+    </td> 
+    <td class="bodyText" style="background: #eee;"> 
+      264.14 (for 228 correct submissions) 
+    </td> 
+  </tr> 
+</table></blockquote> 
+
+Used as: Division One - Level One: <blockquote><table cellspacing="2"> 
+  <tr> 
+    <td class="bodyText" style="background: #eee;"> 
+      <b>Value</b> 
+    </td> 
+    <td class="bodyText" style="background: #eee;"> 
+      256 
+    </td> 
+  </tr> 
+  <tr> 
+    <td class="bodyText" style="background: #eee;"> 
+      <b>Submission Rate</b> 
+    </td> 
+    <td class="bodyText" style="background: #eee;"> 
+      779 / 857 (90.90%) 
+    </td> 
+  </tr> 
+  <tr> 
+    <td class="bodyText" style="background: #eee;"> 
+      <b>Success Rate</b> 
+    </td> 
+    <td class="bodyText" style="background: #eee;"> 
+      667 / 779 (85.62%) 
+    </td> 
+  </tr> 
+  <tr> 
+    <td class="bodyText" style="background: #eee;"> 
+      <b>High Score</b> 
+    </td> 
+    <td class="bodyText" style="background: #eee;"> 
+      <b>Petr</b> for 248.46 points (4 mins 58 secs) 
+    </td> 
+  </tr> 
+  <tr> 
+    <td class="bodyText" style="background: #eee;"> 
+      <b>Average Score</b> 
+    </td> 
+    <td class="bodyText" style="background: #eee;"> 
+      176.13 (for 667 correct submissions) 
+    </td> 
+  </tr> 
+</table></blockquote> 
+<p>
+Like other usual D1-Easy problems, the key to solving this problem is the old, magical brute force!</p>
+
+<p>Suppose you have decided which problems you want to solve. So, the problem that remains is how to distribute the points of luck such that you can solve all of them in 75 minutes. There are at least two ways to do this.</p>
+
+<p><b><u>The Greedy Way</u></b></p>
+
+<p>First, note that the best strategy is to use all points of luck, unless the time to solve each problem has been reduced to 1 minute. How to distribute the luck, then? Remember that:</p>
+	<ul>
+		<li>1 minute in the first problem costs you 2 points,</li>
+		<li>1 minute in the second problem costs you 4 points, and</li>
+		<li>1 minute in the third problem costs you 8 points.</li>
+	</ul>
+	
+<p>Each point of luck saves you 1 minute and saves you either 2, 4, or 8 points. It is obvious that you want to save the largest points. So, you can always spend the point of lucks on the problem with the largest cost until the time to solve the problem is decreased to 1 minute, or until you run out of points of luck. If there are remaining points of luck, use them on the problem with the next largest cost, and so on. It is optimal.</p>
+
+<p><b><u>The Brute Force Way</u></b></p>
+
+<p>Didn't I say that the key to solve this problem is brute force? If you read the constraints carefully, you will notice that the maximum points of luck is just 100. There are only 3 problems, so you can just brute force all ways to distribute the points of luck; there are at most roughly 100^3 ways which will fit in the time limit easily.</p>
+
+<p>--</p>
+
+<p>Okay, back to the original problem. The only remaining problem is how to choose which problems to solve. Remember the key: brute force. There are only 3 problems. On each problem there are two options: either you solve it or not. So, there are 2^3 ways to choose which problems to solve. Overall, the complexity is O(2^N . M^3), where N is 3 and M is 100 in this particular problem.</p>
+
+<p>Note that because we use brute force in both parts (choosing problems and distributing points of luck), we can swap the process and still get the same result, with cleaner code.</p>
+
+<pre>
+public int countScore(int[] points, int[] skills, int luck)
+{
+    int best = 0;
+
+    for (int a = 0; a &lt; skills[0] && a &lt;= luck; a++)
+    for (int b = 0; b &lt; skills[1] && a + b &lt;= luck; b++)
+    for (int c = 0; c &lt; skills[2] && a + b + c &lt;= luck; c++)
+    {
+        int t[] = {skills[0]-a, skills[1]-b, skills[2]-c};
+        int c[] = {2, 4, 8};
+        
+        for (int mask = 0; mask &lt; 1&lt;&lt;3; mask++)
+        {
+            int totalTime = 0, totalScore = 0;
+            for (int i = 0; i &lt; 3; i++)
+                if ((mask & (1&lt;&lt;i)) > 0)
+                {
+                    totalTime += t[i];
+                    totalScore += points[i] - c[i]*t[i];
+                }
+            if (totalTime &lt;= 75)
+                best = Math.max(best, totalScore);
+        }
+    }
+    return best;
+}
+</pre>
+
+<p><b><u>I don't Like Brute Force!</u></b></p>
+
+<p>If you are tired doing brute force and want "more interesting" algorithm to solve this problem, don't worry, there is a DP solution. Let's define dp[T][L][P] as the maximum score we can obtain if there are T minutes left, L points of luck left, and the available problems to solve are the first P problems.</p>
+
+<p><b><u>Warning</u></b></p>
+
+<p>Don't let this problem mislead you! To decrease the amount of time you need to solve a problem in real SRMs, you have to practice a lot, instead of relying on your luck.</p>
+
+<font size="+2"> 
+<b><a href="/stat?c=problem_statement&amp;pm=11289&amp;rd=14537" name="11289">SRMSystemTestPhase</a></b> 
+</font> 
+<A href="/tc?module=ProblemRatingQuestions&pid=11289"><img src="/i/rate_it.gif" hspace="10" border="0" alt="rate it" /></A> 
+<A HREF="http://forums.topcoder.com/?module=ThreadList&forumID=545692" CLASS="statText"><img src="/i/interface/btn_discuss_it.gif" alt="discuss it" border="0" /></A>
+<br> 
+Used as: Division Two - Level Three: <blockquote><table cellspacing="2"> 
+  <tr> 
+    <td class="bodyText" style="background: #eee;"> 
+      <b>Value</b> 
+    </td> 
+    <td class="bodyText" style="background: #eee;"> 
+      1024 
+    </td> 
+  </tr> 
+  <tr> 
+    <td class="bodyText" style="background: #eee;"> 
+      <b>Submission Rate</b> 
+    </td> 
+    <td class="bodyText" style="background: #eee;"> 
+      185 / 1398 (13.23%) 
+    </td> 
+  </tr> 
+  <tr> 
+    <td class="bodyText" style="background: #eee;"> 
+      <b>Success Rate</b> 
+    </td> 
+    <td class="bodyText" style="background: #eee;"> 
+      89 / 185 (48.11%) 
+    </td> 
+  </tr> 
+  <tr> 
+    <td class="bodyText" style="background: #eee;"> 
+      <b>High Score</b> 
+    </td> 
+    <td class="bodyText" style="background: #eee;"> 
+      <b>akm14889</b> for 958.02 points (7 mins 33 secs) 
+    </td> 
+  </tr> 
+  <tr> 
+    <td class="bodyText" style="background: #eee;"> 
+      <b>Average Score</b> 
+    </td> 
+    <td class="bodyText" style="background: #eee;"> 
+      653.67 (for 89 correct submissions) 
+    </td> 
+  </tr> 
+</table></blockquote> 
+<p>This is a counting problem. Problems of this type, i.e., counting the number of objects, are usually to be solved using dynamic programming. To solve a DP problem, we must define its state and recurrence.</p>
+
+<p><b><u>The DP State</u></b></p>
+
+<p>Consider the way the coders are sorted in a scoreboard. They are sorted in decreasing order of the number of passed solutions, and if tie, in ascending order of the number of challenged solutions. Intuitively, we must keep track how many passed and challenged solutions so far. It turns out to that to decide the outcome of the solutions for a coder, we only have to keep the number of passed and challenged solutions for the coder in the previous rank.</p>
+
+<p>Let's formalize the state of a subproblem. We define dp[i][p][c] as the number of different scoreboards considering only coders [i .. N-1], such that the (i-1)th coder has p passed solutions and c challenged solutions. The answer to the original problem would be dp[0][3][0]. Why? Because in any valid scoreboard, the ordering is still valid when we insert a dummy coder with 3 passed solutions and no challenged solutions above the first ranked (0-th) coder.</p>
+
+<p><b><u>The DP Recurrence</u></b></p>
+
+<p>Back to dp[i][p][c]. We have fixed the outcome of the solutions for the (i-1)th coder. Now, enumerate all possible outcomes of the solutions for the i-th coder. For example, if description[i] is "NYN", then all possible outcomes for this coder are (X, passed, X), (X, failed, X), and (X, challenged, X). However, only several of them are valid, depending on the number of passed and challenged solutions for the (i-1)th coder (which are p and c). Let p' be the number of passed solutions for the i-th coder, and c' be the number of challenged solutions for the i-th coder. According to the rule, the outcome is valid only if p' &lt; p or (p = p' and c' &ge; c).</p>
+
+<p>By determining an outcome for the i-th coder, we are creating a new subproblem, dp[i+1][p'][c']. The number of different scoreboards then depends on dp[i+1][p'][c']. So, the final recurrence for this DP is:</p>
+
+<pre>
+dp[i][p][c] = sum { dp[i+1][p_j][c_j], where p_j &lt; p or (p_j == p and c_j &gt= c) }, for 1 &lt;= j &lt;= M
+</pre>
+
+<p>where M is the number of possible outcomes, p_j is the number of passed solutions in the j-th outcome, and c_j is the number of challenged solutions in the j-th outcome.</p>
+
+<p>The base case case is:</p>
+
+<pre>
+dp[N][a][b] = 1, for 0 &lt;= a &lt;= 3, 0 &lt;= b &lt;= 3
+</pre>
+
+<p>because those states represent an empty scoreboard, and there is 1 way to create an empty scoreboard: do nothing.</p>
+
+<p><b><u>The Implementation</u></b></p>
+
+<p>The tricky part in implementing this DP is how to enumerate all possible outcomes for the i-th coder efficiently. You could create a separate recursive function to visit all possible outcomes, but I find it is simpler to use three nested loops, each iterating from 0 to 2, inclusive. If description[i] = 'Y', they represent the 3 possible outcomes for each problem (passed, failed, or challenged). If description[i] = 'N', simply ignore the second and the third iteration. Here is the code.</p>
+
+<pre>
+public int countWays(String[] description)
+{
+    int N = description.length;
+    int[][][] dp = new int[N+1][4][4];
+    for (int p = 0; p &lt;= 3; p++)
+    for (int c = 0; c &lt;= 3; c++)
+        dp[N][p][c] = 1;
+    
+    for (int i = N-1; i &gt;= 0; i--)
+    for (int p = 0; p &lt;= 3; p++)
+    for (int c = 0; c &lt;= 3; c++)
+    {
+        int[] opt = new int[3];
+        for (opt[0] = 0; opt[0] &lt; 3; opt[0]++)
+        for (opt[1] = 0; opt[1] &lt; 3; opt[1]++)
+        for (opt[2] = 0; opt[2] &lt; 3; opt[2]++)
+        {
+            // 0 : passed / not submitted
+            // 1 : challenged
+            // 2 : failed
+            
+            int p_j = 0, c_j = 0;
+            boolean valid = true;
+            
+            for (int k = 0; k &lt; 3; k++)
+            {
+                if (description[i].charAt(k) == 'Y')
+                {
+                    if (opt[k] == 0) p_j++;
+                    else if (opt[k] == 1) c_j++;
+                }
+                else if (opt[k] != 0)
+                    valid = false;
+            }
+            
+            if (!valid) continue;
+            
+            if (p_j &lt; p || (p_j == p && c_j &gt;= c))
+                dp[i][p][c] = (dp[i][p][c] + dp[i+1][p_j][c_j]) % MOD;
+        }
+    }
+    return dp[0][3][3];
+}
+</pre>
+<font size="+2"> 
+<b><a href="/stat?c=problem_statement&amp;pm=11288&amp;rd=14537" name="11288">SRMIntermissionPhase</a></b> 
+</font> 
+<A href="/tc?module=ProblemRatingQuestions&pid=11288"><img src="/i/rate_it.gif" hspace="10" border="0" alt="rate it" /></A> 
+<A HREF="http://forums.topcoder.com/?module=ThreadList&forumID=545692" CLASS="statText"><img src="/i/interface/btn_discuss_it.gif" alt="discuss it" border="0" /></A>
+<br> 
+Used as: Division One - Level Two: <blockquote><table cellspacing="2"> 
+  <tr> 
+    <td class="bodyText" style="background: #eee;"> 
+      <b>Value</b> 
+    </td> 
+    <td class="bodyText" style="background: #eee;"> 
+      512 
+    </td> 
+  </tr> 
+  <tr> 
+    <td class="bodyText" style="background: #eee;"> 
+      <b>Submission Rate</b> 
+    </td> 
+    <td class="bodyText" style="background: #eee;"> 
+      183 / 857 (21.35%) 
+    </td> 
+  </tr> 
+  <tr> 
+    <td class="bodyText" style="background: #eee;"> 
+      <b>Success Rate</b> 
+    </td> 
+    <td class="bodyText" style="background: #eee;"> 
+      67 / 183 (36.61%) 
+    </td> 
+  </tr> 
+  <tr> 
+    <td class="bodyText" style="background: #eee;"> 
+      <b>High Score</b> 
+
+    </td> 
+    <td class="bodyText" style="background: #eee;"> 
+      <b>wcao</b> for 398.79 points (16 mins 7 secs) 
+    </td> 
+  </tr> 
+  <tr> 
+    <td class="bodyText" style="background: #eee;"> 
+      <b>Average Score</b> 
+    </td> 
+    <td class="bodyText" style="background: #eee;"> 
+      248.38 (for 67 correct submissions) 
+    </td> 
+  </tr> 
+</table></blockquote> 
+<p>
+Similar to SRMSystemTestPhase, we need to use dynamic programming approach to solve this problem. Unlike the previous problem, this problem requires two DPs. The DP states may be quite easy to spot by high-rated coder, however, the implementation is not that easy.</p>
+
+<p>To simplify the DP implementation of this problem, we assume that the input is 1-indexed.</p>
+
+<p>So, let's begin with an obvious DP state.</p>
+
+<p><b><u>The First DP</u></b></p>
+
+<p>Define dp[i][j] as the number of different scoreboards, considering only coders [i..N], such that the i-th coder has total score j. Consider the (i+1)th coder. By the rule, because all scores are different and the coders are sorted in descending order of their total scores, the possible total score for this coder is between 0 and j-1, inclusive. Furthermore, there are many ways for the i-the coder to have total score j, call it W. So, the value of dp[i][j] is:</p>
+
+
+<font size="+2"> 
+<b><a href="/stat?c=problem_statement&amp;pm=11290&amp;rd=14537" name="11290">PickAndDelete</a></b> 
+</font> 
+<A href="/tc?module=ProblemRatingQuestions&pid=11290"><img src="/i/rate_it.gif" hspace="10" border="0" alt="rate it" /></A> 
+<A HREF="http://forums.topcoder.com/?module=ThreadList&forumID=545692" CLASS="statText"><img src="/i/interface/btn_discuss_it.gif" alt="discuss it" border="0" /></A>
+<br> 
+Used as: Division One - Level Three: <blockquote><table cellspacing="2"> 
+  <tr> 
+    <td class="bodyText" style="background: #eee;"> 
+      <b>Value</b> 
+    </td> 
+    <td class="bodyText" style="background: #eee;"> 
+      1024 
+    </td> 
+  </tr> 
+  <tr> 
+    <td class="bodyText" style="background: #eee;"> 
+      <b>Submission Rate</b> 
+    </td> 
+    <td class="bodyText" style="background: #eee;"> 
+      28 / 857 (3.27%) 
+    </td> 
+  </tr> 
+  <tr> 
+    <td class="bodyText" style="background: #eee;"> 
+      <b>Success Rate</b> 
+    </td> 
+    <td class="bodyText" style="background: #eee;"> 
+      17 / 28 (60.71%) 
+    </td> 
+  </tr> 
+  <tr> 
+    <td class="bodyText" style="background: #eee;"> 
+      <b>High Score</b> 
+    </td> 
+    <td class="bodyText" style="background: #eee;"> 
+      <b>ACRush</b> for 858.72 points (12 mins 59 secs) 
+    </td> 
+  </tr> 
+  <tr> 
+    <td class="bodyText" style="background: #eee;"> 
+      <b>Average Score</b> 
+    </td> 
+    <td class="bodyText" style="background: #eee;"> 
+      682.98 (for 17 correct submissions) 
+    </td> 
+  </tr> 
+</table></blockquote> 
+<p>
+### PROBLEM WRITEUP GOES HERE
+</p>

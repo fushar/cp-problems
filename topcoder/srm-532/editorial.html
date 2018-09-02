@@ -1,0 +1,719 @@
+<link type="text/css" rel="stylesheet" href="/css/style.css" />
+<link type="text/css" rel="stylesheet" href="/css/coders.css" />
+<link type="text/css" rel="stylesheet" href="/css/stats.css" />
+<link type="text/css" rel="stylesheet" href="/css/tcStyles20080219.css" />
+
+<div class="linkBox">
+    <a href="http://apps.topcoder.com/wiki/display/tc/Algorithm+Problem+Set+Analysis">Archive</a><br />
+    <a href="http://community.topcoder.com/stat?c=round_overview&er=5&rd=14725">Match Overview</a><br />
+    <a href="http://apps.topcoder.com/forums/?module=ThreadList&forumID=551402">Discuss this match</a>
+</div>
+<span class="bodySubtitle">Single Round Match 532</span><br />
+Thursday, February 9th, 2012
+<br /><br />
+
+<h2>Match summary</h2> 
+
+<p>SRM 532 attracted 830 Div 1 participants and 1361 Div 2 participants for a total of 2191 coders that showed off their wits in an algorithm match.</p>
+ 
+<p>In division 1, the match presented three interesting problems to solve, with one tricky problem that only less than half of the coders solved. In the end, only 5 coders solved all problems correctly. The first place went to <a class="coderTextRed" href="http://community.topcoder.com/tc?module=MemberProfile&tab=alg&cr=22674179">RAD.</a> thanks for his additional +50 challenge points. <a class="coderTextRed" href="http://community.topcoder.com/tc?module=MemberProfile&tab=alg&cr=22752635">dolphinigle</a> took the second place, however, he should have been the match winner if he had not unsuccessfully challenged a solution in the last seconds. <a class="coderTextRed" href="http://community.topcoder.com/tc?module=MemberProfile&tab=alg&cr=22074135">dzhulgakov</a> grabbed the third place with stable performance in each problems and additional +100 challenge points.</p>
+
+<p>In division 2, only <a class="coderTextYellow" href="http://community.topcoder.com/tc?module=MemberProfile&tab=alg&cr=23011839">csferng</a> solved all problems correctly and thus became the match winner. The second and third place went to <a class="coderTextGreen" href="http://community.topcoder.com/tc?module=MemberProfile&tab=alg&cr=22759973">akm1489</a> and <a class="coderTextYellow" href="coderTextYellow" href="http://community.topcoder.com/tc?module=MemberProfile&tab=alg&cr=23050260">MDG.CEO</a>, respectively. <a class="coderTextYellow" href="http://www.topcoder.com/tc?module=MemberProfile&cr=23001199&tab=alg">Erop</a>, the fastest D2-Hard solver (with unfortunately challenged D2-Medium), finished in the 6th place.</p>
+
+<p>I would like to thank <a class="coderTextOrange" href="http://community.topcoder.com/tc?module=MemberProfile&cr=23025160">[[rng_58]]</a>, <a class="coderTextOrange" href="http://community.topcoder.com/tc?module=MemberProfile&cr=22688523">mystic_tc</a>, and <a class="coderTextRed" href="http://community.topcoder.com/tc?module=MemberProfile&tab=alg&cr=8357090">misof</a> for helping me prepare the match.</p>
+<H1> 
+The Problems 
+</H1>
+</p> 
+
+<font size="+2"> 
+<b><a href="/stat?c=problem_statement&amp;pm=11631&amp;rd=14725" name="11631">DengklekTryingToSleep</a></b> 
+</font> 
+<A href="http://community.topcoder.com/tc?module=ProblemRatingQuestions&pid=11631"><img src="/i/rate_it.gif" hspace="10" border="0" alt="rate it" /></A> 
+<br> 
+Used as: Division Two - Level One: <blockquote><table cellspacing="2"> 
+  <tr> 
+    <td class="bodyText" style="background: #eee;"> 
+      <b>Value</b> 
+    </td> 
+    <td class="bodyText" style="background: #eee;"> 
+      250 
+    </td> 
+  </tr> 
+  <tr> 
+    <td class="bodyText" style="background: #eee;"> 
+      <b>Submission Rate</b> 
+    </td> 
+    <td class="bodyText" style="background: #eee;"> 
+      1178 / 1239 (95.08%) 
+    </td> 
+  </tr> 
+  <tr> 
+    <td class="bodyText" style="background: #eee;"> 
+      <b>Success Rate</b> 
+    </td> 
+    <td class="bodyText" style="background: #eee;"> 
+      1147 / 1178 (97.37%) 
+    </td> 
+  </tr> 
+  <tr> 
+    <td class="bodyText" style="background: #eee;"> 
+      <b>High Score</b> 
+    </td> 
+    <td class="bodyText" style="background: #eee;"> 
+      <b>jg_1992</b> for 249.93 points (0 mins 28 secs) 
+    </td> 
+  </tr> 
+  <tr> 
+    <td class="bodyText" style="background: #eee;"> 
+      <b>Average Score</b> 
+    </td> 
+    <td class="bodyText" style="background: #eee;"> 
+      222.71 (for 1147 correct submissions) 
+    </td> 
+  </tr> 
+</table></blockquote> 
+<p><b><u>Optimal values for A and B</u></b></p>
+<p>
+As the problem statement says, the numbers A and B, i.e., the lowest and highest duck numbers in the kingdom, are unknown to us. So, let's try to determine them from <b>ducks</b>. There are two obvious observations: A must be less than or equal to the smallest number in <b>ducks</b> and B must be greater than or equal to the largest number in <b>ducks</b>. What are their values such that the number of ducks that Mr. Dengklek forgot to call is minimum? It can be proved that in an optimal solution,</p>
+
+<p><b>*</b> A is equal to the smallest number in <b>ducks</b>.<br />
+<b>*</b> B is equal to the largest number in <b>ducks</b>.</p>
+<p>
+<b>Proof</b>: In the proposed solution above, duck numbered A was called by Mr. Dengklek because it is present in <b>ducks</b>. Now, suppose that A is less than the smallest number in <b>ducks</b>. Because A is not present in <b>ducks</b>, then in this solution the number of ducks that were not called is at least one larger than that in the proposed solution. The case with B being larger than the largest number in <b>ducks</b> is handled in a similar way. Therefore, the proposed solution must be optimal.</p>
+
+<p><b><u>Conclusion</u></b></p>
+<p>
+So we know the values of A and B. There are B-A+1 ducks in the kingdom. Because <b>ducks</b> does not contain duplicate elements, the number of ducks that Mr. Dengklek called is equal to the number of elements of <b>ducks</b>. Therefore, the number of ducks that Mr. Dengklek did not call is (B-A+1) - (number of elements of <b>ducks</b>).</p>
+
+<p><b><u>Code</u></b></p>
+<p>
+To get the smallest and largest number in <b>ducks</b>, we can sort it and retrieve its first and last element, to produce this short code.</p>
+<pre>
+public class DengklekTryingToSleep
+{
+    public int minDucks(int[] ducks)
+    {
+        Arrays.sort(ducks);
+        return (ducks[ducks.length-1] - ducks[0] + 1) - ducks.length;
+    }
+}
+</pre>
+
+<font size="+2"> 
+<b><a href="/stat?c=problem_statement&amp;pm=11754&amp;rd=14725" name="11754">DengklekMakingChains</a></b> 
+</font> 
+<A href="http://community.topcoder.com/tc?module=ProblemRatingQuestions&pid=11754"><img src="/i/rate_it.gif" hspace="10" border="0" alt="rate it" /></A> 
+<br> 
+Used as: Division Two - Level Two: <blockquote><table cellspacing="2"> 
+  <tr> 
+    <td class="bodyText" style="background: #eee;"> 
+      <b>Value</b> 
+    </td> 
+    <td class="bodyText" style="background: #eee;"> 
+      600 
+    </td> 
+  </tr> 
+  <tr> 
+    <td class="bodyText" style="background: #eee;"> 
+      <b>Submission Rate</b> 
+    </td> 
+    <td class="bodyText" style="background: #eee;"> 
+      687 / 1239 (55.45%) 
+    </td> 
+  </tr> 
+  <tr> 
+    <td class="bodyText" style="background: #eee;"> 
+      <b>Success Rate</b> 
+    </td> 
+    <td class="bodyText" style="background: #eee;"> 
+      106 / 687 (15.43%) 
+    </td> 
+  </tr> 
+  <tr> 
+    <td class="bodyText" style="background: #eee;"> 
+      <b>High Score</b> 
+    </td> 
+    <td class="bodyText" style="background: #eee;"> 
+      <b>akm1489</b> for 595.07 points (2 mins 35 secs) 
+    </td> 
+  </tr> 
+  <tr> 
+    <td class="bodyText" style="background: #eee;"> 
+      <b>Average Score</b> 
+    </td> 
+    <td class="bodyText" style="background: #eee;"> 
+      292.88 (for 106 correct submissions) 
+    </td> 
+  </tr> 
+</table></blockquote> 
+
+Used as: Division One - Level One: <blockquote><table cellspacing="2"> 
+  <tr> 
+    <td class="bodyText" style="background: #eee;"> 
+      <b>Value</b> 
+    </td> 
+    <td class="bodyText" style="background: #eee;"> 
+      300 
+    </td> 
+  </tr> 
+  <tr> 
+    <td class="bodyText" style="background: #eee;"> 
+      <b>Submission Rate</b> 
+    </td> 
+    <td class="bodyText" style="background: #eee;"> 
+      721 / 756 (95.37%) 
+    </td> 
+  </tr> 
+  <tr> 
+    <td class="bodyText" style="background: #eee;"> 
+      <b>Success Rate</b> 
+    </td> 
+    <td class="bodyText" style="background: #eee;"> 
+      317 / 721 (43.97%) 
+    </td> 
+  </tr> 
+  <tr> 
+    <td class="bodyText" style="background: #eee;"> 
+      <b>High Score</b> 
+    </td> 
+    <td class="bodyText" style="background: #eee;"> 
+      <b>dolphinigle</b> for 289.66 points (5 mins 24 secs) 
+    </td> 
+  </tr> 
+  <tr> 
+    <td class="bodyText" style="background: #eee;"> 
+      <b>Average Score</b> 
+    </td> 
+    <td class="bodyText" style="background: #eee;"> 
+      199.56 (for 317 correct submissions) 
+    </td> 
+  </tr> 
+</table></blockquote> 
+<p>
+There are only two cases that we have to consider in order to make an optimal sequence of links. For simplicity, let's assume that character X denotes a clean link of any degree of beauty.</p>
+
+<p><b><u>Case 1</u></b></p>
+
+<p>
+We can pick the middle link in any chain pieces of the form ".X." as a solution. The largest beauty of a middle link is the solution of this type.</p>
+
+<p>Many coders may miss this case very easily (did you?), so we included this case to the sample test cases. :)</p>
+
+<p><b><u>Case 2</u></b></p>
+
+<p>
+Let's define some terminology.</p>
+
+<p><b>*</b> A <i>suffix piece</i> is a chain piece of the form "..X" or ".XX", or "X.X".<br />
+<b>*</b> A <i>full piece</i> is a chain piece of the form "XXX".<br />
+<b>*</b> A <i>prefix piece</i> is a chain piece of the form "X.." or "XX.", or "X.X".</p>
+
+<p>In order to make a sequence of contiguous links, it is obvious that you can concatenate at most one suffix piece, followed by arbitrarily many full pieces, followed by at most one prefix piece. Therefore, the solution of this type is obtained by taking the sum of:
+</p>
+
+<p>
+<b>*</b> the largest beauty of a suffix piece (if there is any), <br />
+<b>*</b> the total beauty of all full pieces (because we want maximum beauty), and <br />
+<b>*</b> the largest beauty of a prefix piece (if there is any).</p>
+
+<p>
+The tricky part here is that chain pieces of the form "X.X" can be used both as a suffix piece or a prefix piece. So, we have to make sure that the prefix piece and the suffix piece, if any, are two different chain pieces. We can do brute force to choose (at most) two different chain pieces as a suffix piece and as a prefix piece.</p>
+
+<p><b><u>Conclusion</u></b></p>
+<p>
+The optimal solution to the problem is therefore the larger of solutions in case 1 and case 2.</p>
+
+<p><b><u>Implementation</u></b></p>
+<p>There are obviously many ways to implement the solution into a working code. For example, you can consult <a class="coderTextRed" href="http://community.topcoder.com/tc?module=MemberProfile&tab=alg&cr=22708534">yeputons</a>'s clear <a href="http://community.topcoder.com/stat?c=problem_solution&rm=311447&rd=14725&pm=11754&cr=22708534">code</a> that uses the same idea as described.</p> 
+
+<p><b><u>Remarks</u></b></p>
+
+<p>This problem turned out to be very tricky, although admins have included several tricky cases in the examples. One night before the match, the solutions of writer (me), <a class="coderTextRed" href="http://community.topcoder.com/tc?module=MemberProfile&tab=alg&cr=10481120">ivan_metelsky</a>, and <a class="coderTextRed" href="http://community.topcoder.com/tc?module=MemberProfile&tab=alg&cr=22692969">rng_58</a> were discovered to be <b>all wrong</b>. Even several hours before the match, a bug in my solution was found. We then considered that this problem is too tricky and assigned it 300 points.</p>
+
+<p>Some tricky cases that I observed are:</p>
+
+<p><b>*</b> {".7."}, i.e., the solution is a middle link with the largest beauty. This is (intentionally) covered in sample #4.</p>
+
+<p><b>*</b> {"9.8", "123"}, i.e., the prefix piece and suffix piece with the largest beauty is actually the same chain piece. This is (also intentionally) covered in sample #3.</p>
+
+<p><b>*</b> {"5.5"}. Solutions that check all possible pairs of prefix and suffix will fail that case because there is no pairs at all, but the solution is 5. I think this is where most solutions fail.</p>
+
+<p><b>*</b> {"3..", "..3"}. Solution that check all pairs with pseudocode like<br />
+<pre>for i = 0 to N-1
+    for j = i+1 to N-1
+        res = max(res, largestSuffix(i) + fullPieces + largestPrefix(j))</pre></p>
+<p>will fail.</p>
+<font size="+2"> 
+<b><a href="/stat?c=problem_statement&amp;pm=11765&amp;rd=14725" name="11765">DengklekPaintingSquares</a></b> 
+</font> 
+<A href="http://community.topcoder.com/tc?module=ProblemRatingQuestions&pid=11765"><img src="/i/rate_it.gif" hspace="10" border="0" alt="rate it" /></A> 
+<br> 
+Used as: Division Two - Level Three: <blockquote><table cellspacing="2"> 
+  <tr> 
+    <td class="bodyText" style="background: #eee;"> 
+      <b>Value</b> 
+    </td> 
+    <td class="bodyText" style="background: #eee;"> 
+      950 
+    </td> 
+  </tr> 
+  <tr> 
+    <td class="bodyText" style="background: #eee;"> 
+      <b>Submission Rate</b> 
+    </td> 
+    <td class="bodyText" style="background: #eee;"> 
+      10 / 1239 (0.81%) 
+    </td> 
+  </tr> 
+  <tr> 
+    <td class="bodyText" style="background: #eee;"> 
+      <b>Success Rate</b> 
+    </td> 
+    <td class="bodyText" style="background: #eee;"> 
+      2 / 10 (20.00%) 
+    </td> 
+  </tr> 
+  <tr> 
+    <td class="bodyText" style="background: #eee;"> 
+      <b>High Score</b> 
+    </td> 
+    <td class="bodyText" style="background: #eee;"> 
+      <b>Erop</b> for 456.47 points (40 mins 14 secs) 
+    </td> 
+  </tr> 
+  <tr> 
+    <td class="bodyText" style="background: #eee;"> 
+      <b>Average Score</b> 
+    </td> 
+    <td class="bodyText" style="background: #eee;"> 
+      446.44 (for 2 correct submissions) 
+    </td> 
+  </tr> 
+</table></blockquote> 
+<p>Notice the low constraint on <b>M</b>, the number of columns. This type of problem is usually solved by the so-called "DP with profile". There are at least two possible solutions, each with complexity O(<b>N</b> &times; <b>M</b> &times; 3<sup><b>M</b></sup>) and O(<b>N</b> &times; <b>M</b> &times; 4<sup><b>M</b></sup>). In this editorial I will explain the O(<b>N</b> &times; <b>M</b> &times; 3<sup><b>M</b></sup>) solution.</p>
+
+<p>Assume that the rows are numbered from 0 to <b>N</b>-1 and the columns are numbered from 0 to <b>M</b>-1.</p>
+
+<p><b><u>The DP State</u></b></p>
+
+<p>Imagine that we process each square one-by-one, from row 0 to row <b>N</b>-1, and for each row from column 0 to column <b>M</b>-1 (i.e., in row-major order). For each square, there is two options: color it or don't color it. For each option, we have to consider the previous squares that are adjacent to it. In this row-major order, the squares adjacent to it that have been considered so far are the square to its left and the square to its top (except possibly for squares in the leftmost or topmost the board). Because coloring or not coloring it affects the number of adjacent squares of each of those two squares, we have to keep those two squares as parts of the DP state.</p>
+
+<p>For each row, we need to know the states of the two squares as described above for <b>every square</b> in that row. Therefore, there are three values as the DP state: current row, current column, and current "profile". This profile is responsible to keep track of the adjacent squares for every square in that row.</p>
+
+<p><b><u>What is a "Profile"?</u></b></p>
+
+<p>Suppose that <b>N</b>=4, <b>M</b>=7, and we are currently in square (2, 3). Take a look at the image below.</p>
+
+<p><img src="DengklekPaintingSquares_fig1.png"/></p>
+
+<p>In the above image, black squares denote unprocessed squares, white squares denote processed squares whose actual state we ignore, gray squares denote processed squares whose actual state we still consider, and red square denotes the currently processed square. The set of states of the gray squares is what we call a "profile". More precisely, if (i, j) is the current square, then the profile is the set of states all squares (i, k) for 0 &lt;= k &lt; j and all squares (i-1, k) for j &lt;= k &lt; <b>M</b>.</p>
+
+<p>For each gray square, there are three possible states:</p>
+
+<p>
+<b>0.</b> It was colored, and currently it has an even number of colored adjacent squares.<br />
+<b>1.</b> It was colored, and currently it has an odd number of colored adjacent squares.<br />
+<b>2.</b> It was not colored.</p>
+
+<p>Then, for each dp state we decide whether to color the current square or not. For example, suppose that the set states of the current profile is denoted in the image below:</p>
+
+<p><img src="DengklekPaintingSquares_fig2.png"/></p>
+
+<p>When deciding whether or not to color the current square, we have to consider the square to its left and its top. This will update the profile accordingly. Suppose that we decide to color the current square (i.e., the red square). The square to its left now has an odd number of adjacent color squares, so we update its state. The square to its top is not colored, so we don't care. The currently colored square has one (odd) adjacent colored square, i.e., the one to the left. We then proceed to square (2, 4). Therefore, the next dp state will be:</p>
+
+<p><img src="DengklekPaintingSquares_fig3.png"/></p>
+
+<p>Note that in this transition we add square (2, 3) to the profile and remove square (1, 3) from the profile. Therefore, we have to make sure that the state of the removed square (after we color/do not color the current square) is either 0 or 2, as we want that all colored squares have an even number of adjacent colored squares.</p>
+
+<p>If the current square is in the rightmost of the board, the next state would be:</p>
+
+<p><img src="DengklekPaintingSquares_fig4.png"/></p>
+
+<p>In this case, we immediately proceed to the next row:</p>
+
+<p><img src="DengklekPaintingSquares_fig5.png"/></p>
+
+<p>In the first row, there are no squares in the previous row. So, can safely assume that those "imaginary" squares in the (-1)-th row are squares with state 2, to simplify the implementation:</p>
+
+<p><img src="DengklekPaintingSquares_fig6.png"/></p>
+
+<p>We process all squares in this fashion, until we reach the last square. Finally, a valid solution is a state when all squares have been processed, and the profile in the last row does not contain a square with state 1:</p>
+
+<p><img src="DengklekPaintingSquares_fig7.png"/></p>
+
+<p><b><u>Implementation</u></b></p>
+
+<p>Let's transform the above concept into a working code. Let dp[<b>i</b>][<b>j</b>][<b>k</b>] be the number of solutions to the puzzle if we are currently processing square (<b>i</b>, <b>j</b>) and with profile <b>k</b>. Because there are three different states for each square, we can represent <b>k</b> as a number in base-3 of length <b>M</b>, where the n-th (0-based) digit in <b>k</b> denotes the state of the n-th square in the profile. Most programming languages unfortunately do not have built-in bit operation in base-3, so we have to code that manually.</p>
+
+<p><b><u>Code</u></b></p>
+
+<p>I think it is best to explain the implementation directly in a working code. Please consult to the below code for a sample implementation. It should be pretty well self-explaining :)</p>
+
+<pre>public class DengklekPaintingSquares
+{
+    static final int MOD = 1000000007;
+    static final int MAXM = 8+1;
+    
+    // pow3[i] is 3^i
+    int[] pow3;
+    
+    // get[i][j] is the j-th digit in ternary representation of i
+    int[][] get;
+    
+    // set[i][j][k] is i with its j-th digit replaced with k
+    int[][][] set;
+    
+    void precompute()
+    {
+        pow3 = new int[MAXM+1];
+        pow3[0] = 1;
+        for (int i = 1; i &lt;= MAXM; i++)
+            pow3[i] = 3 * pow3[i-1];
+            
+        get = new int[pow3[MAXM]][MAXM];
+        for (int i = 0; i &lt; pow3[MAXM]; i++)
+            for (int j = 0; j &lt; MAXM; j++)
+                get[i][j] = (i / pow3[j]) % 3;
+        
+        set = new int[pow3[MAXM]][MAXM][3];
+        for (int i = 0; i &lt; pow3[MAXM]; i++)
+            for (int j = 0; j &lt; MAXM; j++)
+                for (int k = 0; k &lt; 3; k++)
+                    set[i][j][k] = i + (k - get[i][j]) * pow3[j];
+    }
+    
+    public int numSolutions(int N, int M)
+    {
+        precompute();
+        
+        int[][][] dp = new int[N+1][M+1][pow3[M]];
+        int startk = 0;
+        
+        // assume that in the initial profile, all squares in the
+        // (-1)-th row have state 2
+        for (int j = 0; j &lt; M; j++)
+            startk = set[startk][j][2];
+        
+        // this is the base case
+        dp[0][0][startk] = 1;
+        
+        for (int i = 0; i &lt; N; i++)
+        {
+            for (int j = 0; j &lt; M; j++)
+                for (int k = 0; k &lt; pow3[M]; k++)
+                {
+                    // do not color square (i, j)
+                    if (get[k][j] != 1)
+                    {
+                        dp[i][j+1][set[k][j][2]] += dp[i][j][k];
+                        dp[i][j+1][set[k][j][2]] %= MOD;
+                    }
+                    
+                    // color square (i, j)
+                    // the state of the top square must not be 0
+                    // or else it will become 1 (invalid as it will be
+                    // removed)
+                    if (get[k][j] != 0)
+                    {
+                        int newk = k;
+                        
+                        // first, set the state of the current square to 0
+                        newk = set[newk][j][0];
+                        
+                        // if the top square is colored, toggle the state
+                        if (get[k][j] != 2)
+                            newk = set[newk][j][1 - get[newk][j]];
+                            
+                        // if the left square is colored, toggle the state
+                        // of both the current square and the left square
+                        if (j &gt; 0 && get[k][j-1] != 2)
+                        {
+                            newk = set[newk][j][1 - get[newk][j]];
+                            newk = set[newk][j-1][1 - get[newk][j-1]];
+                        }
+                        
+                        // update the next DP state
+                        dp[i][j+1][newk] += dp[i][j][k];
+                        dp[i][j+1][newk] %= MOD;
+                    }
+                }
+            
+            // move the profile in states (i, M, ?) to (i+1, 0, ?)
+            for (int k = 0; k &lt; pow3[M]; k++)
+                dp[i+1][0][k] = dp[i][M][k];
+        }
+        
+        // all valid solutions is the states (N, 0, k),
+        // where k does not contain state 1
+        int res = 0;
+        for (int k = 0; k &lt; pow3[M]; k++)
+        {
+            boolean valid = true;
+            for (int j = 0; j &lt; M; j++)
+                if (get[k][j] == 1)
+                    valid = false;
+            if (valid)
+                res = (res + dp[N][0][k]) % MOD;
+        }
+        return res;
+    }
+}
+</pre>
+
+<p><b><u>Remarks</u></b></p>
+
+<p>The solution described here can be easily transformed into an O(<b>N</b> &times; <b>M</b> &times; 4<sup><b>M</b></sup>) solution, and it is much easier to code. Instead of having a base-3 profile, use two base-2 profiles. The first profile keeps whether or not a square is colored, and the second profile keeps whether a square has an even or an odd number of adjacent color squares. Then the profile manipulation can be done easily with bit operations.</p>
+
+<p><a class="coderTextYellow" href="http://www.topcoder.com/tc?module=MemberProfile&cr=23001199&tab=alg">Erop</a>'s <a href="http://community.topcoder.com/stat?c=problem_solution&rm=311515&rd=14725&pm=11765&cr=23001199">solution</a> uses a slightly different idea. Instead of processing the squares one-by-one, he processed the squares row-by-row. For each row, he did brute force to determine the profile for the current row. <b>M</b> &lt;= 8 is small enough to let this solution runs within 2 seconds.</p>
+
+<p>For another exercise, solve <a href="http://community.topcoder.com/stat?c=problem_statement&pm=10487">FourBlocks</a> that uses a similar approach.</p>
+
+<font size="+2"> 
+<b><a href="/stat?c=problem_statement&amp;pm=11767&amp;rd=14725" name="11767">DengklekBuildingRoads</a></b> 
+</font> 
+<A href="http://community.topcoder.com/tc?module=ProblemRatingQuestions&pid=11767"><img src="/i/rate_it.gif" hspace="10" border="0" alt="rate it" /></A> 
+<br> 
+Used as: Division One - Level Two: <blockquote><table cellspacing="2"> 
+  <tr> 
+    <td class="bodyText" style="background: #eee;"> 
+      <b>Value</b> 
+    </td> 
+    <td class="bodyText" style="background: #eee;"> 
+      450 
+    </td> 
+  </tr> 
+  <tr> 
+    <td class="bodyText" style="background: #eee;"> 
+      <b>Submission Rate</b> 
+    </td> 
+    <td class="bodyText" style="background: #eee;"> 
+      191 / 756 (25.26%) 
+    </td> 
+  </tr> 
+  <tr> 
+    <td class="bodyText" style="background: #eee;"> 
+      <b>Success Rate</b> 
+    </td> 
+    <td class="bodyText" style="background: #eee;"> 
+      149 / 191 (78.01%) 
+    </td> 
+  </tr> 
+  <tr> 
+    <td class="bodyText" style="background: #eee;"> 
+      <b>High Score</b> 
+    </td> 
+    <td class="bodyText" style="background: #eee;"> 
+      <b>exod40</b> for 405.78 points (9 mins 35 secs) 
+    </td> 
+  </tr> 
+  <tr> 
+    <td class="bodyText" style="background: #eee;"> 
+      <b>Average Score</b> 
+    </td> 
+    <td class="bodyText" style="background: #eee;"> 
+      240.59 (for 149 correct submissions) 
+    </td> 
+  </tr> 
+</table></blockquote> 
+<p>To make the solution easier to implement, let's assume that the houses are numbered 0 through <b>N</b>-1.</p>
+
+<p>Although the statement says that the each road is bidirectional, we can assume that each road connect two houses, from a house with a higher number to another house with a lower number. For example, if <b>K</b>=3, the roads that can be built from house number 5 are 5-->4, 5-->3, and 5-->2.</p>
+
+<p>Let's process the houses one-by-one, from house 0 to house <b>N</b>-1. We will build the roads one-by-one from each house. For each house <b>i</b>, we can build a road to (at most) <b>K</b> other houses from it: houses <b>i</b>-1, <b>i</b>-2, ..., max(0, <b>i</b>-<b>K</b>). Building a road from house <b>i</b> to any of these houses will affect their parities of number of incident roads (we want that each of the parities is even). Therefore, when considering house <b>i</b>, we have to know the parities of number of incident roads of all (at most) <b>K</b> houses before house <b>i</b>.</p>
+
+<p>Because we are building the roads one-by-one, if we are not careful we can possibly count a road configuration more than once. For example, assuming that configuration 0&lt;--2--&gt;1 is valid, we count it twice: </p>
+<p><b>1.</b> Build a road from house 2 to house 0, and then build a road from house 2 to house 1.<br />
+<b>2.</b> Build a road from house 2 to house 1, and then build a road from house 2 to house 0.</p>
+<p>To fix this error, we should require that after we build a road from house A to house B, we cannot build a from house A to house with number smaller than B.</p>
+
+<p><b><u>Dynamic Programming Solution</u></b></p>
+
+<p>We can use DP approach here. Let dp[<b>i</b>][<b>j</b>][<b>k</b>][<b>mask</b>] be the total number of ways to build <b>M</b> roads if we have already built <b>j</b> roads, considering only houses [<b>i</b>..<b>N</b>-1], the parities of number of incident roads of house <b>i</b> and (at most) <b>K</b> houses before it are represented by <b>mask</b>, and we are currently considering to build a road from house <b>i</b> to house <b>i</b>-(<b>k</b>+1). More precisely, the n-th (0-indexed) bit of <b>mask</b> represents the parity of number of incident roads of house <b>i</b>-n, for all 0 &lt;= n &lt;= <b>K</b>.</p>
+<p>For each state,</p>
+
+<p><b>*</b> If <b>k</b>=<b>K</b>, then we have finished processing house <b>i</b> (we simply run out of houses to consider to build roads to). We have to process the next house. The parity of number of incident roads of house <b>i</b>-<b>K</b> must be even, as it we cannot build any road to it from the subsequent houses. The number of ways is dp[<b>i</b>+1][<b>j</b>][0][<b>mask</b>&lt;&lt;1].</p> 
+
+<p><b>*</b> Else, <b>k</b>&lt;<b>K</b>. We have two options here:
+
+<p><b>1.</b> Do not build a road from house <b>i</b> to house <b>i</b>-(<b>k</b>+1). Then we have to consider to build a road to the next house. The number of ways is dp[<b>i</b>][<b>j</b>][<b>k</b>+1][<b>mask</b>]. Note that this way we cannot build a road to houses with smaller numbers than <b>i</b>-(<b>k</b>+1), so there will be no duplicate counting as described in the previous section.</p>
+<p><b>2.</b> Build a road from house <b>i</b> to house <b>i</b>-(<b>k</b>+1). We must still consider house <b>i</b>-(<b>k</b>+1) after building the road, because we may build multiple roads to it. We update <b>mask</b> to toggle the parities of number of incident roads of house <b>i</b> and house <b>i</b>-(<b>k</b>+1). The number of ways is dp[<b>i</b>][<b>j</b>+1][<b>mask</b>^(1&lt;&lt;0)^(1&lt;&lt;(<b>k</b>+1))]. Of course, if <b>i</b>-(<b>k</b>+1) &lt; 0, we have to ignore this option.</p>
+
+<p>The base case is dp[<b>N</b>][<b>M</b>][0][0] = 1, i.e., we have processed all houses, we have built all roads, and all parities of number of incident roads of (at most) <b>K</b> last houses are all even.</p>
+
+<p><b><u>Conclusion</u></b></p>
+
+<p>The answer to this problem is simply dp[0][0][0][0]. Note that all calculations should be done in modulo 1,000,000,007.</p>
+
+<p><b><u>Code</u></b></p>
+
+<p>Here is my solution.</p>
+
+<pre>
+public class DengklekBuildingRoads
+{
+    static final long MOD = 1000000007;
+    public int numWays(int N, int M, int K)
+    {
+        long[][][][] dp = new long[N+1][M+1][K+1][1&lt;&lt;(K+1)];
+        dp[N][M][0][0] = 1;
+        
+        for (int i = N-1; i &gt;= 0; i--)
+        {
+            for (int j = M; j &gt;= 0; j--)
+            {
+                // k == K
+                for (int mask = 0; mask &lt; 1&lt;&lt;(K+1); mask++)
+                {
+                    // if house (i-K) has even parity
+                    if ((mask & (1&lt;&lt;K)) == 0)
+                        dp[i][j][K][mask] = dp[i+1][j][0][mask&lt;&lt;1];
+                }
+                for (int k = K-1; k &gt;= 0; k--)
+                {
+                    for (int mask = 0; mask &lt; 1&lt;&lt;(K+1); mask++)
+                    {
+                        // don't build a road from (i) to (i-k-1)
+                        dp[i][j][k][mask] = dp[i][j][k+1][mask];
+                        
+                        // build a road from (i) to (i-k-1)
+                        if (i-k-1 &gt;= 0 && j+1 &lt;= M)
+                        {
+                            dp[i][j][k][mask] += dp[i][j+1][k][mask^(1&lt;&lt;0)^(1&lt;&lt;(k+1))];
+                            dp[i][j][k][mask] %= MOD;
+                        }
+                    }
+                }
+            }
+        }
+        return (int)dp[0][0][0][0];
+    }
+}</pre>
+<font size="+2"> 
+<b><a href="/stat?c=problem_statement&amp;pm=11766&amp;rd=14725" name="11766">DengklekCountingFormations</a></b> 
+</font> 
+<A href="http://community.topcoder.com/tc?module=ProblemRatingQuestions&pid=11766"><img src="/i/rate_it.gif" hspace="10" border="0" alt="rate it" /></A> 
+<br> 
+Used as: Division One - Level Three: <blockquote><table cellspacing="2"> 
+  <tr> 
+    <td class="bodyText" style="background: #eee;"> 
+      <b>Value</b> 
+    </td> 
+    <td class="bodyText" style="background: #eee;"> 
+      1000 
+    </td> 
+  </tr> 
+  <tr> 
+    <td class="bodyText" style="background: #eee;"> 
+      <b>Submission Rate</b> 
+    </td> 
+    <td class="bodyText" style="background: #eee;"> 
+      12 / 756 (1.59%) 
+    </td> 
+  </tr> 
+  <tr> 
+    <td class="bodyText" style="background: #eee;"> 
+      <b>Success Rate</b> 
+    </td> 
+    <td class="bodyText" style="background: #eee;"> 
+      9 / 12 (75.00%) 
+    </td> 
+  </tr> 
+  <tr> 
+    <td class="bodyText" style="background: #eee;"> 
+      <b>High Score</b> 
+    </td> 
+    <td class="bodyText" style="background: #eee;"> 
+      <b>dolphinigle</b> for 657.02 points (23 mins 15 secs) 
+    </td> 
+  </tr> 
+  <tr> 
+    <td class="bodyText" style="background: #eee;"> 
+      <b>Average Score</b> 
+    </td> 
+    <td class="bodyText" style="background: #eee;"> 
+      508.04 (for 9 correct submissions) 
+    </td> 
+  </tr> 
+</table></blockquote> 
+<p>My solution, <a class="coderTextRed" href="http://community.topcoder.com/tc?module=MemberProfile&tab=alg&cr=10481120">ivan_metelsky</a>'s solution, and <a class="coderTextRed" href="http://community.topcoder.com/tc?module=MemberProfile&tab=alg&cr=22692969">rng_58</a>'s solutions have <b>totally different</b> approaches to this problem. It seems that all coders who solved this problem in-contest have similar solutions to <a class="coderTextRed" href="http://community.topcoder.com/tc?module=MemberProfile&tab=alg&cr=10481120">ivan_metelsky</a>'s.</p>
+<p>I will describe my own approach. If you have solved this problem, you can consider this as an alternative approach. :)</p>
+
+<p><b><u>Writer's Solution: Inclusion-Exclusion</u></b></p>
+
+<p>There are <b>N</b>*<b>M</b> available cells. In each cell, we may place a duck of type from 1 to <b>K</b>, inclusive. There are <b>K</b>^(<b>N</b>*<b>M</b>) ways to fill the cells. Some of them are <i>ugly</i>, i.e., contain at least one pair of similar rows. The total number of beautiful formations would be <b>K</b>^(<b>N</b>*<b>M</b>) - (number of ugly formations).</p>
+
+<p>Let's call the rows R1, R2, R3, ..., R<b>N</b>. Define set Sxy as the set of all formations such that Rx and Ry are similar. For example, let <b>N</b>=3. By principle if inclusion-exclusion,</p>
+
+<p>number of ugly formations = | S12 U S13 U S23 | = | S12 | + | S13 | + | S23 | - | S12 ^ S13 | - | S12 ^ S23 | - | S13 ^ S23 | + | S12 ^ S13 ^ S23 |,</p>
+
+<p>where 'U' denotes set union and '^' denotes set intersection. In general, if the number of terms in the intersection is odd, we add the size of the intersection to the solution, else we subtract it from the solution.</p>
+
+<p>Here comes the interesting way to calculate the expression. Imagine R1, R2, R3, ..., R<b>N</b> as vertices, and Sxy as an edge connecting Rx and Ry. Now, enumerate all possible simple graph <b>G</b> of <b>N</b> vertices:</p> 
+
+<p><b>*</b> If the number of edges in <b>G</b> is odd, add F(<b>G</b>) to the solution.<br />
+<b>*</b> If the number of edges in <b>G</b> is even, subtract F(<b>G</b>) from the solution.</p>
+
+<p>where F(<b>G</b>) is the number of formations such that Rx and Ry are similar if and only if they are connected (directly or indirectly) in <b>G</b>.
+
+<p><b><u>Calculating F(G)</u></b></p>
+
+<p>Suppose that <b>G</b> contains <b>C</b> connected components, each with X1, X2, ..., X<b>C</b> vertices. These connected components are independent from each other. Moreover, all rows in each connected component are similar to each other. Therefore, if num_similar(<b>x</b>) denotes the number of ways <b>x</b> rows can be similar to each other, then</p>
+
+<p>F(<b>G</b>) = num_similar(X1) * num_similar(X2) * ... * num_similar(X<b>C</b>).</p>
+
+<p>This cannot be calculated in a straightforward way, and will be discussed in the next section.</p>
+
+<p><b><u>Enumerating All Simple Graphs of N Vertices</u></b></p>
+
+<p>There are comb[<b>N</b>][2] possible edges in a simple graph of <b>N</b> vertices, so there are 2^(comb[<b>N</b>][2]) possible simple graphs. (comb[i][j] is the number of ways to pick j things from i things.) Obviously, we cannot enumerate them one-by-one. So, let's use dynamic programming instead. We will enumerate all simple graphs by partitioning them into connected components.</p>
+
+<p>Let dp[<b>V</b>][<b>E</b>][<b>a</b>][<b>b</b>] be the number of formations of <b>V</b> vertices (rows), <b>E</b> edges (pairs of similar rows), and we are considering to make connected subgraphs of <b>a</b> vertices and <b>b</b> edges each from it. The last two values (<b>a</b>, <b>b</b>) are necessary to avoid double counting.</p>
+
+<p>In each state, we determine how many connected subgraphs of <b>a</b> vertices and <b>b</b> edges. Suppose we want to make <b>Y</b> such subgraphs. The next state is dp[<b>V</b> - <b>Y</b>*<b>a</b>][<b>E</b> - <b>Y</b>*<b>b</b>][<b>next_a</b>][<b>next_b</b>], where (<b>next_a</b>, <b>next_b</b>) = (<b>a</b>, <b>b</b>+1) if <b>b</b> &lt; comb[<b>N</b>][2], or (<b>a</b>+1, 0) otherwise. To put it simply, we consider all possible sizes of a connected subgraph for each size we determine how many connected subgraphs of that size to make.</p>
+
+<p>Back to topic. For each of the <b>Y</b> connected subgraphs, there are num_similar(<b>a</b>) possible formations. Suppose that there are num_connected(<b>V</b>, <b>a</b>, <b>b</b>, <b>Y</b>) ways to make <b>Y</b> connected subgraphs of <b>a</b> vertices and <b>b</b> edges each from <b>V</b> vertices (note that the vertices are <b>distinguishable</b> and the edges are not). The DP recurrence is therefore:</p>
+<p>dp[<b>V</b>][<b>E</b>][<b>a</b>][<b>b</b>] = sum of {num_similar(<b>a</b>)^<b>Y</b> * num_connected(<b>V</b>, <b>a</b>, <b>b</b>, <b>Y</b>) * dp[<b>V</b> - <b>Y</b>*<b>a</b>][<b>E</b> - <b>Y</b>*<b>b</b>][<b>next_a</b>][<b>next_b</b>]}, for all nonnegative <b>Y</b> such that <b>V</b> &gt;= <b>Y</b>*<b>a</b> and <b>E</b> &gt;= <b>Y</b>*<b>b</b>.</p>
+
+<p>The base case is dp[0][0][<b>a</b>][<b>b</b>] = 1, for all <b>a</b> and <b>b</b>.</p>
+
+<p>Finally, we can enumerate the graphs with respect to the number of edges. dp[<b>N</b>][<b>E</b>][1][0] is the sum of F(<b>G</b>) for all <b>G</b> that have <b>E</b> edges.</p>
+
+<p><b><u>Calculating num_connected(V, a, b, Y)</u></b></p>
+
+<p>Let's solve a simpler problem: how many different connected graphs of <b>n</b> vertices and <b>m</b> edges, where the vertices are distinguishable? Here is the explanation by <a class="coderTextRed" href="http://community.topcoder.com/tc?module=MemberProfile&tab=alg&cr=22692969">rng_58</a>.</p>
+
+<p>It is also solved with DP. Let con[<b>n</b>][<b>m</b>] be the solution.  There are comb[comb[<b>n</b>][2]][<b>m</b>] total simple graphs (picking <b>m</b> edges out of comb[<b>n</b>][2] possible edges.) Some of them are not connected. Let's count the number of disconnected graphs of <b>n</b> vertices and <b>m</b> edges. Number the vertices from 0 to <b>n</b>-1. Consider vertex 0. In a disconnect graph, vertex 0 must be a part of a connected component of <b>p</b> vertices and <b>q</b> edges, where 1 &lt;= <b>p</b> &lt; <b>n</b> and 0 &lt;= <b>q</b> &lt;= <b>m</b>. There are comb[<b>n</b>-1][<b>p</b>-1] ways to choose <b>p</b>-1 vertices in vertex 0's connected component. There are con[<b>p</b>][<b>q</b>] different ways to make connected component for vertex 0. There are <b>n</b>-<b>p</b> remaining vertices to consider and we have to put the remaining <b>m</b>-<b>q</b> edges on them. The number of ways is comb[comb[<b>n</b>-<b>p</b>][2]][<b>m</b>-<b>q</b>].</p>
+
+<p>Therefore, the DP recurrence is:</p>
+<p>con[<b>n</b>][<b>m</b>] = comb[comb[<b>n</b>][2]][<b>m</b>] - sum of {comb[<b>n</b>-1][<b>p</b>-1] * con[<b>p</b>][<b>q</b>] * comb[comb[<b>n</b>-<b>p</b>][2]][<b>m</b>-<b>q</b>]}, for all 1 &lt;= <b>p</b> &lt; <b>n</b> and 0 &lt;= <b>q</b> &lt;= <b>m</b>.</p>
+
+<p>Back to the original question. There are (comb[<b>V</b>][<b>a</b>] * comb[<b>V</b>-<b>a</b>][<b>a</b>] * ... * comb[<b>V</b>-(<b>Y</b>-1)*<b>a</b>][<b>a</b>] / <b>Y</b>!) ways to choose <b>Y</b> set of <b>a</b> vertices each. For each <b>a</b> vertices, there are con[<b>a</b>][<b>b</b>] ways to make a connected component of <b>a</b> vertices and <b>b</b> edges. Therefore,</p>
+
+<p>num_connected(<b>V</b>, <b>a</b>, <b>b</b>, <b>Y</b>) = (comb[<b>V</b>][<b>a</b>] * comb[<b>V</b>-<b>a</b>][<b>a</b>] * ... * comb[<b>V</b>-(<b>Y</b>-1)*<b>a</b>][<b>a</b>] / <b>Y</b>!) * con[<b>a</b>][<b>b</b>].</p>
+
+<p><b><u>Calculating num_similar(x)</u></b></p>
+
+<p>Again, it solved with DP. For each row there are <b>M</b> cells to fill with numbers from 1 to <b>K</b>. So let sim[<b>m</b>][</b>k</b>] be the number of ways to make <b>x</b> similar rows, when there are <b>m</b> cells left in each row and considering only numbers from 1 to <b>k</b>. In each state, we determine how many number <b>k</b> to include in each row. Suppose we want to include <b>p</b> number <b>k</b>'s. There are comb[<b>m</b>][<b>p</b>] ways to choose the positions of number <b>k</b>'s. Because there are <b>x</b> rows and the positions are independent, there are (comb[<b>m</b>][<b>p</b>])^<b>x</b> ways to pick <b>p</b> positions for all rows. Therefore,</p>
+
+<p>sim[<b>m</b>][</b>k</b>] = sum of {(comb[<b>m</b>][<b>p</b>])^<b>x</b> * sim[<b>m</b>-<b>p</b>][<b>k</b>-1]} for all 0 &lt;= <b>p</b> &lt;= <b>m</b></p>
+<p>Finally, num_similar(<b>x</b>) = sim[<b>M</b>][<b>K</b>].</p>
+
+<p><b><u>Conclusion</u></b></p>
+
+<p>All pieces of the puzzle have been discovered now. We can solve the original problem. Instead of enumerating all simple graphs, we just enumerate the all possible number of edges in the simple graphs. Here is the pseudocode of the solution:</p>
+
+<pre>res = 0
+for i = 1 to comb[N][2]
+    if i is even
+        res = res + dp[N][i][1][0]
+    else
+    	res = res - dp[N][i][1][0]
+return K^(N*M) - res
+</pre>
+
+<p>Phew, that was a quite long explanation. I was very relieved to know that there is a more approachable solution, that was used by most coders during the match. :)</p>
+
+<h2>Last words</h2>
+
+<p>I hope you enjoyed the match. I humbly apologize for the not-so-strong examples in DengklekMakingChains. So, see you again in my next SRMs!</p>

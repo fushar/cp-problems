@@ -1,0 +1,17 @@
+3
+2
+Take a single stone in your first turn, leaving 2 stones. You win because Mr. Dengklek cannot leave any composite number of stones in his turn.
+
+
+58
+1
+You are forced to take a single stone, but 57 is not a prime number. You cannot make your turn, therefore, you lose.
+
+30
+3
+The game will proceed as follows:
+* You take 1 stone, leaving 29 stones.
+* Mr. Dengklek takes 1 or 2 stones, leaving 28 or 27 stones. In either case, you cannot leave a prime number of stones in your next turn, therefore, you lose.
+
+526
+58

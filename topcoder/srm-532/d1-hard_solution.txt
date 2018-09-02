@@ -1,0 +1,41 @@
+Let's simplify the problem into: How many different lists of N elements are there such that no two of its elements are same? (of course we ignore the K!/(K-N)! formula)
+
+Let's call the elements A, B, C, ... (the N-th letter in alphabet). Let's call XY the set of lists such that element X and element Y are the same.
+
+The solution is : K^N - (number of lists such that at least two of its elements are the same). The '(number of lists such that at least two of its elements are the same)' is (U = union, ^ = intersection)
+
+| AB U AC U AD U ... U BC U BD U ... |
+
+Suppose that N = 3. The above expression becomes
+
+| AB U AC U BC |
+
+By principle of inclusion-exclusion, the value of the above expression is the same as
+
+| AB | + | AC | + | BC | - | AB ^ AC | - | AB ^ BC | - | AC ^ BC | + | AB ^ BC ^ AC |
+
+The value of the above expression can be calculated like this. Let A, B, C be nodes, and imagine set XY as adding an edge to node X and node Y. Enumerate all possible simple graphs with 3 nodes:
+	* If the number of edges in the graph is odd, add F(G) to the solution.
+	* If the number of edges in the graph is even, subtract F(G) from the solution.
+	where F(G) is the number of lists such that if node A and node B are connected in graph G, then element A and element B are the same.
+	
+How to calculate F(G)? Suppose that F(G) contains X connected components. Since each connected component can take any value between 1 and K, the number of lists would be K^X.
+
+There are like 2^(comb[N][2]) possible simple graphs, so we can't enumerate it. Let's use dynamic programming. The DP is much like integer partition DP, where in this context we partition the graphs into several connected subgraphs. The state is (A, B, C, D), where:
+	* A : number of nodes
+	* B : number of edges
+	* C : the current size of nodes considered
+	* D : the current size of edges considered
+	
+It is actually analoguos to integer partition DP: the state is (current integer, current partition size). The last state is required to avoid duplicate counting.
+
+For each state DP(A, B, C, D), we decide how many connected subgraphs with C nodes and D edges to create (let's call Y), and proceed the state to DP(A-Y*C, B-Y*D, C, D+1) or DP(A-Y*C, B-Y*D, C+1, 0) depending on the current (C, D). More formally,
+
+DP(A, B, C, D) = sum of K * Z(A, C, D, Y) * DP(A-Y*C, B-Y*D, **next(C, D)**) for all valid Y such that A >= Y*C and B >= Y*D,
+
+where next(C, D) is (C, D+1) if D <= N*(N-1)/2, or (C+1, 0) otherwise, and
+Z(A, C, D, Y) is the number of ways to create Y connected subgraphs of C nodes and D edges from A nodes.
+
+Let's calculate Z(A, C, D, Y). There are {comb[A][C] * comb[A-C][C] * comb[A-2C][C] * ... * comb[A-(K-1)C][C] / K!} ways to choose Y C-nodes from A nodes. For each C-nodes, there are W(C, D)^Y ways to create Y connected graph with C nodes and D edges each. W(C, D) is calculated with your solution in our chat. Multiply them to get the result.
+
+So, the simplified problem is solved. To solve the original problem, just replace all occurrences of K with the number of lists of T sublists where all of them has the same number of each lucky number. It can be solved with another simple DP.

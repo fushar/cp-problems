@@ -1,0 +1,49 @@
+24
+{25000, 45000, 90000}
+{"YYY"}
+{30000, 60000, 110000}
+{"NNN"}
+{30000, 60000, 110000}
+{"YYY", "YYY", "YYY", "YYY", "YYY", "YYY", "YYY", "YYY", "YYY", "YYY", "YYY", "YYY", "YYY", "YYY", "YYY", "YYY", "YYY", "YYY", "YYY", "YYY"}
+{30000, 60000, 110000}
+{"NNN", "NNN", "NNN", "NNN", "NNN", "NNN", "NNN", "NNN", "NNN", "NNN", "NNN", "NNN", "NNN", "NNN", "NNN", "NNN", "NNN", "NNN", "NNN", "NNN"}
+{25825, 57183, 96726}
+{"YYN"}
+{26406, 56734, 106724}
+{"NNY", "YNN"}
+{25021, 55144, 97044}
+{"NYY", "NYN", "YYY"}
+{26488, 46109, 97112}
+{"NYY", "NYN", "NNN", "NNY"}
+{26803, 52189, 95975}
+{"NYY", "YNY", "NYN", "YNN", "NNN"}
+{26471, 49498, 92670}
+{"NNY", "NYN", "NNN", "YNN", "NNY", "YYN"}
+{29404, 48960, 90453}
+{"YNN", "NNY", "YYY", "NYN", "YNY", "YYN", "NYY"}
+{25575, 57034, 101292}
+{"YNN", "NNY", "NNY", "YYN", "YYY", "YNY", "YNY", "NNN"}
+{25154, 46646, 101268}
+{"NNN", "NNY", "NNY", "YNN", "YNY", "YNY", "YNY", "NYY", "NNN"}
+{25275, 46180, 108685}
+{"NYN", "NYY", "NNY", "NYN", "NYY", "YNN", "YYN", "YNN", "NYY", "YYY"}
+{27019, 51679, 99255}
+{"NYY", "YNN", "YYY", "NYY", "NYN", "YNN", "NNN", "NNN", "NYN", "YNN", "NNN"}
+{26738, 52723, 107896}
+{"NYN", "NYY", "NNN", "NNY", "NYN", "YYY", "YNN", "YYN", "YNN", "YNN", "NYY", "YNN"}
+{27667, 46855, 98053}
+{"NNN", "YNN", "YNY", "NNY", "YYN", "NNY", "NYN", "YNY", "YNN", "NYY", "NNY", "YNY", "NYY"}
+{28222, 52374, 91085}
+{"NNN", "NNY", "NYY", "NNN", "NNN", "NYN", "YNN", "YYY", "NNY", "YYN", "YYY", "NYN", "NYY", "NNY"}
+{25427, 57062, 95581}
+{"YYN", "YNN", "NNN", "NYN", "NYN", "NNY", "NNY", "NYY", "NYY", "NNN", "NYN", "NYN", "NNY", "YNY", "NNY"}
+{28167, 53441, 106710}
+{"NNY", "NYN", "YYY", "NYY", "NNN", "NYY", "NYN", "NYY", "YYY", "YYN", "YNN", "YNN", "NYY", "NYN", "NYN", "YYN"}
+{27735, 48263, 102484}
+{"YYY", "YYY", "NYY", "NNN", "NNN", "NNN", "YYN", "NNY", "YNY", "NYN", "NYN", "NNN", "NNN", "YNY", "YNY", "NYY", "NNY"}
+{29489, 54514, 94843}
+{"NYN", "YNN", "YYN", "NYY", "YNY", "NYN", "YNN", "YNY", "YYY", "NYY", "YYN", "YNY", "YNN", "NNY", "YYY", "YNY", "NNY", "NYN"}
+{27268, 48881, 92683}
+{"YNN", "NYN", "YYN", "NNN", "NNN", "NYN", "NNN", "YYY", "NNN", "NYY", "NNY", "NNN", "YNY", "NYY", "NNY", "YYN", "NYN", "NYY", "YNN"}
+{29018, 46800, 92729}
+{"YYY", "YNY", "NYN", "YNY", "YYY", "YYN", "YYY", "NYY", "YYY", "NNY", "NYN", "YYN", "NNN", "NYN", "NNY", "YYY", "YNN", "YYN", "NNY", "NNY"}

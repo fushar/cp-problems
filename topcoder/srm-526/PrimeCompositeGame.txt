@@ -1,0 +1,19 @@
+Let's use dynamic programming approach first.
+
+Let dpAsh[i] be the outcome of the game when initially there are i marbles and Ash starts the game.
+
+Let dpElsh[i] be the outcome of the game when initially there are i marbles and Elsh starts the game.
+
+The obvious recurrence is:
+
+dpAsh[i] = 1 + min { -dpElsh[i-j] } (for 1 <= j <= K) (for i-j is prime) (for dpElsh[i-j] < 0).
+
+If there is no dpElsh[i-j] < 0, the recurrence becomes
+
+dpAsh[i] = - (1 + max { dpElsh[i-j] } (for 1 <= j <= K) (for i-j is prime).
+
+dpElsh[] can be computed in a very similar way.
+
+The problem is that the recurrence is too slow, O(NK). We can overcome this using priority queues. Compute both dp's in increasing index. While computing, we maintain two priority queues for each person to compute min {-dpOpponent[i-j]} and max{dpOpponent[i-j]} in O(log N) (just retrieving the top of priority queue). When advancing from i to i+1, we pop all elements from top that are out of range, i.e., that have i-K > j. Some may call it "sliding window technique".
+
+The total complexity is O(N log N). The idea is rather easy to spot, but the implementation is not that easy, so I think it's perfect for an Easy in TCO onsite round.
