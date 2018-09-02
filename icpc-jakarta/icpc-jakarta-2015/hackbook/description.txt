@@ -1,0 +1,39 @@
+Hackbook Password
+-----------------
+
+Budi wants to create a new account on Hackbook, a website where programmers post interesting statuses about their daily lives.
+
+When he opens the registration form, there are strange rules about a valid password that must  be followed by the users:
+
+- A password should consists of lowercase letters.
+- A password must be similar to an Indonesian word, so that few users will forget their passwords.
+- A password is said to be similar to an Indonesian word if it consists of one or more syllables joined together.
+- A syllable must be in the form of CV or CVC, where C is a consonant and V is a vowel.
+- Indonesian vowels are 'a', 'e', 'i', 'o', and 'u'. The rest of the letters are consonants.
+
+Budi really wants to use a string S for his password on Hackbook. If S is not a valid Hackbook password, Budi wants to rearrange the letters in S so that the final string is a valid Hackbook password.
+
+Help Budi rearrange the letters!
+
+Input
+The first line of input contains an integer T (T ≤ 20) denoting the number of cases. Each case consists of a line containing a string S. S will contain between 1 and 100 letters, inclusive. Each letter in S will be 'a'-'z'.
+
+Output
+For each case, output "Case #X: Y" in a line, where X is the case number that starts from 1, and Y is an arrangement of letters in S that is a valid Hackbook password. If there are more than one solution, output any of them. If no valid arrangements exist, Y should be the string "IMPOSSIBLE" without quotes.
+
+Sample Input
+6
+aeosmg
+slolo
+ek
+jakarta
+icpc
+fharsu
+
+(Possible) Output for Sample Input
+Case #1: semoga
+Case #2: lolos
+Case #3: ke
+Case #4: jakarta
+Case #5: IMPOSSIBLE
+Case #6: fushar

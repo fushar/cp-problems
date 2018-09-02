@@ -1,0 +1,69 @@
+An ICPC Problem Without Statement - Solution
+--------------------------------------------
+
+First, split the input into two arrays: array of *absolute* values of negative integers (X) and array of nonnegative integers (Y).
+
+There are two cases to consider. In each case, we greedily brute force how many negative integers to pick and how many nonnegative integers to pick.
+
+- The solution consists of an odd number of negative integers. To make it optimal, we have to minimize absolute value of the product.
+
+  Pseudocode:
+
+  sort(X)
+  sort(Y)
+
+  res = -INF
+  for (int cntX = 1; cntX <= nX && cntX <= A; cntX += 2) {
+        cntY = min(cntY, A - cntX)
+
+        if (cntX + cntY < A) {
+            continue;
+        }
+
+        // this means we pick the *first* cntX negative integers and the first cntY nonnegative integers
+        // compare and update res with this current solution
+  }
+
+
+- The solution consists of an even number of negative integers. To make it optimal, we have to maximize the product.
+
+  Pseudocode:
+
+  sort(X)
+  sort(Y)
+
+  let nYPositiveOnly be number of positive integeres in Y
+
+  res = -INF
+  for (int cntX = 0; cntX <= nX && cntX <= B; cntX += 2) {
+
+        // don't pick zeroes
+        cntY = min(nYPositiveOnly, B - cntX)
+
+        // only pick zeroes if must
+        if (cntX + cntY < A) {
+            cntY = A - cntX
+        }
+
+        if (cntX + cntY < A) {
+            continue;
+        }
+
+        // this means we pick the last cntX negative integers and the last cntY nonnegative integers
+        // compare and update res with this current solution
+  }
+
+
+Pick the better of two solutions.
+
+------------------
+
+How to represent the product?
+
+One way: take the logarithm. But we can have 0, so modify it a bit as follows
+
+- 0 means 0.
+- P (P > 0) means 2^(P-1)
+- P (P < 0) means -2^((-P)-1)
+
+So we can replace partial products computation  with just partial sums.

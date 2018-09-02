@@ -1,0 +1,51 @@
+An ICPC Problem Without Statement
+---------------------------------
+
+It's a very lovely day in the year of 2016.
+
+You are the coach of ACM-ICPC teams in your university. This year, you want to send your teams to ACM-ICPC regionals. Due to limited budget, your university can only send teams to a single regional site. You know that different sites have different problemset types and styles. You want to do a simple research of problemsets in different sites by reading blogposts about last year's regional contests.
+
+You are now stumbled upon a contestant's blogpost about ACM-ICPC Jakarta Regionals 2015. In the blogpost, the contestant described an "evil" problem. Interested, you begin to read the full post...
+
+"This year, I participated in ACM-ICPC Jakarta Regionals 2015. The problemset was interesting. My favorite problem is An ICPC Problem Without Statement. The problem has very long description. Here, I will just simplify what the problem is really asking:
+
+You are given N (1 ≤ N ≤ 100,000) integers. Each integer is between -2 and 2, inclusive. You are also given two integers A and B. Pick K integers, where K is between A and B inclusive, such that their product is as large as possible!
+
+The problem looks kind of easy, right? However, many teams got many wrong answer verdicts on this problem during the contest. The scoreboard was full of red color on this problem's column. My team finally managed to get accepted on this problem in the 7th try. We got very bad penalty :(
+
+Anyway, can you solve this problem? Post your solution in the comment section below."
+
+Instead of browsing other blogposts, you are now interested to solve the mentioned problem. What's so difficult about this problem? The solution should be easy.
+
+Then, you start coding the solution right away. After you are confident about your solution, you submitted your solution to Live Archive, a website that hosts all past ICPC regional problems. Uh-oh, a Wrong Answer verdict. After receiving the so many Wrong Answer verdicts for your solution, you realized one thing: the blogpost author was correct. This problem is so evil...
+
+Input
+The first line of input contains an integer T (T ≤ 20) denoting the number of cases. Each case begins with three integers: N, A, and B (1 ≤ A ≤ B ≤ N ≤ 100,000). The next line contains N space-separated integers. Each integer is between -2 and 2, inclusive.
+
+Output
+For each case, output "Case #X:" in a line, where X is the case number that starts from 1. In the next line, output K, the number of integers you pick. In the next line, output K integers: the space-separated indices of the integers, sorted from the smallest index to the largest index. The first integer has the index 1. If there are more than one solution, output any.
+
+Sample Input
+4
+7 1 4
+2 1 1 -2 -1 2 0
+4 1 1
+1 -2 2 -1
+4 3 4
+1 -1 1 -1
+4 3 4
+1 -1 1 -1
+
+(Possible) Output for Sample Input
+Case #1:
+4
+1 4 5 6
+Case #2:
+1
+3
+Case #3:
+4
+1 2 3 4
+Case #4:
+3
+2 3 4
