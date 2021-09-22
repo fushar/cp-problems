@@ -1,0 +1,107 @@
+\documentclass[12pt]{article}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage[latin1]{inputenc}
+
+\newtheorem{lemma}{Lemma}
+
+\title{Getting started}
+\author{Veloci Raptor}
+\date{03/14/15}
+
+\begin{document}
+
+At the end of every hour, the current state the siblings' readings is completely determined by four values:
+
+\begin{itemize}
+	\item The book Andi has just read ($a_{cur}$), and how many hours he has spent on it ($a_{done}$)
+	\item The book Budi has just read ($b_{cur}$), and how many hours he has spent on it ($b_{done}$)
+\end{itemize}
+
+Let's start with an obvious DP solution. Let $dp[a_{cur}][a_{done}][b_{cur}][b_{done}]$ be the shortest time for the siblings to finish the books, given the current state. The transition depends on Budi's next action for the next hour:
+
+\begin{itemize}
+  \item Do nothing.
+  \item Continue reading book $b_{cur}$, if $b_{done} < B[b_{cur}]$.
+  \item Start reading book $b_{cur}+1$, if $b_{done} = B[b_{cur}]$.
+  \item Start reading book $b_{cur}+2$, if $b_{done} = B[b_{cur}]$.
+\end{itemize}
+
+For each of the possible Budi's actions above, Andi can continue reading the current book, start reading the next book if he has finished the current book, or do nothing if he cannot do it because Budi has not finished reading the next book yet.
+
+
+The DP formula will be roughly something like this:
+\[
+dp[a_{cur}][a_{done}][b_{cur}][b_{done}] = min 
+\begin{cases}
+  1 + dp[a_{cur}+?][?][b_{cur}][b_{done}] \\
+  1 + dp[a_{cur}+?][?][b_{cur}][b_{done}+1] \\
+  1 + dp[a_{cur}+?][?][b_{cur}+1][1] \\
+  1 + dp[a_{cur}+?][?][b_{cur}+2][1] \\
+\end{cases}
+\]
+
+(For simplicity, the base cases and boundary conditions are intentionally left out in the above formula. Also, exact the values of the question marks depends on the current state, which are also intentionally omitted.)
+
+Using the above formula, the final answer will be $dp[0][0][0][0]$, with the added convenient sentinel values $A[0] = B[0] = 0$ (i.e. it takes $0$ hours to read the $0$-th book).
+
+Of course, unfortunately, the above solution is too slow and requires too much memory: the size of the state space is $N \times max\{A[i]\} \times N \times max\{B[i]\} = 1000 \times 1000 \times 1000 \times 10 = 10^{10}$. Let's try to reduce the state space. We have the following lemma:
+
+\begin{lemma}
+  Once Budi starts reading a book, it is always optimal for him to finish the book without idle hours in-between.
+\end{lemma}
+
+Using this lemma, we can drop $b_{done}$ from the state, and only consider the hours where Budi has finished reading some book $b_{cur}$. So, we now define $dp[a_{cur}][a_{done}][b_{cur}]$ to be the shortest time for Budi to have finished reading book $b_{cur}$, while Andi has spent $a_{done}$ hours reading book $a_{cur}$. To further simplify the state, since Andi will need to read all books $1, 2, ..., N$ in order, let's define Andi's "total progress" $a_{tot}$ as the total non-idle hours Andi has spent reading the books. This value will range from $0$ to $A[1] + A[2] + ... + A[N]$.
+
+Finally, our DP state is now simplified to $dp[a_{tot}][b_{cur}]$, which represents the shortest time for Budi to have finished reading book $b_{cur}$, while Andi has spent $a_{tot}$ hours reading the books. The base case is $dp[A[1] + A[2] + ... + A[N]][N] = 0$. The transition formula is as follows:
+
+\[
+dp[a_{tot}][b_{cur}] = min 
+\begin{cases}
+  1 + dp[a_{tot}+1][b_{cur}] \\
+  B[b_{cur}+1] + dp[a_{tot}+?][b_{cur}+1] \\
+  B[b_{cur}+2] + dp[a_{tot}+?][b_{cur}+2] \\
+\end{cases}
+\]
+
+
+We need to replace the question marks with the furthest "progress" that Andi can make in the above DP transition formula. Intuitively, when Budi spends $B[b_{cur}+1]$ hours reading $b_{cur}+1$, then $a_{tot}$ could increase by $B[b_{cur}+1]$, too.  However, note that because Andi can't start reading a book if Budi has not finished reading it or skipped it,  $a_{tot}$ also can't exceed $A[1] + A[2] + ... + A[b_{cur}]$, so we need to take the minimum value from both. To simplify the formula, let's define $A_{prefix}[i] = A[1] + A[2] + ... + A[i]$. Then, the DP transition formula becomes:
+
+\[
+dp[a_{tot}][b_{cur}] = min 
+\begin{cases}
+  1 + dp[a_{tot}+1][b_{cur}] \\
+  B[b_{cur}+1] + dp[min(A_{prefix}[b_{cur}], a_{tot}+B[b_{cur}+1])][b_{cur}+1] \\
+  B[b_{cur}+2] + dp[min(A_{prefix}[b_{cur}+1], a_{tot}+B[b_{cur}+2])][B_{cur}+2] \\
+\end{cases}
+\]
+
+
+Even though we made improvement, the size of the state space is now $N \times max\{A[i]\} \times N = 1000 \times 1000 \times 1000 = 10^{9}$, which is still too much. Can we improve it further?
+
+The final trick is by realizing the next lemma:
+
+\begin{lemma}
+  It is always optimal for Budi to not have idle hours between two consecutive book readings.
+\end{lemma}
+
+In other words, right after Budi has just finished reading a book, it is always optimal to immediately read another book. Therefore, we don't need to consider the first case in the DP transition formula above, where Budi does nothing (which is $1 + dp[a_{tot}+1][b_{cur}]$). Also, the most important consequence is, right after Budi has finished reading book $N$, the value of $a_{tot}$ will be at most $B[1] + B[2] + ... + B[N]$. At this point, Budi will just do nothing and Andi can just continue reading for $A_{prefix}[N] - a_{tot}$ hours. Therefore, we can just consider the values of $a_{tot}$ which are at most $B[1] + B[2] + ... + B[N]$ in our DP state.
+
+Using the above observation, our final DP formula will be:
+
+\[
+dp[a_{tot}][N] = A_{prefix}[N] - a_{progress} \text{ (base case). Otherwise:}
+\]
+\[
+dp[a_{tot}][b_{cur}] = min
+\begin{cases}
+  B[b_{cur}+1] + dp[min(A_{prefix}[b_{cur}], a_{tot}+B[b_{cur}+1])][b_{cur}+1] \\
+  B[b_{cur}+2] + dp[min(A_{prefix}[b_{cur}+1], a_{tot}+B[b_{cur}+2])][B_{cur}+2] \\
+\end{cases}
+\]
+
+Now, the size of the state space is $N \times max\{B[i]\} \times N = 1000 \times 10 \times 1000 = 10^{7}$, which fits time and memory limits easily.
+
+\end{document}
