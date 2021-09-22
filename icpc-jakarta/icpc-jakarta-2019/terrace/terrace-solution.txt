@@ -1,0 +1,18 @@
+Tiling Terrace - Solution
+
+Let S be the number of characters '.' in the input.
+
+The solution uses dynamic programming and greedy.
+
+Let's assume that we can only use type-2 and type-3 tiles. Define dp[i][j] = maximum number of type-2 tiles that can be used for tiling cells 1..i, given that we have used j type-3 tiles. The recurrence is trivial: for each state, decide whether we want to use type-2 tile, type-3 tile, or skip.
+
+Now, we can brute-force j, the number of type-3 tiles used. For each j, we know that:
+
+- The number of type-2 tiles used = dp[N][j]
+- The number of type-3 tiles used = j
+- The number of untiled, soil cells = S - dp[N][j] - j
+- We can use greedy to put at most K type-1 tiles on those untiled soil cells, and possibly replace some type-2 tiles into two type-1 tiles, whenever that is more profitable.
+
+The answer is the maximum result over all j.
+
+Time complexity = O(NM), where M is the number of characters '#' in the input (at most 50).

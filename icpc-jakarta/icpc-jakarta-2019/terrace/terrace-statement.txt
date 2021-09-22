@@ -1,0 +1,41 @@
+Tiling Terrace
+
+Talia just bought an abandoned house. In the front of the house, there is a terrace which can be represented as a one-dimensional grid consisting of 1xN cells. The terrace is missing all the tiles, so each cell of the terrace contains either soil (represented by the character '.') or rock (represented by the character '#'). There are at most 50 cells containing rocks at the terrace.
+
+Being a superstitious girl, Talia wants to tile the terrace with mystical tiles are able to repel ghosts. There are three types of mystical tiles:
+
+Type 1
+- Covers 1x1 cell.
+- Can only be placed on a soil cell ('.').
+- Repels G1 ghosts/day.
+
+Type 2
+- Covers 1x2 cells.
+- Can only be placed on two consecutive soil cells ('..').
+- Repels G2 ghosts/day.
+
+Type 3
+- Covers 1x3 cells.
+- Can only be placed on consecutive soil-rock-soil cells ('.#.').
+- Repels G3 ghosts/day.
+
+There are also mystical rules that must be followed to use the tiles:
+- The tiles must not overlap each other.
+- There can only be at most K type-1 tiles.
+- There is no limit on the number of type-2 and type-3 tiles.
+
+What is the maximum possible total number ghosts repelled per day by tiling mystical tiles on Talia's terrace? In other words, what is the maximum sum of ghosts repelled per day, over all tiles?  Note that Talia does not have to tile all the cells; she can leave some cells untiled.
+
+Input Format
+
+N K G1 G2 G3
+<N characters representing the terrace>
+
+Output Format
+<maximum total number of ghosts repelled per day>
+
+Constraints
+- 1 <= N <= 100.000
+- There are at most 50 character '#'
+- 0 <= K <= N
+- 0 <= G1, G2, G3 <= 1.000
