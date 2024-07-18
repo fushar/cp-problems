@@ -1,0 +1,78 @@
+You love to solve a daily puzzle in a newspaper. In the puzzle, you are given a grid consisting of 2 rows and N columns. Each cell is initially empty (denoted by '.') or blocked (denoted by '#'). Each empty cell can be filled with a letter, either A, B, or C, with the following rules:
+
+- The number of A's is at most Ma.
+- The number of B's is at most Mb.
+- The number of C's is at most Mc.
+- There must be no two cells, each containing A, that share a side (in other words, are vertically or horizontally adjacent).
+- There must be no two cells, each containing B, that share a corner (in other words, are diagonally adjacent).
+
+Your final score is calculated as follows: (the number of A's) * Sa + (the number of B's) * Sb + (the number of C's) * Sc.
+
+Given a puzzle, determine the maximum possible score you can obtain.
+
+Constraints
+1 <= N <= 1,000
+0 <= Ma, Mb, Mc <= 1,000
+1 <= Sa, Sb, Sc <= 100,000
+Each character in the grid is either '.' or '#'.
+
+Input
+N
+Ma Mb Mc
+Sa Sb Sc
+<the grid>
+
+Output
+Output the maximum possible score.
+
+Sample Input 1
+7
+4 4 3
+10 30 20
+#.#..#.
+.#...#.
+
+Sample Output 1
+200
+
+Explanation of Sample 1
+One possible way to fill the grid that achieves the maximum score is:
+
+#B#CB#B
+C#CAB#A
+
+Your score is 2*10 + 4*30 + 3*20 = 20 + 120 + 60 = 200.
+
+Sample Input 2
+7
+4 4 3
+40 20 30
+#.#..#.
+.#...#.
+
+Sample Input 2
+290
+
+Explanation of Sample 2
+One possible way to fill the grid that achieves the maximum score is:
+
+#A#AB#C
+A#ACB#C
+
+Your score is 4*40 + 2*20 + 3*30 = 160 + 40 + 90 = 290.
+
+Sample Input 3
+2
+1 1 1
+10 10 10
+..
+..
+
+Sample Output 3
+30
+
+Explanation of Sample 3
+One possible way to fill the grid that achieves the maximum score is:
+
+A.
+BC

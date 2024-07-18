@@ -1,0 +1,17 @@
+The most obvious dynamic programming state, such as: $DP(c, cnt_A, cnt_B, cnt_C)$ = max score, considering only columns $[1..c]$, and using exactly $cnt_A$ A's, $cnt_B$ B's, and $cnt_C$ C's, will not work because it requires an $O(N^4)$ solution. What can we drop from the state?
+
+We can try the following improvement: $DP(c, cnt_A, cnt_B)$ = max number of C's we can use, considering only columns $[1..c]$, and using exactly $cnt_A$ A's and $cnt_B$ B's. For each possible pair ($cnt_A$, $cnt_B$), we know the remaining number of empty cells (= number of all empty cells - $cnt_A$ - $cnt_B$). We then put at most $DP(N, cnt_A, cnt_B)$ C's to the empty cells, and calculate the score. By iterating over all possible pairs ($cnt_A$, $cnt_B$), we get the max score.
+
+This solution runs in $O(N^3)$, which still exceeds the time limit. How to improve further?
+
+Notice that we don't have any restriction on where to put the C's. We can use this advantage to drop one more state. Now, define $DP(c, cnt_A)$ = max number of B's we can use, considering only columns $[1..c]$, and using exactly $cnt_A$ A's. For each possible $cnt_A$, we first maximize the number of B's = $DP(N, cnt_A)$. We know the number of remaining empty cells (= number of all empty cells - $cnt_A$ - $DP(N, cnt_A)$). Then, we greedily do the following:
+
+\begin{itemize}
+  \item WLOG, let us assume that $S_a < S_b$.
+  \item Put as many C's as possible to the remaining empty cells.
+  \item If we still have C's, and $S_c > S_a$, replace as many A's as possible with C's.
+  \item If we still have C's, and $S_c > S_b$, replace as many B's as possible with B's.
+  \item After the number of A's, B's, and C's are fixed, we calculate the score.
+\end{itemize}
+
+By iterating over all possible $cnt_A$, we can get the max score. This solution runs in $O(N^2)$.
