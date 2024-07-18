@@ -1,0 +1,74 @@
+Tale of the Twins
+
+Joko's wife is expecting twins. Her parents proposed two baby names, represented by the strings A and B, each consisting of uppercase letters 'A' to 'Z'.
+
+Joko wants to honor his in-laws' choice, while also having the freedom to choose the names for his twins-to-be. He comes up with the following rule:
+
+- The name for the elder sibling (referred to as A'), must be a permutation of A.
+- The name for the younger sibling (referred to as B'), must satisfy:
+  * |B'| = |A'|.
+  * B' can be obtained by removing zero of more characters from a permutation of B.
+  * For each i, B'[i] must be equal to A'[i], or the next letter that follows alphabetically after A'[i].
+
+Joko now wonders, how many different possible pairs of (A', B') are there? As the result might be very large, he is only interested in the result modulo 1,000,000,007.
+
+Constraints
+
+- 1 <= |A| <= |B| <= 100,000.
+- A consists of characters 'A'-'Z'.
+- B consists of characters 'A'-'Z'.
+
+Input
+
+A
+B
+
+Output
+
+The result modulo 1,000,000,007.
+
+Sample Input 1
+AMA
+ANAB
+
+Sample Output 1
+9
+
+Explanation of Sample 1
+The 9 pairs are:
+
+AAM  AAM  AAM
+AAN  ABN  BAN
+
+AMA  AMA  AMA
+ANA  ANB  BNA
+
+MAA  MAA  MAA
+NAA  NAB  NBA
+
+
+Sample Input 2
+BINUS
+BINANUSA
+
+Sample Output 2
+120
+
+Explanation of Sample 2
+The 120 pairs are the pairs where A' = B' and A' is a permutation of "BINUS".
+
+
+Sample Input 3
+BINUSUNIVERSITY
+BINANUSANTARAUNIVERSITYJAKARTA
+
+Sample Output 3
+810042666
+
+
+Sample Input 4
+ANDI
+BUDI
+
+Sample Output 4
+0

@@ -1,0 +1,55 @@
+Notice that the order of characters in $A$ and $B$ does not matter. What matters is the count of each letter in the alphabet in both strings. Let's represent each letter in the alphabet by an integer in the $[0, 26)$ range. Then, we define the following:
+
+\begin{itemize}
+  \item $cnt_{A}[c]$ = the count of letter $c$ in $A$, for each c in $[0, 26)$.
+  \item $cnt_{B}[c]$ = the count of letter $c$ in $B$, for each c in $[0, 26)$.
+\end{itemize}
+
+Let's solve the problem using dynamic programming. Let $DP(c, cnt\_c\_used)$ be the number of ways, if we only consider letters $[c, 26)$, and we already used $cnt\_c\_used$ letters $c$ from $B$. We now want to "match" the letters $c$ in $A$ (there are $cnt_{A}[c]$ of them), with $cnt_{A}[c]$ characters from $B$. According to the rules, we can only use letters $c$ or $c+1$ from $B$. Define the following counts:
+
+\begin{itemize}
+  \item $cnt\_c\_to\_use$ = the count of letter $c$ taken from $B$.
+  \item $cnt\_c'\_to\_use$ = the count of letter $c+1$ taken from $B$, which is equal to $cnt_{A}[c] - cnt\_c\_to\_use$.
+\end{itemize}
+
+Then, the value is:
+
+$$DP(c, cnt\_c\_used) = \sum F(cnt\_c\_to\_use, cnt\_c'\_to\_use) \cdot DP(c+1, cnt\_c'\_to\_use)$$
+
+, where:
+
+\begin{itemize}
+  \item $0 \le cnt\_c\_to\_use \le cnt_{A}[c]$,
+  \item $cnt\_c\_used + cnt\_c\_to\_use \le cnt_{B}[c]$,
+  \item $cnt\_c'\_to\_use \le cnt_{B}[c+1]$.
+\end{itemize}
+
+Here, $F(cnt\_c\_to\_use, cnt\_c'\_to\_use)$ is defined as the number of ways to assign $cnt_{A}[c]$ letters $c$ to $A'$, with the corresponding $cnt\_c\_to\_use$ letters $c$ and $cnt\_c'\_to\_use$ letters $c+1$ to $B'$. The value is the product of the following values:
+
+\begin{itemize}
+  \item The number of ways to choose $cnt_{A}[c]$ positions for the letters $c$ in $A'$. Because we only consider letters $[c, 26)$, there are $(cnt_{A}[c]+cnt_{A}[c+1]+...+cnt_{A}[25])$  available positions. Let's simplify the expression using suffix sum $cntSum_{A}[c] = cnt_{A}[c]+cnt_{A}[c+1]+...+cnt_{A}[25]$. So, the number of ways is $C(cntSum_{A}[c], cnt_{A}[c])$.
+  \item The number of ways to choose $cnt\_c'\_to\_use$ relative positions for the letters $c+1$ in $B'$ matching with the corresponding positions of letters $c$ in $A'$, which is simply $C(cnt_{A}[c],cnt\_c'\_to\_use)$.
+\end{itemize}
+
+Therefore,
+
+$$F(cnt\_c\_to\_use, cnt\_c'\_to\_use) = C(cntSum_{A}[c], cnt_{A}[c]) \cdot C(cnt_{A}[c],cnt\_c'\_to\_use).$$
+
+By manipulating the conditions for valid pairs $(cnt\_c\_to\_use, cnt\_c'\_to\_use)$, we can finally write out the equation for the $DP$ as follows:
+
+$$DP(c, cnt\_c\_used) = \sum C(cntSum_{A}[c], cnt_{A}[c]) \cdot C(cnt_{A}[c],cnt\_c'\_to\_use) \cdot DP(c+1, cnt\_c'\_to\_use),$$
+
+for all $cnt\_c'\_to\_use$ between:
+
+\begin{itemize}
+  \item $\max(0, cnt_{A}[c] - (cnt_{B}[c]-cnt\_c\_used))$, and
+  \item $\min(cnt_{A}[c], cnt_{B}[c+1])]$, inclusive.
+\end{itemize}
+
+The base case is $DP(26, 0) = 1$, and the result is $DP(0, 0)$.
+
+Computing this DP directly leads to a quadratic solution. To get the full points, we need a linear solution as follows. Observe that the equation can be rewritten as:
+
+$$DP(c, cnt\_c\_used) = C(cntSum_{A}[c], cnt_{A}[c]) \cdot \sum  C(cnt_{A}[c],cnt\_c'\_to\_use) \cdot DP(c+1, cnt\_c'\_to\_use)$$
+
+The expression under the sigma symbol can be computed in constant time using an auxillary table (hint: prefix/suffix sum of the DP). The rest is left as an exercise to the readers.
